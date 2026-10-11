@@ -6,11 +6,23 @@ GitHub remains authoritative for requirements, decisions, issues, source and evi
 
 This integration uses Python 3.9+ standard-library code and GitHub Actions, with two Discord incoming webhooks and no bot. The credentials are repository Actions secrets; Codex dispatches through its existing GitHub authorization and never needs their values.
 
-**Activation requires human review and merge of this PR into `main`.** The default branch must contain the workflow before GitHub accepts `workflow_dispatch`. A Draft PR is not deployment. Do not merge merely to test reporting. A separately labeled, supervised local smoke test can verify the webhook transport before merge; it does not verify Actions event delivery. Automatic merge/release delivery must be checked after activation against real, meaningful events, not fabricated releases or PRs.
+**Reporting is active on `main` following [PR #3](https://github.com/VoidPhoenixApps/project-tesseract/pull/3).** Both the merged-PR notification and the explicitly dispatched development update have been verified in Discord. Published-release delivery remains unverified until a genuine release occurs; do not fabricate a release to test it.
 
-## Setup record — 2026-10-11
+## Activation evidence — 2026-10-11
 
-The two reporting channels and dedicated webhooks were configured through Discord UI, and both repository secret names were verified through GitHub. No bot was installed. Local mocked tests pass. A premerge live transport test was blocked because Computer Use disallowed Terminal access; no test message was sent. Actions activation and real dispatch/merge/release delivery remain pending human review and merge. Update this record with actual run/message evidence after verification.
+The two dedicated channel-scoped webhooks and repository Actions secrets are configured. No bot was installed. All 15 mocked software tests passed, and independent security review approved the implementation before activation.
+
+| Path | GitHub Actions evidence | Actual Discord verification |
+| --- | --- | --- |
+| Merged PR | [Successful run 38124114139](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38124114139) for PR #3 | Tesseract GitHub message in [#github-updates](https://discord.com/channels/1558743337735954512/1558745506421669888), report ID `merge:3`; confirmed by owner and inspected through Computer Use |
+| Development dispatch | [Successful run 38124276930](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38124276930) on `main` | Tesseract Development message in [#development-updates](https://discord.com/channels/1558743337735954512/1558750555097145384), explicitly labeled `TEST ONLY`, report ID `development:reporting-activation-test`; inspected through Computer Use |
+| Published release | Awaiting a genuine release | Not yet verified |
+
+Before dispatch, retained reporting history contained only the merge notice and no activation-test run. Exactly one activation test was dispatched; do not send it again. The two original maintainer setup notes were edited in place to correct outdated unconnected/pending-merge claims while retaining their historical context. Both channel topics now reflect activation. Role preview verified that Community Member can read both channels but cannot send messages.
+
+The earlier premerge transport test was blocked because Computer Use prohibited Terminal access. Postmerge Actions delivery verification supersedes that activation blocker; no local credential access is needed for ordinary reports. This verifies reporting software and delivery only, not printer hardware.
+
+Separate Discord setup remains incomplete: Community activation awaits the owner's Community Guidelines agreement authorization, onboarding depends on that activation, role hierarchy reordering was not applied by the UI drag control, and moderator 2FA enforcement requires owner account 2FA. These do not block the verified reporting paths.
 
 ## Channels and secrets
 
@@ -60,7 +72,7 @@ Read [AGENTS.md](../AGENTS.md) and the current GitHub state. At a meaningful mil
 
 After activation and authorization, ordinary public project reports do not require repeated user permission. Do not post confidential information or claim review/validation that has not occurred. A configured secret alone does not mean the workflow is active.
 
-Use a local JSON file containing **only public report text** with these keys, then dispatch:
+Use a local JSON file containing **only public report text** with these keys. The activation example below is historical and has already been delivered: do not dispatch it again. For future meaningful work, use its actual stable milestone ID and current evidence, then dispatch:
 
 ```json
 {
@@ -68,7 +80,7 @@ Use a local JSON file containing **only public report text** with these keys, th
   "accomplished": "TEST ONLY: development reporting integration activated.",
   "why": "Checks the automated project update path.",
   "verification": "Reporting software tests passed; inspect this test delivery. No hardware validation.",
-  "unresolved": "Automatic merge and release event delivery still awaits real events.",
+  "unresolved": "Published-release delivery awaits a genuine release; this existing activation ID must not be dispatched again.",
   "evidence": "software",
   "link": "https://github.com/VoidPhoenixApps/project-tesseract"
 }
