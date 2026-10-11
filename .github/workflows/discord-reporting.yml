@@ -1,0 +1,74 @@
+name: Discord reporting
+run-name: "discord:${{ github.event_name == 'workflow_dispatch' && format('development:{0}', inputs.update_id) || github.event_name == 'release' && format('release:{0}', github.event.release.id) || github.event.pull_request.merged && format('merge:{0}', github.event.pull_request.number) || format('ignored:{0}', github.run_id) }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      update_id:
+        description: Stable milestone ID (3-64 lowercase letters/numbers/hyphens); reuse to suppress duplicates
+        required: true
+        type: string
+      accomplished:
+        description: What was accomplished (maximum 300 characters)
+        required: true
+        type: string
+      why:
+        description: Why it matters (maximum 300 characters)
+        required: true
+        type: string
+      verification:
+        description: Actual verification and limits (maximum 300 characters)
+        required: true
+        type: string
+      unresolved:
+        description: What remains unresolved (maximum 300 characters)
+        required: true
+        type: string
+      evidence:
+        description: Evidence category; physical-test requires actual measured hardware results
+        required: true
+        type: choice
+        options: [concept, simulation, software, physical-test, project-admin]
+      link:
+        description: Relevant URL within this GitHub repository (maximum 400 characters)
+        required: true
+        default: https://github.com/VoidPhoenixApps/project-tesseract
+        type: string
+  pull_request_target:
+    types: [closed]
+    branches: [main]
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: "discord-${{ github.event_name }}-${{ github.event.pull_request.number || github.event.release.id || inputs.update_id }}"
+  cancel-in-progress: false
+
+jobs:
+  report:
+    if: >-
+      github.repository == 'VoidPhoenixApps/project-tesseract' &&
+      github.run_attempt == 1 &&
+      ((github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') ||
+       (github.event_name == 'pull_request_target' && github.event.pull_request.merged == true) ||
+       github.event_name == 'release')
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      # Never check out PR heads, merge refs, release tags, or caller-selected refs.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+          sparse-checkout: scripts/discord_report.py
+          sparse-checkout-cone-mode: false
+      - name: Publish bounded report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DISCORD_DEVELOPMENT_WEBHOOK: ${{ secrets.DISCORD_DEVELOPMENT_WEBHOOK }}
+          DISCORD_GITHUB_WEBHOOK: ${{ secrets.DISCORD_GITHUB_WEBHOOK }}
+        run: python3 scripts/discord_report.py

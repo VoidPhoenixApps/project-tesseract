@@ -28,13 +28,14 @@ Start with an architecture trade study and a **two-bed docking and cross-seam pr
 | [Architecture](docs/architecture.md) | Candidate systems, constraints, tradeoffs, and unresolved decisions |
 | [Roadmap](docs/roadmap.md) | Development phases and measurable engineering gates |
 | [Contributing](CONTRIBUTING.md) | Contribution process, reproducible evidence, and review expectations |
+| [Discord reporting](docs/discord-reporting.md) | Automated development updates, setup, security boundaries and recovery |
 | [Agent instructions](AGENTS.md) | AI engineering standards and repository workflow |
 
 The [original approved brief](https://github.com/VoidPhoenixApps/home-infrastructure/blob/75f40a677e00407e40b0995504476f473c4c23f7/3d-printing/reconfigurable-quad-bed-printer-concept.md) is the source baseline for this foundation. Cross-repository authority/link updates will follow separately after review. This is an original future printer, separate from Fireball, Enderwire, the existing Voron V2.4 plan, and the 1980s bowling-alley printer concept.
 
 ## Development and participation
 
-There is no selected CAD environment, build command, firmware target, test runner, or hardware BOM yet. Begin with the requirements and contribution guide; propose bounded trade studies and test plans before detailed machine design or parts selection. Record failed experiments and rejected alternatives alongside successful results.
+There is no selected CAD environment, printer build command, firmware target or hardware BOM yet. Reporting automation has isolated software tests; it does not validate printer hardware. Begin with the requirements and contribution guide; propose bounded trade studies and test plans before detailed machine design or parts selection. Record failed experiments and rejected alternatives alongside successful results.
 
 ## Open-source intent and licensing
 
