@@ -2,7 +2,7 @@
 
 Project Tesseract is an early engineering concept for a reconfigurable multi-bed RepRap 3D printer: one machine intended to operate as four smaller printers, paired or mixed regions, or one larger printer. Its mechanics should give it a distinctive identity, with editable design data and reproducible community builds.
 
-**Development status:** Documentation foundation and feasibility planning only. No CAD, mechanism, firmware, or prototype has been validated. The features below are design targets, not working capabilities.
+**Development status:** Early feasibility stage, with a published mechanical trade study for review. No CAD, mechanism, firmware, or prototype has been validated. The features below are design targets, not working capabilities.
 
 ## Goals and planned features
 
@@ -18,7 +18,22 @@ Four-head cooperative printing on a single large part is an **unproven stretch g
 
 ## First engineering milestone
 
-Start with an architecture trade study and a **two-bed docking and cross-seam printing proof**. Measure registration, seam gap, thermal drift, adhesion, and repeatability through dock/undock cycles before scaling to four beds. Thermal, electrical, moving machinery, heater wiring, collision avoidance, and emergency-stop behavior require reviewed evidence; a drawing or successful simulation alone does not validate a mechanism.
+The [Phase 1 mechanical trade study](docs/phase1/README.md) is available for critique; its rankings remain proposals. The first physical proof remains **two-bed docking and cross-seam printing**. Measure registration, seam gap, thermal drift, adhesion, and repeatability through dock/undock cycles before scaling to four beds. Thermal, electrical, moving machinery, heater wiring, collision avoidance, and emergency-stop behavior require reviewed evidence; a drawing or successful simulation alone does not validate a mechanism.
+
+## Why this is an interesting engineering problem
+
+Moving a bed is only the start: separate heated surfaces must return to a repeatable common plane, accommodate thermal expansion, and support a first layer across their seams. Locks, transport, sheet behavior, cable routing and printable-frame stiffness all interact. A convincing result needs measurements through repeated docking cycles, including failures.
+
+The printable-first RepRap approach makes reproducibility part of the challenge: builders should eventually be able to make the printed parts on an ordinary Ender 3 and use documented local reinforcement stock. Imperial and metric interfaces must each work without mesh scaling, socket reaming or improvised shims.
+
+## Follow, discuss, contribute
+
+- **Follow progress:** star this repository to bookmark it and use GitHub Watch to choose notifications. Reviewed work and evidence live here.
+- **Discuss ideas:** use [GitHub Discussions](https://github.com/VoidPhoenixApps/project-tesseract/discussions). Questions and evidence-backed challenges to assumptions are welcome.
+- **Contribute:** start with [the contributor guide](CONTRIBUTING.md), check [open issues](https://github.com/VoidPhoenixApps/project-tesseract/issues) and current PRs, and agree on a small scope before substantial work.
+- **Discord:** development reporting is active, but no public invitation has been verified for this onboarding update. See [community access and owner actions](docs/community/README.md#discord-access); channel links in the reporting guide are not invitations.
+
+You can help today with source checks, documentation, bounded research and reviewable calculations. Engineering proposals need specialist review; nobody needs to promise a complete printer to contribute.
 
 ## Documentation
 
@@ -28,6 +43,7 @@ Start with an architecture trade study and a **two-bed docking and cross-seam pr
 | [Architecture](docs/architecture.md) | Candidate systems, constraints, tradeoffs, and unresolved decisions |
 | [Roadmap](docs/roadmap.md) | Development phases and measurable engineering gates |
 | [Contributing](CONTRIBUTING.md) | Contribution process, reproducible evidence, and review expectations |
+| [Community preparation](docs/community/README.md) | Issue drafts, discussion and outreach drafts, and owner setup actions |
 | [Discord reporting](docs/discord-reporting.md) | Automated development updates, setup, security boundaries and recovery |
 | [Agent instructions](AGENTS.md) | AI engineering standards and repository workflow |
 | [ChatGPT Project instructions](CHATGPT_INSTRUCTIONS.md) | Durable ChatGPT-specific rules; intended target for the short Project settings pointer |
