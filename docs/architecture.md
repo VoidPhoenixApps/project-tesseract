@@ -4,6 +4,8 @@
 
 The [requirements](requirements.md) preserve the approved brief. This document organizes its exploration directions and proposes comparison criteria; it does not approve a design. The [roadmap](roadmap.md) defines the evidence needed to advance.
 
+The [Phase 1 mechanical trade study](phase1/README.md) compares bed transport, six-degree-of-freedom docking, configuration paths, preliminary thermal/structural estimates and a proposed two-bed proof plan. Its rankings and numerical test criteria are proposals for review; no architecture is selected and no engineering gate has passed.
+
 ## Constraints for every candidate
 
 - Four nominal 180 × 180 mm heated modules must support separated, row-paired, column-paired, mixed, and fully joined layouts. A permanently diagonal-only mechanism is unacceptable.
