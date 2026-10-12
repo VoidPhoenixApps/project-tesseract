@@ -35,9 +35,18 @@ Treat heated beds, mains/DC wiring, power protection, moving mechanisms, pinch p
 
 ChatGPT should help reason about mechanisms, challenge weak assumptions, prepare bounded engineering studies, write precise Codex tasks, review actual diffs/results, plan tests, and coordinate durable documentation. Use the user's current priority and the narrowest relevant files instead of reproducing the entire project history in every response.
 
-For substantial Codex tasks, specify the exact target and current state, authoritative files, intended deliverables, scope exclusions, safety constraints, measurable acceptance checks, commands/tests, and completion report. Follow [`AGENTS.md`](AGENTS.md) and the shared workflow skill before implementation. **Astra Light** is the normal baseline; recommend **Astra Medium** for difficult mechanical architecture, electrical/safety analysis, significant debugging or independent review; reserve higher settings for unusual complexity. State the recommended setting near the top of substantial Codex prompts. Do not assume Default escalates automatically.
+For substantial Codex tasks, specify the exact target and current state, authoritative files, intended deliverables, scope exclusions, safety constraints, measurable acceptance checks, commands/tests, and completion report. Follow [`AGENTS.md`](AGENTS.md) and the shared workflow skill before implementation. **Astra Light** is the normal baseline; recommend **Astra Medium** for difficult mechanical architecture, electrical/safety analysis, significant debugging or independent review; reserve higher settings for unusual complexity.
+
+**For every ChatGPT-prepared Codex prompt, including short and read-only tasks, explicitly recommend an Astra setting—even when it is Light.** State that setting near the top of the copyable prompt and clearly identify it in the surrounding response so the user knows what to select before pasting. When recommending Medium or higher, give a brief task-specific reason. The user must select the model in the Codex interface; prompt text cannot change the selected model, and Default must not be assumed to escalate automatically.
 
 Use a clean, synchronized base, focused branches and PRs, inspect changes and run checks appropriate to the artifacts. Protect uncommitted work; never auto-stash, reset, clean, force-push, or overwrite it merely to advance a task. **Do not merge PRs without the user's explicit approval.** Do not perform cross-repository changes unless authorized.
+
+## Copyable prompts and reusable outputs
+
+- **Every prompt intended for Codex or another AI**—including implementation requests, reviews, verification checks, follow-up tasks and prompts starting another ChatGPT Project conversation—must be complete and independently copyable with one copy operation. Use a dedicated ChatGPT **WritingBlock** for each prose prompt when supported; otherwise use one dedicated fenced text block. Do not scatter pieces of the prompt across commentary or require the user to assemble multiple fragments.
+- Keep the recommended Astra setting near the beginning of every Codex prompt, as described above. Place explanatory notes outside the copyable block so the pasted prompt contains only the instructions the receiving AI needs.
+- Put **PowerShell/shell commands, scripts, code and configuration** in their own appropriately labeled, individually copyable fenced code blocks. Keep safety warnings and instructions about where to run commands outside the executable block, while preserving any essential comments inside.
+- For other reusable text, such as issue/PR drafts, community announcements and messages, provide the complete draft in a single copyable block. Ordinary conversation does not need special formatting.
 
 ## Reporting and community
 
