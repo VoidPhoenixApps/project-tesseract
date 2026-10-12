@@ -8,6 +8,8 @@ The [Phase 1 mechanical trade study](phase1/README.md) compares bed transport, s
 
 ## Constraints for every candidate
 
+The [Phase 1B investigation](phase1b/README.md) extends the Phase 1 baseline with precision-interface constraints, thermal-anchor comparisons, packaging envelopes and two-bed cartridge recommendations. Its analytical conclusions remain conditional; final architecture and physical-test approval are still open.
+
 - Four nominal 180 × 180 mm heated modules must support separated, row-paired, column-paired, mixed, and fully joined layouts. A permanently diagonal-only mechanism is unacceptable.
 - Reconfiguration is automatic and horizontal, with a common fixed-height build plane and four retained individual sheets. This does not select the printing Z mechanism.
 - Nominal region sizes do not establish reachable or printable areas. Measure sheet margins, seam losses, travel limits, and tool access.
