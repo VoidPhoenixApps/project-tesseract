@@ -30,7 +30,7 @@ Start with an architecture trade study and a **two-bed docking and cross-seam pr
 | [Contributing](CONTRIBUTING.md) | Contribution process, reproducible evidence, and review expectations |
 | [Discord reporting](docs/discord-reporting.md) | Automated development updates, setup, security boundaries and recovery |
 | [Agent instructions](AGENTS.md) | AI engineering standards and repository workflow |
-| [ChatGPT Project instructions](CHATGPT_INSTRUCTIONS.md) | Durable ChatGPT-specific rules; ChatGPT Project settings link here |
+| [ChatGPT Project instructions](CHATGPT_INSTRUCTIONS.md) | Durable ChatGPT-specific rules; intended target for the short Project settings pointer |
 
 The [original approved brief](https://github.com/VoidPhoenixApps/home-infrastructure/blob/75f40a677e00407e40b0995504476f473c4c23f7/3d-printing/reconfigurable-quad-bed-printer-concept.md) remains the historical source baseline. [Home Infrastructure](https://github.com/VoidPhoenixApps/home-infrastructure/blob/main/3d-printing/reconfigurable-quad-bed-printer-concept.md) now points to this repository as the maintained engineering authority. This is an original future printer, separate from Fireball, Enderwire, the existing Voron V2.4 plan, and the 1980s bowling-alley printer concept.
 
