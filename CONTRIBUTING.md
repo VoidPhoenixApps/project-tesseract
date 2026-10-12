@@ -2,6 +2,37 @@
 
 Project Tesseract is at the documentation and feasibility stage. No CAD or prototype has been validated. Contributions should help test the [requirements](docs/requirements.md), compare [architecture candidates](docs/architecture.md), or produce evidence for the [roadmap](docs/roadmap.md).
 
+## Find a useful starting point
+
+You do not need a workshop or a finished design. Pick a small question, check [open issues](https://github.com/VoidPhoenixApps/project-tesseract/issues) and [PRs](https://github.com/VoidPhoenixApps/project-tesseract/pulls), and say what you plan to investigate before duplicating someone else's work. The [Phase 1 study](docs/phase1/README.md) is a proposal to examine, not a settled architecture.
+
+| Contribution | Useful submission today |
+| --- | --- |
+| Documentation or diagrams | One confusing passage or a clearly labeled conceptual diagram, with source links and editable source |
+| Research | A bounded comparison using primary sources, revisions/access dates, applicability and limitations |
+| Calculations | Equations, units, assumptions, parameter ranges, uncertainty and reproducible working; distinguish estimates from measurements |
+| CAD proposals | A small interface or illustrative concept, native editable parametric source, tool versions and regeneration steps; label it unvalidated and do not assume a chosen toolchain |
+| Test plans | A question, proposed measurement method, uncertainty, acceptance limits, hazards, supervision and abort criteria; a plan does not authorize testing |
+| Mechanical critique | The exact assumption, why it may fail, supporting evidence, alternatives and what observation could resolve the disagreement |
+
+[Proposed newcomer tasks](docs/community/issue-drafts.md) distinguish beginner documentation/source work from specialist engineering work. They are drafts awaiting maintainer triage, not assignments or promises of mentorship.
+
+## Propose an idea or challenge an assumption
+
+Use [Discussions](https://github.com/VoidPhoenixApps/project-tesseract/discussions) for exploratory questions. Use the [existing issue templates](https://github.com/VoidPhoenixApps/project-tesseract/issues/new/choose) for a bounded engineering proposal, documentation problem, bug, or completed experiment report. For a test plan, use Engineering Proposal and clearly label all results as not performed.
+
+Link the requirement and exact document revision/section you are questioning. Separate approved targets from proposed mechanisms; describe a counterexample or source, its limits, and an alternative. Challenging a mandatory target is welcome as a request for requirement review, never as permission to silently remove it. Critique the claim, treat people respectfully, and retain negative or inconclusive evidence.
+
+GitHub owns durable decisions and evidence. Discord is for conversation and progress; [public invitation verification is pending](docs/community/README.md#discord-access). Bring useful discussion conclusions back to a linked issue or PR.
+
+## Open your first Draft PR
+
+1. Fork the repository if you lack write access, and create a focused branch from current `main`. If another task uses your checkout, use a separate clean worktree.
+2. Keep the change small, link the issue/discussion, and follow the workflow and verification rules below.
+3. Push your branch to your fork or authorized repository. In GitHub, compare it against `VoidPhoenixApps/project-tesseract:main`, choose **Create draft pull request**, and use the PR template.
+4. State what is ready for feedback, what has not been tested, and which decisions remain open. Draft status invites review; it does not approve a design.
+5. A maintainer reviews scope and evidence; consequential architecture and safety changes require risk-appropriate independent review. Resolve findings and obtain human approval before merge. Record accepted decisions in their owning documents; preserve rejected alternatives and their rationale.
+
 ## Licensing status
 
 The project intends to become fully open source, but no hardware, software, or documentation license has been selected. This repository is not currently distributed under a selected open-source license. Do not assume the planned openness or future commercial-kit ecosystem already grants a license. Identify authorship and third-party source/license information in contributions; resolve licensing and compatibility through review before adopting dependencies or release terms.
