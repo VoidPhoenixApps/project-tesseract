@@ -29,4 +29,6 @@ Evidence confidence is high for the stated degree-of-freedom limitations and ele
 
 ## Review boundaries
 
+Follow-up: [Phase 1B precision docking, thermal expansion and packaging](../phase1b/README.md) narrows these hypotheses with constraint audits, anchor sensitivity and dimensioned envelope screening. It preserves this study and its rejected alternatives; neither study approves an architecture or physical operation.
+
 Recommendations rank the next investigations. They do not select final motion, printing Z, toolheads, CAD, reinforcement, controllers, firmware, suppliers or license. Four-head cooperation on one object remains an unproven stretch goal. All nominal areas remain nominal; sheet margins, thermal gaps and head access determine eventual usable regions. Documentation checks and any independent desk review cannot approve physical operation.
