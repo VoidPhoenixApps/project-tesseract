@@ -31,7 +31,7 @@ The printable-first RepRap approach makes reproducibility part of the challenge:
 - **Follow progress:** star this repository to bookmark it and use GitHub Watch to choose notifications. Reviewed work and evidence live here.
 - **Discuss ideas:** use [GitHub Discussions](https://github.com/VoidPhoenixApps/project-tesseract/discussions). Questions and evidence-backed challenges to assumptions are welcome.
 - **Contribute:** start with [the contributor guide](CONTRIBUTING.md), check [open issues](https://github.com/VoidPhoenixApps/project-tesseract/issues) and current PRs, and agree on a small scope before substantial work.
-- **Discord:** [join Project Tesseract](https://discord.gg/45NYXMxKHg), start in `#welcome`, and discuss the first challenge in `#bed-docking`. The public invite was verified on 2026-10-12; [Community activation and newcomer testing remain pending](docs/community/activation.md).
+- **Discord:** [join Project Tesseract](https://discord.gg/45NYXMxKHg), start in `#welcome`, and discuss the first challenge in `#bed-docking`. The public invite was verified on 2026-10-12. Community is active; see [access checks and remaining limits](docs/community/activation.md).
 
 You can help today with source checks, documentation, bounded research and reviewable calculations. Engineering proposals need specialist review; nobody needs to promise a complete printer to contribute.
 
@@ -43,7 +43,7 @@ You can help today with source checks, documentation, bounded research and revie
 | [Architecture](docs/architecture.md) | Candidate systems, constraints, tradeoffs, and unresolved decisions |
 | [Roadmap](docs/roadmap.md) | Development phases and measurable engineering gates |
 | [Contributing](CONTRIBUTING.md) | Contribution process, reproducible evidence, and review expectations |
-| [Community preparation](docs/community/README.md) | Issue drafts, discussion and outreach drafts, and owner setup actions |
+| [Community preparation](docs/community/README.md) | Published newcomer work, drafts, and community activation evidence |
 | [Discord reporting](docs/discord-reporting.md) | Automated development updates, setup, security boundaries and recovery |
 | [Agent instructions](AGENTS.md) | AI engineering standards and repository workflow |
 | [ChatGPT Project instructions](CHATGPT_INSTRUCTIONS.md) | Durable ChatGPT-specific rules; intended target for the short Project settings pointer |

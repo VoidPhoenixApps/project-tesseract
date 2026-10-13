@@ -1,6 +1,6 @@
 # Community preparation
 
-**Community onboarding, updated 2026-10-12.** The [activation record](activation.md) separates completed administrative changes and published content from remaining owner actions. The original preparation baseline below is retained as history; this is not engineering approval or completed Discord Community activation.
+**Community onboarding, updated 2026-10-12.** The [activation record](activation.md) separates completed administrative changes and published content from remaining owner actions. The original preparation baseline below is retained as history. Community and onboarding are now active; this is not engineering approval.
 
 - [Eight issue drafts](issue-drafts.md), including beginner and specialist review boundaries.
 - [Discussion, Discord and outreach drafts](message-drafts.md), each in a copyable block.
@@ -22,13 +22,13 @@ Early feasibility research for a reconfigurable four-bed RepRap 3D printer. Prin
 
 The recommended eight topics were applied. Existing labels were reused for two beginner issues: [navigation/glossary #13](https://github.com/VoidPhoenixApps/project-tesseract/issues/13) and [layout overview #14](https://github.com/VoidPhoenixApps/project-tesseract/issues/14). The owner explicitly confirmed review availability. Six specialist/source/toolchain drafts remain unpublished; triage them against Phase 1B and current CAD guidance before assignment.
 
-The [welcome Discussion #11](https://github.com/VoidPhoenixApps/project-tesseract/discussions/11) and [first engineering challenge #12](https://github.com/VoidPhoenixApps/project-tesseract/discussions/12) are published in Announcements and Ideas. Pinning remains an owner action because the browser was signed out of GitHub and the available API did not expose a Discussion-pin mutation. No external promotional posts were made.
+The [welcome Discussion #11](https://github.com/VoidPhoenixApps/project-tesseract/discussions/11) and [first engineering challenge #12](https://github.com/VoidPhoenixApps/project-tesseract/discussions/12) are published in Announcements and Ideas. Both were pinned through the signed-in GitHub interface and verified on the Discussions landing page. No external promotional posts were made.
 
 ## Discord access
 
 [Join Project Tesseract](https://discord.gg/45NYXMxKHg). The owner explicitly approved this never-expiring, unlimited-use invite to `#welcome`, with no role assignment and temporary membership disabled. A signed-out browser resolved it to Project Tesseract on 2026-10-12. This confirms the invitation destination, not successful newcomer joining or posting.
 
-The existing pinned welcome was updated in place, and the first engineering prompt was published and pinned in `#bed-docking`. Community activation still awaits the owner's agreement; onboarding, role hierarchy and moderator 2FA need follow-up. See the [activation evidence and precise owner steps](activation.md). Reporting workflows, secrets, webhooks and channel permissions were preserved.
+The existing pinned welcome was updated in place, and the first engineering prompt was published and pinned in `#bed-docking`. The owner completed the Community agreement; onboarding and the approved role hierarchy are saved. Moderator 2FA was explicitly deferred by the owner, and a real newcomer join remains untested. See the [activation evidence and remaining limits](activation.md). Reporting workflows, secrets, webhooks and channel permissions were preserved.
 
 ## Scope and handoff
 

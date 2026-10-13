@@ -2,7 +2,7 @@
 
 **Publication status, 2026-10-12:** the two GitHub Discussion drafts below were published as [#11](https://github.com/VoidPhoenixApps/project-tesseract/discussions/11) and [#12](https://github.com/VoidPhoenixApps/project-tesseract/discussions/12). Adapted Discord welcome/challenge text was published as recorded in [activation evidence](activation.md); avoid duplicates. The outreach announcement remains unposted and requires owner review. Recheck linked main-branch documents and active work before posting. Discord publication requires the owner to verify access and choose a discussion channel; reporting channels are read-only for ordinary members.
 
-## GitHub Discussion: welcome (published; pin pending)
+## GitHub Discussion: welcome (published and pinned)
 
 ```markdown
 # Welcome to Project Tesseract — help investigate a four-bed RepRap
@@ -20,7 +20,7 @@ GitHub keeps the durable decisions and evidence. Failed and inconclusive results
 What small uncertainty would you like to help resolve?
 ```
 
-## GitHub Discussion: first engineering challenge (published; pin pending)
+## GitHub Discussion: first engineering challenge (published and pinned)
 
 ```markdown
 # First challenge: can two heated beds repeatedly form a printable seam?
