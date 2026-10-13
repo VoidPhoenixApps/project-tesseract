@@ -1,5 +1,7 @@
 # Phase 1 — mechanical architecture trade study
 
+**Reading path:** [project overview](../../README.md#newcomer-reading-path) → [contribution guide](../../CONTRIBUTING.md) → [requirements](../requirements.md) → this study. Return to the [requirements](../requirements.md) when a proposal appears to conflict with an approved target.
+
 **2026-10-12 · Proposal for review.** Analytical exploration only: no CAD, simulation, physical measurement, architecture approval, or engineering gate completion. The first physical proof remains two-bed docking and cross-seam printing. This study does not authorize fabrication, purchases, heaters, machine motion, firmware changes, or unattended operation.
 
 ## Reading order and authority

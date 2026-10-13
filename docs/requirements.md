@@ -1,5 +1,7 @@
 # Project Tesseract requirements
 
+**Reading path:** [start with the project overview](../README.md#newcomer-reading-path) → [contribution guide](../CONTRIBUTING.md) → this requirements document → [Phase 1 trade study](phase1/README.md).
+
 ## Status and provenance
 
 **Status:** Approved concept requirements ported for foundation review; no CAD, mechanism, firmware, or prototype has been validated. Planned features are not implemented capabilities.
