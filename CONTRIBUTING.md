@@ -15,7 +15,7 @@ You do not need a workshop or a finished design. Pick a small question, check [o
 | Test plans | A question, proposed measurement method, uncertainty, acceptance limits, hazards, supervision and abort criteria; a plan does not authorize testing |
 | Mechanical critique | The exact assumption, why it may fail, supporting evidence, alternatives and what observation could resolve the disagreement |
 
-[Proposed newcomer tasks](docs/community/issue-drafts.md) distinguish beginner documentation/source work from specialist engineering work. They are drafts awaiting maintainer triage, not assignments or promises of mentorship.
+[Proposed newcomer tasks](docs/community/issue-drafts.md) distinguish beginner documentation/source work from specialist engineering work. The navigation/glossary and conceptual-layout tasks are published as [issue #13](https://github.com/VoidPhoenixApps/project-tesseract/issues/13) and [issue #14](https://github.com/VoidPhoenixApps/project-tesseract/issues/14), with owner review confirmed. The other six remain drafts awaiting triage. Comment before starting to avoid overlapping work.
 
 ## Propose an idea or challenge an assumption
 
@@ -23,7 +23,7 @@ Use [Discussions](https://github.com/VoidPhoenixApps/project-tesseract/discussio
 
 Link the requirement and exact document revision/section you are questioning. Separate approved targets from proposed mechanisms; describe a counterexample or source, its limits, and an alternative. Challenging a mandatory target is welcome as a request for requirement review, never as permission to silently remove it. Critique the claim, treat people respectfully, and retain negative or inconclusive evidence.
 
-GitHub owns durable decisions and evidence. Discord is for conversation and progress; [public invitation verification is pending](docs/community/README.md#discord-access). Bring useful discussion conclusions back to a linked issue or PR.
+GitHub owns durable decisions and evidence. [Join Project Tesseract on Discord](https://discord.gg/45NYXMxKHg) for conversation and progress; start in `#welcome` and use `#bed-docking` for the first engineering challenge. [Access verification and remaining setup limits](docs/community/activation.md) are recorded separately. Bring useful discussion conclusions back to a linked issue or PR.
 
 ## Open your first Draft PR
 

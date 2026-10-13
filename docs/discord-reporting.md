@@ -22,6 +22,8 @@ Before dispatch, retained reporting history contained only the merge notice and 
 
 The earlier premerge transport test was blocked because Computer Use prohibited Terminal access. Postmerge Actions delivery verification supersedes that activation blocker; no local credential access is needed for ordinary reports. This verifies reporting software and delivery only, not printer hardware.
 
+For the later community audit and owner steps, see [community activation](community/activation.md). The following paragraph retains the original activation-era context.
+
 Separate Discord setup remains incomplete: Community activation awaits the owner's Community Guidelines agreement authorization, onboarding depends on that activation, role hierarchy reordering was not applied by the UI drag control, and moderator 2FA enforcement requires owner account 2FA. These do not block the verified reporting paths.
 
 ## Channels and secrets

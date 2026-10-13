@@ -1,0 +1,59 @@
+# Community activation record — 2026-10-12
+
+**Partially activated; not ready to claim complete onboarding.** GitHub community content and a public Discord invitation are live. Discord Community mode and its onboarding remain blocked on owner-only steps. This record concerns administration and documentation, not validated printer hardware.
+
+Source baseline: current `main` at `6f65f13`, including onboarding PR #8, Phase 1B PR #9 and Fusion-first evaluation preference PR #10. Shared standards were consulted at project-knowledge `46ff107`, matching its current main; no Tesseract project record was invented. AgentMemory was unavailable. Home Infrastructure and project-knowledge were not modified. File changes use an isolated `codex/community-activation` worktree; the primary engineering checkout was preserved.
+
+## Live administrative changes completed
+
+| Surface | Actual result and evidence |
+| --- | --- |
+| GitHub About | Saved and reread: “Early feasibility research for a reconfigurable four-bed RepRap 3D printer. Printable-first; open-source intent, licensing undecided.” |
+| Repository topics | Saved and reread: `reprap`, `3d-printing`, `3d-printer`, `additive-manufacturing`, `mechanical-engineering`, `parametric-design`, `research`, `community` |
+| Beginner issues | [#13: navigation/glossary](https://github.com/VoidPhoenixApps/project-tesseract/issues/13) and [#14: conceptual layouts](https://github.com/VoidPhoenixApps/project-tesseract/issues/14), both labeled `documentation` and `good first issue`; the owner explicitly confirmed availability to review both. No contributor was assigned. Bodies and labels were reread after publication. |
+| GitHub Discussions | [Welcome #11](https://github.com/VoidPhoenixApps/project-tesseract/discussions/11) in Announcements and [heated-bed challenge #12](https://github.com/VoidPhoenixApps/project-tesseract/discussions/12) in Ideas. Published from the prepared drafts with current Phase 1B context. Pinning remains pending. |
+| Discord welcome | [Existing pinned message](https://discord.com/channels/1558743337735954512/1558745176116297829/1558746783910334466) edited in place, preserving its identity and adding direct requirements, contribution and Discussion links. The rendered message and edit acknowledgement were inspected. No duplicate welcome was posted. |
+| Discord engineering prompt | [New message in #bed-docking](https://discord.com/channels/1558743337735954512/1558745615176040448/1559360581281120297), published once and pinned; the rendered message and pin notification were inspected. It links current Phase 1B, Discussion #12, requirements and CONTRIBUTING, and explicitly prohibits treating it as physical-test authorization. |
+| Public invitation | [Join Project Tesseract](https://discord.gg/45NYXMxKHg), landing in `#welcome`: never expires, unlimited uses, no automatic role assignment, temporary membership off. Owner explicitly approved permanent public joining after automatic approval review required confirmation. The UI confirmed no expiration. |
+
+The invitation was independently opened in a signed-out browser and displayed **Project Tesseract** with the account-creation/sign-in entry point. No account was created and no real newcomer joined. The invite is a public join link, not a webhook or privileged credential. Review it periodically and revoke/replace it through Server Settings → Invites if abused. Opening the invite dialog also produced a default 30-day link; that link was not distributed or placed in documentation. Review redundant invites in the owner's invite audit rather than assuming they were removed.
+
+No channels, roles or bots were added. No role, channel, moderation, webhook, secret, workflow or account-security permissions were changed. No license or engineering architecture was selected. No Reddit, forum or external promotional posts were published.
+
+## Access and safety observations (read-only)
+
+| Check | Observed result | Limit |
+| --- | --- | --- |
+| Community mode | Settings still offered Enable Community. Wizard reached the unchecked “I agree and understand” step; Finish Setup was disabled. | Agreement was not accepted and activation was not completed. |
+| Activation prerequisites | Wizard reported verified-email and scan-all-members media requirements already satisfied. Existing `#rules` and private `#community-updates` could be selected. | Wizard selections were a preview, not saved activation. |
+| Server onboarding | No active Community onboarding settings were exposed while Community mode was disabled. | Owner must complete activation before configuration and end-to-end testing. |
+| Verification/filtering | Medium verification; filter media from all members; restrict member prune to admins enabled. Safety notifications target `#community-updates`. | UI settings only; no adversarial spam or media test. Discord warns assigned roles can bypass verification when onboarding is disabled. |
+| AutoMod | Block Mention Spam, Block Suspected Spam Content and Block Commonly Flagged Words all enabled, each showing block-message action. | Rule thresholds/exemptions and real enforcement were not exhaustively tested. |
+| Moderator 2FA | Require 2FA for moderator actions off; UI says the owner needs account 2FA to change it. | Account setup and server enforcement remain owner actions. |
+| Role hierarchy | Visible top-to-bottom order: Community Member, Contributor, Moderator, Maintainer, then @everyone. All four named roles showed zero members. | This is unsuitable as a final moderation hierarchy; changing it changes whom moderators can act on. No reordering or assignments were made. |
+| Community Member role | No additional role grants enabled, including Administrator, Manage Roles, Manage Server and Manage Webhooks. | Effective access also inherits @everyone and channel overrides. |
+| @everyone | View channels, message/history and normal discussion capabilities enabled; privileged management/administrator permissions were off. | Channel overrides still govern reporting and private channels. |
+| Moderator role | Timeout Members, Manage Messages and Mute Members enabled; Administrator, Manage Roles, Manage Server, Manage Webhooks, Kick and Ban off. | Role order can limit moderation of higher roles. Maintainer/Contributor effective privilege combinations were not exhaustively audited. |
+| Reporting channels | Discord **View Server As Role → Community Member** could read `#github-updates` and `#development-updates`; both displayed “You do not have permission to send messages in this channel.” | Role preview, not a privileged-account posting test and not proof from an actual ordinary account. |
+| Engineering discussion | The same role preview could see `#bed-docking` and its enabled message composer. | No real member post or thread/attachment test was performed. |
+| Rules/welcome/channels | Existing respectful-conduct, anti-spam, privacy, evidence and safety rules; welcome/resources/announcements, community and engineering channels already present. | No need to duplicate channels or replace the existing rules. |
+| Reporting delivery | Recent `merge:8`, `merge:9`, `merge:10` messages visible in `#github-updates`; corresponding Actions history successful. Prior engineering updates visible in `#development-updates`. | Published-release delivery still awaits a genuine release. No webhook values were inspected. |
+
+## Owner-only actions before external promotion
+
+1. **Activate Community:** Project Tesseract server menu → Server Settings → Enable Community → Enable Community. Confirm the satisfied safety checks; choose existing `#rules` for Rules or Guidelines and existing private `#community-updates` for Community Updates. On the final page, review Discord's Community Server Guidelines personally, then check **I agree and understand** and select **Finish Setup** if you agree. Do not create duplicate channels. This task deliberately stopped before acceptance.
+2. **Configure onboarding after activation:** Server Settings → Onboarding. Reuse the existing rules, welcome, resources and discussion channels; make the path to `#bed-docking` obvious. Review any proposed channel/permission changes before enabling them, preserve read-only reporting, and use Preview where available. The post-activation UI and completion requirements were not inspected, so no completion is claimed.
+3. **Enable moderator protection yourself:** User Settings → My Account → enable two-factor authentication (wording may vary); retain recovery information privately. Then return to Project Tesseract → Server Settings → Safety Setup → **Require 2FA for moderator actions**. The observed UI explicitly required account 2FA. Do not share authentication or recovery values with an agent.
+4. **Review role order and staffing:** Server Settings → Roles. Review the intended order `Maintainer > Moderator > Contributor > Community Member > @everyone` and the moderation authority it creates before applying it. Keep Administrator and Manage Webhooks off for ordinary members and unnecessary roles. Assign roles only to intended trusted people and recheck effective channel permissions. The current order was not silently changed.
+5. **Pin GitHub Discussions:** sign into GitHub as an authorized maintainer, open Discussions #11 and #12, and use the discussion management **Pin discussion** control (or its pin dialog) for each. The automation browser was signed out; the available GraphQL schema exposed createDiscussion but no pinDiscussion mutation. No pin was claimed or attempted through an undocumented endpoint.
+6. **Independent newcomer test:** have a willing ordinary account use the public invitation. Confirm welcome/rules/resources visibility, posting in `#general` and `#bed-docking`, and inability to post/create threads/use external apps to post in both reporting channels. Confirm the private moderator-update channel is hidden. Repeat after Community/onboarding or role changes; do not substitute the owner's normal account for this test.
+
+Only after these checks and moderation ownership are settled should the owner review the [outreach announcement](message-drafts.md#founding-contributors-outreach) for external promotion. Six issue drafts remain unassigned and unpublished; inspect ongoing engineering work before expanding the queue.
+
+## Repository changes and verification boundaries
+
+README and CONTRIBUTING gain the verified invitation and current participation links. Community records distinguish published items from remaining drafts and capture this audit. The reporting guide receives only a pointer to this newer community record. These source edits remain subject to a Draft PR and human approval; live administrative changes above have already occurred independently of the PR.
+
+Engineering requirements, architecture, roadmap, CAD, Phase 1/1B studies and automation code remain outside scope. Documentation verification covers changed-file links/anchors, Markdown structure, requirement/license/status consistency, full diff and staged whitespace checks. The existing 15 mocked reporting tests check reporting software only. No physical, CAD-generation or actual newcomer-access test is implied.
+
+Any durable cross-project community ownership/access reference can be promoted separately after review; this task makes no source-repository knowledge update and creates no missing project record.

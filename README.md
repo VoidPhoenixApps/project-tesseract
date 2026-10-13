@@ -31,7 +31,7 @@ The printable-first RepRap approach makes reproducibility part of the challenge:
 - **Follow progress:** star this repository to bookmark it and use GitHub Watch to choose notifications. Reviewed work and evidence live here.
 - **Discuss ideas:** use [GitHub Discussions](https://github.com/VoidPhoenixApps/project-tesseract/discussions). Questions and evidence-backed challenges to assumptions are welcome.
 - **Contribute:** start with [the contributor guide](CONTRIBUTING.md), check [open issues](https://github.com/VoidPhoenixApps/project-tesseract/issues) and current PRs, and agree on a small scope before substantial work.
-- **Discord:** development reporting is active, but no public invitation has been verified for this onboarding update. See [community access and owner actions](docs/community/README.md#discord-access); channel links in the reporting guide are not invitations.
+- **Discord:** [join Project Tesseract](https://discord.gg/45NYXMxKHg), start in `#welcome`, and discuss the first challenge in `#bed-docking`. The public invite was verified on 2026-10-12; [Community activation and newcomer testing remain pending](docs/community/activation.md).
 
 You can help today with source checks, documentation, bounded research and reviewable calculations. Engineering proposals need specialist review; nobody needs to promise a complete printer to contribute.
 

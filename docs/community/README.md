@@ -1,40 +1,34 @@
 # Community preparation
 
-**Owner-review package, 2026-10-12.** These are proposed community actions, not published issues, approved engineering decisions or completed Discord setup.
+**Community onboarding, updated 2026-10-12.** The [activation record](activation.md) separates completed administrative changes and published content from remaining owner actions. The original preparation baseline below is retained as history; this is not engineering approval or completed Discord Community activation.
 
 - [Eight issue drafts](issue-drafts.md), including beginner and specialist review boundaries.
 - [Discussion, Discord and outreach drafts](message-drafts.md), each in a copyable block.
 - [Contributor guide](../../CONTRIBUTING.md) for evidence and review standards.
 
-## Verified starting point
+## Preparation baseline (before activation work)
 
 Read-only GitHub inspection on 2026-10-12 found Discussions enabled, no existing Discussions, no open PRs, no issues, no topics, and existing `good first issue`, `help wanted` and `documentation` labels. Repository baseline: `7b734b0` (Phase 1 trade study, PR #7). Recheck live state before publishing or assigning work; engineering work can progress independently.
 
 Shared workflow/engineering/knowledge/secrets/review standards were consulted at project-knowledge revision `46ff107e35053b970915a3ca147f5513571f7be6`, matching GitHub main. No Tesseract CURRENT_STATE record was present. Current Home Infrastructure instructions were consulted read-only. Neither source repository was changed; AgentMemory was unavailable.
 
-The GitHub About description currently says “Open-source, reconfigurable multi-bed RepRap 3D printer,” which overstates the license status. Owner action: replace it with the following proposed description after review:
+At the preparation baseline, the GitHub About description said “Open-source, reconfigurable multi-bed RepRap 3D printer,” which overstates the license status. The activation task replaced it with the following description and verified the saved value:
 
 ```text
 Early feasibility research for a reconfigurable four-bed RepRap 3D printer. Printable-first; open-source intent, licensing undecided.
 ```
 
-## GitHub owner actions
+## GitHub community status
 
-1. Review the About description above and proposed topics: `reprap`, `3d-printing`, `3d-printer`, `additive-manufacturing`, `mechanical-engineering`, `parametric-design`, `research`, `community`. Avoid an `open-source` topic until licensing is resolved.
-2. Reuse existing `documentation`, `good first issue` and `help wanted` labels. Apply `good first issue` only to a bounded task with clear inputs, acceptance criteria and an available reviewer. Use `help wanted` for specialist tasks too; it does not imply beginner suitability. Optional new label: `engineering-review` for work requiring specialist assessment.
-3. Triage the issue drafts against current engineering branches and PRs with their maintainers. Publish only one or two ready tasks initially; supply a reviewer and identify any overlapping investigation before inviting work. No issue has been created by this package.
-4. Review and publish the two GitHub Discussion drafts, then pin them. Use an Announcements-style category for the welcome and an Ideas-style category for the first challenge, creating or choosing suitable categories as needed. No category or pin setting has been changed.
-5. Review community moderation expectations and ownership before broad outreach. The contributor guide asks for respectful, evidence-based critique; it does not establish a staffed moderation program.
+The recommended eight topics were applied. Existing labels were reused for two beginner issues: [navigation/glossary #13](https://github.com/VoidPhoenixApps/project-tesseract/issues/13) and [layout overview #14](https://github.com/VoidPhoenixApps/project-tesseract/issues/14). The owner explicitly confirmed review availability. Six specialist/source/toolchain drafts remain unpublished; triage them against Phase 1B and current CAD guidance before assignment.
+
+The [welcome Discussion #11](https://github.com/VoidPhoenixApps/project-tesseract/discussions/11) and [first engineering challenge #12](https://github.com/VoidPhoenixApps/project-tesseract/discussions/12) are published in Announcements and Ideas. Pinning remains an owner action because the browser was signed out of GitHub and the available API did not expose a Discussion-pin mutation. No external promotional posts were made.
 
 ## Discord access
 
-No public invitation was found in the inspected repository, About/homepage information or GitHub Discussions. No candidate invite was available to validate. Existing Discord channel URLs in [reporting documentation](../discord-reporting.md) are authenticated channel destinations, not public join links. README and CONTRIBUTING therefore point here instead of inventing an invitation.
+[Join Project Tesseract](https://discord.gg/45NYXMxKHg). The owner explicitly approved this never-expiring, unlimited-use invite to `#welcome`, with no role assignment and temporary membership disabled. A signed-out browser resolved it to Project Tesseract on 2026-10-12. This confirms the invitation destination, not successful newcomer joining or posting.
 
-Owner action: provide or create an intended public invitation, verify that it resolves to the correct Project Tesseract server, and test newcomer access and permissions with an ordinary account. Record the verification date and intended expiry policy, then add that verified invitation to README and CONTRIBUTING. Never substitute a webhook URL.
-
-The reporting guide records Community activation/onboarding, role ordering and moderator 2FA setup as incomplete on 2026-10-11. These are historical records, not a fresh Discord UI audit; the owner should verify their current status. The GitHub-to-Discord reporting integration is documented as active. This package changes no workflows, permissions, webhooks, secrets or automation, and does not exercise message delivery.
-
-Review the [Discord welcome and first challenge drafts](message-drafts.md) before publishing. No welcome, engineering prompt, milestone or outreach message is automatically posted by this task, following its explicit publication restriction.
+The existing pinned welcome was updated in place, and the first engineering prompt was published and pinned in `#bed-docking`. Community activation still awaits the owner's agreement; onboarding, role hierarchy and moderator 2FA need follow-up. See the [activation evidence and precise owner steps](activation.md). Reporting workflows, secrets, webhooks and channel permissions were preserved.
 
 ## Scope and handoff
 
