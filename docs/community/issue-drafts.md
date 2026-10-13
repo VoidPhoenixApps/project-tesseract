@@ -1,6 +1,6 @@
 # Proposed newcomer issues
 
-**Drafts for maintainer review; none have been opened.** Recheck current issues, PRs and the active engineering investigation before assigning any task. Each block contains the complete suggested title, labels and body. All submissions follow [CONTRIBUTING](../../CONTRIBUTING.md); labels do not approve engineering results. Maintainers should confirm an available reviewer before applying `good first issue`.
+**Publication status, 2026-10-12:** drafts 1 and 2 were published as [issue #13](https://github.com/VoidPhoenixApps/project-tesseract/issues/13) and [issue #14](https://github.com/VoidPhoenixApps/project-tesseract/issues/14) after the owner confirmed availability to review both. Do not open duplicates. Drafts 3–8 remain for maintainer review. Recheck current issues, PRs and the active engineering investigation before assigning any task. Each block contains the complete suggested title, labels and body. All submissions follow [CONTRIBUTING](../../CONTRIBUTING.md); labels do not approve engineering results. Maintainers should confirm an available reviewer before applying `good first issue`.
 
 ## 1. Documentation navigation audit — beginner
 
@@ -53,7 +53,7 @@ Done when: each entry has a traceable specification and unavailable data is expl
 Title: Add a bounded evidence comparison for two docking interfaces
 Labels: help wanted, engineering-review
 
-Start from https://github.com/VoidPhoenixApps/project-tesseract/blob/main/docs/phase1/docking-registration.md and coordinate with the active precision-docking investigation. Select one unanswered comparison with its maintainer; do not repeat the whole trade study.
+Start from https://github.com/VoidPhoenixApps/project-tesseract/blob/main/docs/phase1/docking-registration.md and read the [Phase 1B investigation](https://github.com/VoidPhoenixApps/project-tesseract/blob/main/docs/phase1b/README.md) and coordinate with current precision-docking work. Select one unanswered comparison with its maintainer; do not repeat the whole trade study.
 
 Scope: compare two existing candidate interfaces using at least three primary sources. Explain which degrees of freedom are constrained, how locking/preload and thermal accommodation differ, and what the cited repeatability actually measures.
 
@@ -98,7 +98,7 @@ Done when: a structural reviewer checks assumptions and alternatives remain prop
 Title: Demonstrate reproducible variants with two candidate CAD toolchains
 Labels: help wanted
 
-Read https://github.com/VoidPhoenixApps/project-tesseract/blob/main/docs/architecture.md (CAD authoring) and CONTRIBUTING.md. Agree on a tiny nonstructural demonstration part and candidate tools with the maintainer before substantial work.
+Read https://github.com/VoidPhoenixApps/project-tesseract/blob/main/docs/architecture.md (CAD authoring) and CONTRIBUTING.md. Respect the recorded Fusion-first evaluation preference (not a toolchain selection), and agree on a tiny nonstructural demonstration part and candidate tools with the maintainer before substantial work.
 
 Scope: use the same synthetic parameters to evaluate two publicly reproducible candidate workflows. The part is a tool demonstration, not a printer component or a selected structural interface.
 
