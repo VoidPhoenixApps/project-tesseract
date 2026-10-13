@@ -90,6 +90,17 @@ Requirements:
 
 Both variants are intended to provide the **same core print capabilities**; no essential operating mode should be reserved only for extrusion without an explicit design review.
 
+### Standard, readily available component policy
+
+**Approved design requirement (2026-10-13):** Wherever reasonably possible, select standardized, readily available **off-the-shelf components** rather than unusual, proprietary, one-off, discontinued, or single-source parts. This applies to the proof rigs and both eventual printer editions, including motion hardware, bearings, belts, motors, fasteners, structural stock, sensors, connectors, power and control components.
+
+- Prefer established, interchangeable specifications and parts that builders can readily source from multiple independent suppliers; consider regional availability, especially US/imperial and international/metric options.
+- Evaluate sourcing, lifecycle/replacement availability, cost, documentation, serviceability, safety suitability, and practical substitutions during component trade studies and BOM reviews. A common part is not automatically mechanically or electrically suitable.
+- Purpose-designed **3D-printed components** are expected in this RepRap design. Custom fabricated or unusual purchased components are exceptions only when needed to meet a documented functional, safety, or performance requirement that practical standard alternatives cannot satisfy.
+- For each exception, document the reason, standard alternatives evaluated and rejected, manufacturability or procurement route, replacement/repair plan, and any supplier or availability risk before adoption.
+- BOMs should identify actual specifications, compatible alternatives where validated, and sourcing constraints. Do not silently substitute superficially similar components; safety-critical and load-bearing replacements require the relevant verification.
+- Do not let sourcing preference silently eliminate an approved mechanical capability or compromise safety; surface unavoidable conflicts for explicit design review.
+
 ### Open-hardware / community commitment
 
 - Publish **native/editable parametric CAD source**, assemblies, editable manufacturing data, dimensioned drawings where needed, and STEP exports; publish STL/3MF print files as derivatives, not the sole source.
