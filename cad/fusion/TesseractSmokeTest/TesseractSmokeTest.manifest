@@ -1,0 +1,13 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "id": "9f2849dc-e526-48e8-9387-f448c347fdeb",
+  "author": "Project Tesseract contributors",
+  "description": {
+    "": "Create a new unsaved 40 x 30 x 10 mm parametric block. CAD automation smoke test only; not a validated printer component."
+  },
+  "version": "0.1.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}
