@@ -4,6 +4,10 @@
 
 The [requirements](requirements.md) govern scope; [architecture](architecture.md) records alternatives and open decisions. Four-head cooperative printing is a separate stretch track. A failed gate leads to investigation and review, not an unsupported claim or silent removal of a requirement.
 
+## Priority parallel exploration — toolhead and printing Z architecture
+
+Explore the [multi-independent-toolhead and Z-motion idea backlog](concepts/toolhead-z-motion-exploration.md) **as soon as practical**, in parallel with bed docking. Compare independently moving XY heads, moving beds versus gantry Z, mode-switching dual Z, and automatic mechanically/electronically coupled bed Z across separated, paired, mixed, and fully joined modes. First outputs are a mode/kinematic compatibility matrix, failure/constraint review and bounded candidate sketches—not a chosen design or permission for physical tests. This work does **not** replace Phase 2's two-bed docking and cross-seam proof.
+
 ## Evidence required at every gate
 
 Before testing, review the procedure and measurable pass/fail limits: units, operating conditions, samples/cycle counts, measurement method, instrument resolution/uncertainty, hazards, controls, and abort criteria. Numerical limits are not established by this foundation. They must be justified against first-layer, structural, thermal, motion, and safety needs before a test is labeled passing.
