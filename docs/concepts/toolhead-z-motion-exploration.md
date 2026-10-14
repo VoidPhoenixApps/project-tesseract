@@ -92,6 +92,27 @@ These ideas extend, but **do not select**, candidate Z-E and the independent-hea
 
 **Maintainer proposal:** Use the *same basic toolhead*, arranged as mirrored/opposing units, to minimize clearance required between heads and around central bed seams.
 
+**Maintainer clarification — exact quadrant pattern (top view, 2026-10-14):** The goal is specifically **two unique toolhead assemblies**, each used twice. Toolheads **1 and 4 are identical Type A units**, with #4 mounted 180° from #1; toolheads **2 and 3 are identical Type B units**, with #3 mounted 180° from #2. Types A and B are left/right mirrored counterparts. In all four quadrants the nozzle sits at the inward-facing corner and the bulkier head/extruder unit toward the outside; the fan positions are offset as shown. This is more precise than a generic “mirror all four heads” suggestion.
+
+```text
+TOP VIEW — conceptual component positions, not a dimensioned mechanism
+
+    Toolhead 1 — Type A             Toolhead 2 — Type B
+    Head  | Fan                      Fan    | Head
+    Fan   | Nozzle                Nozzle   | Fan
+
+    ---------------- CENTER / BED SEAMS ----------------
+
+    Fan   | Nozzle                Nozzle   | Fan
+    Head  | Fan                      Fan    | Head
+    Toolhead 3 — Type B             Toolhead 4 — Type A
+
+Assembly relation: 1 = 4 (rotated 180°); 2 = 3 (rotated 180°).
+Type A and Type B are mirror counterparts, not four unique designs.
+```
+
+The component layout is an **exploration hypothesis**, not an approved carriage/mount. Test that a physically identical A or B assembly can truly be installed in its diagonal location by rotation alone: mounting references, filament path, motor/cooling direction, wiring strain relief, fan ducts, probe location, service access and XY belt/rail attachments may force handed adapters. Quantify *swept* clearances for all four independently moving heads, especially near the joined center, and preserve viable single-head full-region access independently of four-head cooperation.
+
 **Alternative ways to realize the intent:** (1) rotate/reorient an identical mechanically symmetric head and its accessory positions; (2) use common functional parts with interchangeable left/right ducts or brackets; (3) true left/right mirror builds if warranted. Compare common-BOM/service advantages against different printed parts or asymmetric cooling/filament routing. No claim of printable reach without swept-envelope analysis.
 
 **Specific checks:**
