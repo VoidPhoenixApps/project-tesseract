@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "scope": "Selected read-only CHECK observations from maintainer runs on the failed fresh B,inset design. Component IDs and private traceback paths omitted; originals remain local. These diagnostic runs precede the correction; corrected runtime evidence is in targeted-smoke.json.",
+  "reports": [
+    {
+      "report_id": "hjkair8a",
+      "original_sha256": "1edaadadbe8ad13eda1091542108b7fc47810196b6bb1e8250b1a451a6130d74",
+      "outcome": "FAIL",
+      "provenance": {
+        "document_creation_id_sha256": "300f09977f743538e3aa75ca77211fa893861bfc33189c7a4b29aa92bc87ad2b",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "7004e0c4-0054-493f-a2cb-0740a2e80fc0",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "a7dd1ea8a9d0de36fc526ee302a7424bac9742f343d20da817f88129b8816b74",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:10:11.624398+00:00"
+      },
+      "diagnostics": {
+        "actual_expression": "-68 mm",
+        "actual_offset_cm": -6.800000000000001,
+        "datum": {
+          "name": "Laboratory_base_ENVELOPE_Z_datum",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            -6.800000000000001
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "definition_type": "adsk::fusion::ConstructionPlaneOffsetDefinition",
+        "expected_expression": "-68 mm",
+        "expected_offset_cm": -6.8,
+        "expected_reference": {
+          "name": "XY",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "expression_equal": true,
+        "health": 0,
+        "health_message": "",
+        "offset_cast": true,
+        "raw_reference": {
+          "name": "XY",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "raw_reference_equal": false,
+        "raw_reference_not_equal": true,
+        "typed_reference": {
+          "name": "XY",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "typed_reference_equal": false
+      }
+    },
+    {
+      "report_id": "cor4qfig",
+      "original_sha256": "e19b75930348b5679074400e4a1b7f3ade073afdf189d4c125afe0e200a6adae",
+      "outcome": "FAIL",
+      "provenance": {
+        "document_creation_id_sha256": "300f09977f743538e3aa75ca77211fa893861bfc33189c7a4b29aa92bc87ad2b",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "0bef5f8a-0b71-42c4-bc6d-a304d9726474",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "188ea54585070f619aa211f52bd0660f7e86e6b32ec7c5758fc11f90d0ef0164",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:12:35.244561+00:00"
+      },
+      "diagnostics": {
+        "actual_expression": "-68 mm",
+        "actual_offset_cm": -6.800000000000001,
+        "datum": {
+          "assembly_context": null,
+          "has_native_object": false,
+          "is_deletable": false,
+          "name": "Laboratory_base_ENVELOPE_Z_datum",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            -6.800000000000001
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "definition_type": "adsk::fusion::ConstructionPlaneOffsetDefinition",
+        "expected_expression": "-68 mm",
+        "expected_offset_cm": -6.8,
+        "expected_reference": {
+          "assembly_context": null,
+          "has_native_object": false,
+          "is_deletable": false,
+          "name": "XY",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "expression_equal": true,
+        "health": 0,
+        "health_message": "",
+        "native_reference_equal": true,
+        "native_sketch_reference_equal": true,
+        "offset_cast": true,
+        "raw_reference": {
+          "assembly_context": "Laboratory_base_ENVELOPE:1",
+          "has_native_object": true,
+          "is_deletable": false,
+          "name": "XY",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "raw_reference_equal": false,
+        "raw_reference_not_equal": true,
+        "sketch_reference_equal": false,
+        "typed_reference": {
+          "assembly_context": "Laboratory_base_ENVELOPE:1",
+          "has_native_object": true,
+          "is_deletable": false,
+          "name": "XY",
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "object_type": "adsk::fusion::ConstructionPlane",
+          "origin_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "python_type": "ConstructionPlane",
+          "valid": true
+        },
+        "typed_reference_equal": false
+      }
+    }
+  ]
+}

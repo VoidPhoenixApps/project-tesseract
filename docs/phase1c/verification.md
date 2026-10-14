@@ -1,11 +1,99 @@
 # Reproduction and verification
 
+## Z-datum regression correction — 2026-10-14 (targeted runtime evidence verified)
+
+The maintainer's fresh default B,inset generation at `1678372` failed at the first
+Z datum. Two subsequent read-only diagnostic CHECK runs on that failed design
+confirmed the cause in Fusion 2705.1.30: `offset.planarEntity` is an assembly proxy,
+whereas `component.xYConstructionPlane` is native. Their raw comparisons fail;
+comparison after resolving `nativeObject` succeeds. The footprint's reference
+plane has the same proxy/native mismatch. Casting alone did not fix equality.
+The definition cast, `-68 mm` expression, -6.800000000000001 cm offset and healthy
+state all passed. Equivalent-unit formatting was **not** the observed cause.
+[Selected diagnostic evidence](evidence/z-datum-regression.json) retains report
+hashes, source hashes, timestamps and actual/expected properties. It is not a
+full report archive or proof of a corrected run.
+
+The local correction compares valid native entities for the datum reference,
+sketch reference, profile's parent sketch and cut face's body. It does not accept
+references merely because names, geometry or token strings match. Wrong native
+entities still fail. Constant length expressions can differ by equivalent units
+(mm/cm/m/in/ft), using exact rational conversion; symbolic expressions still must
+match apart from whitespace, preserving parameter dependencies. Existing numeric
+checks, tolerances, parameter domains and geometry are unchanged. Z failures
+include bounded reference, expression, value and health diagnostics.
+
+Regression tests use distinct proxy/native doubles and reject wrong reference
+entities, invalid proxies, altered definitions, expressions and offset values.
+They also cover equivalent literal units and retain frozen-driver rejection.
+All 63 repository tests and 11 Phase 1B tests passed, as did Python 3.9 syntax,
+compilation/manifest checks, Markdown structure/internal links and `git diff --check`.
+Both retained raw-report hashes were rechecked. Requirements/geometry/domain
+source files remain unchanged. These are software checks, not Fusion kernel or
+physical validation.
+
+### Verified targeted smoke results
+
+The maintainer reports fresh B,inset generation: PASS, 59 components. No separate
+generation report was supplied. Direct inspection of the following local CHECK
+reports corroborates the outcomes below. The [sanitized smoke evidence](evidence/targeted-smoke.json)
+retains original SHA-256 hashes, embedded provenance, parameters, timeline states,
+errors, selected history observations and successful B-Rep measurements.
+
+| Report ID | Observed result |
+| --- | --- |
+| `g6m024s6` | Independent baseline CHECK PASS, 59 components |
+| `hs81n16e` | Removed footprint constraint: required sketch underconstrained rejection |
+| `jkut1vep` | Constraint restored: PASS, 59 components |
+| `rdx62f8g` | Altered hole 1 X expression: required driving dimensions rejection |
+| `fo9cf9la` | Expression restored: PASS, 59 components |
+| `p62klz0r` | Suppressed mounting cut: mount-plate volume mismatch; timeline 243/244 |
+| `ynmp_nt4` | Additional retained missing-solid failure at timeline 243/244 |
+| `py9umo0p` | After unsuppressing: missing final reinforcement solid, timeline 243/244 |
+| `89146d90` | Final recovery CHECK PASS, 59 components; timeline 244/244 |
+
+The requested identifier `rdx62f8q` has no local file. The retained `rdx62f8g`
+report contains the matching altered-expression rejection; this discrepancy is
+preserved, not silently renamed. The additional `ynmp_nt4` is retained as another
+observation of the rolled-back state, not another planned mutation test.
+
+All nine reports identify Fusion 2705.1.30, Darwin/macOS 26.6.2 and the same hashed
+document ID. Their embedded checker SHA-256 is
+`2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978`,
+which exactly matches the corrected local source being published. Model SHA-256
+remains `2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18`.
+Together with the maintainer's execution confirmation, this identifies the exercised
+correction. Hashes are of files at CHECK time, not an independent attestation of
+loaded bytecode or generation history. UTC timestamps are retained verbatim;
+these runs occurred on October 13 locally (America/Chicago), October 14 UTC.
+
+The final PASS records four 5 mm cylindrical cuts centered at (230.5,70),
+(230.5,170), (330.5,70), (330.5,170) mm, with rims at Z=-32/-28 mm within existing
+tolerances. These are Fusion observations, not measured hardware dimensions.
+
+The suppressed-cut rejection occurred at the earlier **volume gate**. It proves
+rejection of that modified state, **not direct runtime execution of the
+suppression-specific guard**. That guard retains API-double test coverage.
+Likewise, the altered-expression test reached the driving-history gate, not the
+later displaced-B-Rep guard. Successful runs exercise positive bore recognition.
+
+The maintainer reports that moving the timeline to its end restored the final
+feature. Reports corroborate the transition from 243/244 and missing
+`Reinforcement_interface_2_NO_STOCK_SELECTED` to 244/244 and final PASS. This is a
+rolled-back evaluation state/recovery, not evidence of a generated geometry
+defect. CHECK did not repair or move the timeline. No validation was weakened.
+
+This completes the requested targeted live follow-up; the historical full matrix
+was not repeated or relabeled. Independent review of the changed acceptance logic
+and explicit human approval remain before merge. Keep PR #18 Draft. Construction
+and physical testing remain separately blocked by the engineering and safety
+requirements below. Current automated verification is recorded in [review](review.md).
+
 ## Independent-review corrections — 2026-10-13
 
-**Current boundary:** the completed historical matrix below verifies the earlier
-CHECK implementation. The strengthened CHECK now has software-double coverage;
-**its new acceptance behavior is not yet Fusion-runtime verified**. The matrix
-must not be relabeled as testing this revision. PR #18 remains Draft and unmerged.
+**Historical boundary at this checkpoint:** the matrix verified the earlier CHECK.
+The targeted results above now verify the corrected CHECK for their bounded scope;
+they do not retroactively change the matrix attribution. PR #18 remains Draft.
 
 ### New acceptance checks
 
@@ -14,7 +102,7 @@ CHECK retains the previous domain/one-ULP, sequence, complete component/pose,
 requires the expected named sketches, offset datum and extrusion set; explicit
 `HealthyFeatureHealthState`, valid objects, fully constrained one-profile
 sketches, four rectangle orientations, and the original driving expression
-multisets (ignoring whitespace only). It rejects suppression, lost parametric
+multisets (symbolic whitespace normalization; equivalent literal units as corrected above). It rejects suppression, lost parametric
 history, changed profile association, operation, start/extent, taper and depth.
 Datum/reference-plane and offset-expression checks preserve the common source
 reference. No geometry, bore-sketch isolation or driving expression was changed.
@@ -46,13 +134,13 @@ metadata is `unknown`; no private document title or source path is added to the
 provenance header. Local failure tracebacks still require sanitization before
 publication. Reports remain local until explicitly archived.
 
-### Minimal targeted live Fusion smoke check — pending
+### Historical targeted live Fusion smoke procedure — completed above
 
 Computer Use could inspect the existing unsaved design, but selecting Utilities
 had no effect, including after raising the window. No CAD edits, saves, exports
 or live CHECK execution were performed by the agent. Existing designs remain
-untouched. A maintainer needs only the following bounded check, **not another
-parameter matrix**:
+untouched. The following was the requested bounded procedure, **not another
+parameter matrix**; its results and coverage limits are now recorded above:
 
 1. Run the updated script to create a **separate unsaved B,inset** concept at
    defaults. Run `CHECK` and retain its report. Expect PASS with 59 components,

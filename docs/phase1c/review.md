@@ -1,5 +1,72 @@
 # Independent desk review record
 
+## Verified Z-datum correction finalization — 2026-10-14
+
+The maintainer authorized publication to existing Draft PR #18 after the targeted
+Fusion smoke tests. Direct report inspection confirms the corrected checker source
+hash and final 59-component PASS; [verification](verification.md) owns the exact
+results, filename discrepancy, original failure, timeline recovery and coverage limits.
+The proxy/native comparison failure is confirmed; equivalent literal units were
+not its cause. The existing exact-unit normalization is retained with regression
+coverage. No geometry, parameter domain, tolerance, release guard or original
+log was changed. No full Fusion matrix was repeated.
+
+Author review covered the complete intended source/test/document/evidence diff,
+identity semantics, strict symbolic drivers, unchanged numeric gates, preserved
+requirements, cross-document scope and sanitization. This is not a new independent
+review. The two earlier supplied reviews do not cover this patch. Before merge:
+independent review of the changed acceptance logic/evidence and explicit human
+approval. Keep Draft; no ready-for-review transition or merge authorized.
+
+Final checks on macOS:
+
+- Full repository suite: **63 passed (31.625 s)**, including proxy/native identity,
+  wrong-reference rejection, exact literal units and Z diagnostic regressions.
+- Phase 1B analytical suite: **11 passed (0.010 s)**; **74 tests total**.
+- Static Fusion smoke checker, changed/new Python compilation and Python 3.9
+  syntax, all 41 Markdown files' local file links/fence balance, complete diff
+  and working/staged whitespace checks passed.
+- Sanitized smoke extraction reproduced from nine untouched original reports;
+  all nine embedded source hashes matched current checker/model files. Both
+  pre-correction diagnostic report hashes matched. Selected JSON excludes private
+  traceback paths. Initial ad hoc reproduction comparison incorrectly compared
+  Python tuples with JSON arrays; JSON-normalized comparison passed without any
+  evidence change.
+- GitHub CI is checked after push and recorded on PR #18. No new Fusion execution
+  by the agent, Windows runtime, export, hardware, thermal/load or full-interference
+  test was performed. Those are outside this bounded finalization; suppression-
+  specific runtime guard coverage remains unproven because volume rejected first.
+
+Changed-file inventory for this correction:
+
+| File | Reason |
+| --- | --- |
+| `cad/fusion/TesseractDockingFixture/TesseractDockingFixture.py` | Existing verified native-entity comparison, exact literal normalization and bounded Z diagnostics |
+| `tests/test_phase1c_diagnostics.py` | Existing proxy/native, unit and incorrect-datum regression coverage |
+| `cad/fusion/TesseractDockingFixture/README.md` | Current smoke status and suppression coverage limit |
+| `docs/phase1c/README.md` | Current evidence status and next review gate |
+| `docs/phase1c/verification.md` | Confirmed failure/correction, smoke outcomes, source identity and timeline recovery |
+| `docs/phase1c/review.md` | This finalization, verification and merge/construction boundaries |
+| `docs/phase1c/evidence/README.md` | Evidence navigation, sanitization and reproduction instructions |
+| `docs/phase1c/evidence/z-datum-regression.json` | Selected original failing diagnostic observations and hashes |
+| `docs/phase1c/evidence/targeted-smoke.json` | Nine sanitized smoke observations with provenance and original hashes |
+| `docs/phase1c/evidence/preserve_smoke_reports.py` | Reproducible fixed-ID extraction, without modifying originals |
+
+Construction/physical testing still requires resolved B capture/centering and
+positive retention, stiffness/load and real-contact development, actual guide/
+fastener/tool-access packaging, reviewed hazard assessment, safe procedures,
+acceptance limits, measurement uncertainty, abort criteria and supervision.
+Windows, exports and a non-proprietary CAD reproduction backend remain unverified;
+no final architecture, toolchain, stock or license is selected.
+
+Current GitHub instructions were retrieved; shared workflow/engineering/knowledge/
+secrets/review/model policies matched the local project-knowledge copies. No
+Tesseract CURRENT_STATE exists in its current tree. AgentMemory returned unrelated
+continuity, so repository sources governed. No supporting-repository changes were
+made. A separately authorized post-merge knowledge update may link this evidence
+and its limitations; no cross-project decision or duplicate record is needed now.
+Original logs, designs, `.vscode`, main checkout and unrelated worktrees are preserved.
+
 ## Two independent reviews and focused corrections — 2026-10-13
 
 Reviewed starting source: `c8dcc50d58cc9718823994c1ebbce8b60a400ba7`, Draft

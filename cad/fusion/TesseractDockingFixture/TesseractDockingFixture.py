@@ -1,6 +1,7 @@
 """Generate/check a cold Phase 1C concept inside Fusion. No save/export or motion."""
 
 from datetime import datetime, timezone
+from fractions import Fraction
 import hashlib
 import json
 import platform
@@ -318,12 +319,69 @@ def normalized_expression(text):
     return re.sub(r"\s+", "", text)
 
 
+def expression_key(text):
+    """Keep symbolic drivers strict; compare unit-qualified literals exactly in mm."""
+    text = normalized_expression(text)
+    literal = re.fullmatch(r"([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)(mm|cm|m|in|ft)", text)
+    if literal:
+        scales = {"mm": Fraction(1), "cm": Fraction(10), "m": Fraction(1000),
+                  "in": Fraction(127, 5), "ft": Fraction(1524, 5)}
+        return ("literal_mm", Fraction(literal[1])*scales[literal[2]])
+    return ("expression", text)
+
+
+def same_native_entity(actual, expected):
+    """Compare Fusion entities in the same native context, never by name/geometry/token."""
+    if actual is None or expected is None or not actual.isValid or not expected.isValid:
+        return False
+    actual = actual.nativeObject or actual
+    expected = expected.nativeObject or expected
+    return actual.isValid and expected.isValid and actual == expected
+
+
 def check_dimensions(sketch, formulas):
     dims = list(sketch.sketchDimensions)
     if (len(dims) != len(formulas) or any(not d.isDriving for d in dims)
-            or sorted(normalized_expression(d.parameter.expression) for d in dims)
-            != sorted(normalized_expression(expression(f)) for f in formulas)):
+            or sorted(expression_key(d.parameter.expression) for d in dims)
+            != sorted(expression_key(expression(f)) for f in formulas)):
         raise ValueError("Required driving dimensions altered: " + sketch.name)
+
+
+def datum_diagnostics(component, datum, part, values):
+    """Bounded read-only evidence for the three original Z-datum predicates."""
+    offset = adsk.fusion.ConstructionPlaneOffsetDefinition.cast(datum.definition)
+    expected = component.xYConstructionPlane
+    actual = offset.planarEntity if offset else None
+    typed = adsk.fusion.ConstructionPlane.cast(actual) if actual else None
+    def describe(entity):
+        return {"python_type": type(entity).__name__,
+                "object_type": diagnostic_read(lambda: entity.objectType),
+                "valid": diagnostic_read(lambda: entity.isValid),
+                "name": diagnostic_read(lambda: entity.name),
+                "is_deletable": diagnostic_read(lambda: entity.isDeletable),
+                "component_id": diagnostic_read(lambda: entity.component.id),
+                "assembly_context": diagnostic_read(lambda: entity.assemblyContext.fullPathName if entity.assemblyContext else None),
+                "has_native_object": diagnostic_read(lambda: entity.nativeObject is not None),
+                "origin_cm": diagnostic_read(lambda: entity.geometry.origin.asArray()),
+                "normal": diagnostic_read(lambda: entity.geometry.normal.asArray())}
+    return {"definition_type": diagnostic_read(lambda: datum.definition.objectType),
+            "offset_cast": bool(offset), "raw_reference": describe(actual),
+            "typed_reference": describe(typed), "expected_reference": describe(expected),
+            "raw_reference_equal": diagnostic_read(lambda: actual == expected),
+            "raw_reference_not_equal": diagnostic_read(lambda: actual != expected),
+            "typed_reference_equal": diagnostic_read(lambda: typed == expected),
+            "native_reference_equal": diagnostic_read(lambda: (actual.nativeObject or actual) == (expected.nativeObject or expected)),
+            "sketch_reference_equal": diagnostic_read(lambda: component.sketches.item(0).referencePlane == datum),
+            "native_sketch_reference_equal": diagnostic_read(lambda: (component.sketches.item(0).referencePlane.nativeObject or component.sketches.item(0).referencePlane) == (datum.nativeObject or datum)),
+            "actual_expression": diagnostic_read(lambda: offset.offset.expression),
+            "expected_expression": expression(part.xyz[2]),
+            "raw_expression_equal": diagnostic_read(lambda: normalized_expression(offset.offset.expression)
+                                                  == normalized_expression(expression(part.xyz[2]))),
+            "equivalent_expression": diagnostic_read(lambda: expression_key(offset.offset.expression) == expression_key(expression(part.xyz[2]))),
+            "actual_offset_cm": diagnostic_read(lambda: offset.offset.value),
+            "expected_offset_cm": model.evaluate(part.xyz[2], values)/10,
+            "datum": describe(datum), "health": diagnostic_read(lambda: datum.healthState),
+            "health_message": diagnostic_read(lambda: datum.errorOrWarningMessage)}
 
 
 def check_history(component, part, values):
@@ -334,17 +392,22 @@ def check_history(component, part, values):
     planes = named_items(component.constructionPlanes, [part.name+"_Z_datum"], part.name+" datum")
     datum = planes[part.name+"_Z_datum"]
     offset = adsk.fusion.ConstructionPlaneOffsetDefinition.cast(datum.definition)
-    if (not offset or offset.planarEntity != component.xYConstructionPlane
-            or normalized_expression(offset.offset.expression) != normalized_expression(expression(part.xyz[2]))):
-        raise ValueError("Required Z datum altered: " + part.name)
-    require_close(offset.offset.value*10, model.evaluate(part.xyz[2], values), part.name+" Z datum")
+    if (not offset or not same_native_entity(offset.planarEntity, component.xYConstructionPlane)
+            or expression_key(offset.offset.expression) != expression_key(expression(part.xyz[2]))):
+        raise ValueError("Required Z datum altered: " + part.name + "\nZ datum diagnostics: "
+                         + json.dumps(datum_diagnostics(component, datum, part, values), sort_keys=True))
+    try:
+        require_close(offset.offset.value*10, model.evaluate(part.xyz[2], values), part.name+" Z datum")
+    except ValueError as exc:
+        raise ValueError(str(exc)+"\nZ datum diagnostics: "
+                         + json.dumps(datum_diagnostics(component, datum, part, values), sort_keys=True)) from exc
     feature_names = [part.name+"_thickness"] + [f"Common_mount_bore_{i}" for i in range(1, len(part.bores)+1)]
     features = named_items(component.features.extrudeFeatures, feature_names, part.name+" extrusions")
     if component.features.count != len(feature_names):
         raise ValueError("Unexpected modeling features: " + part.name)
     for sketch in sketches.values():
         if (not sketch.isFullyConstrained or sketch.profiles.count != 1
-                or sketch.referencePlane != datum):
+                or not same_native_entity(sketch.referencePlane, datum)):
             raise ValueError("Required sketch underconstrained or profile altered: " + sketch.name)
     footprint = sketches[footprint_name]
     lo, _ = part.bounds(values)
@@ -367,8 +430,8 @@ def check_history(component, part, values):
         if (not feature.isParametric or feature.isSuppressed or not feature.isSolid
                 or feature.operation != operation or feature.hasTwoExtents or feature.isThinExtrude
                 or not adsk.fusion.ProfilePlaneStartDefinition.cast(feature.startExtent)
-                or not extent or not profile or profile.parentSketch != sketches[sketch_name]
-                or normalized_expression(extent.distance.expression) != normalized_expression(expression(part.size[2]))):
+                or not extent or not profile or not same_native_entity(profile.parentSketch, sketches[sketch_name])
+                or expression_key(extent.distance.expression) != expression_key(expression(part.size[2]))):
             raise ValueError("Required extrusion altered: " + name)
         require_close(extent.distance.value*10, model.evaluate(part.size[2], values), name+" depth")
         require_close(feature.taperAngleOne.value, 0, name+" taper", 1e-9)
@@ -400,7 +463,7 @@ def check_bores(component, part, values, sketches, features):
         if sides.count != 1:
             raise ValueError("Bore cut must have one cylindrical side face: " + label)
         face = sides.item(0)
-        if face.body != body or face.tempId not in cylinders or face.tempId in seen or not face.isValid:
+        if not same_native_entity(face.body, body) or face.tempId not in cylinders or face.tempId in seen or not face.isValid:
             raise ValueError("Bore cut does not identify a distinct final plate face: " + label)
         seen.add(face.tempId)
         cylinder = adsk.core.Cylinder.cast(face.geometry)

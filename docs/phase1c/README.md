@@ -13,8 +13,9 @@ See verification for report-inspected versus maintainer-observed evidence. Full
 parameter combinations, exports, independent Windows execution, physical docking,
 thermal/load validation and full collision certification remain unverified.
 No engineering gate or physical test is approved. The subsequent independent-review
-cleanup strengthens CHECK history and bore acceptance; a targeted live smoke
-check of that new logic is still pending. Historical runtime observations are
+cleanup strengthens CHECK history and bore acceptance. The corrected checker
+has passed the bounded maintainer-run smoke follow-up with retained rejection/
+restoration evidence and final 59-component PASS. Historical runtime observations are
 now retained in the [evidence bundle](evidence/README.md).
 
 The [generator](../../cad/fusion/TesseractDockingFixture/TesseractDockingFixture.py)
@@ -78,9 +79,9 @@ no licensing decision. No software, parts or services were installed or bought.
 
 ## Next experiments, in order
 
-1. Complete only the targeted smoke check of the strengthened CHECK in
-   [verification](verification.md). The earlier four-variant parameter matrix is
-   complete; do not repeat it merely for this acceptance-logic correction.
+1. Independently review the corrected acceptance logic and the completed targeted
+   [smoke evidence](verification.md), then obtain explicit human merge approval.
+   Keep PR #18 Draft; do not repeat the completed parameter matrix.
 2. Desk-design B capture, centering, retention and preload sequencing, including
    finite yaw near the seam, real contact curvature and an interference/force
    model. Draw adjustments, fasteners and tool access from actual component data.

@@ -124,3 +124,24 @@ All IDs expand to `tesseract-phase1c-check-ID.txt`. Outcomes are historical.
 | `xhotdiee` | FAIL | 0 | `4181dc24a84833c0102c9ff258147e945f8e259abc75a025d9e01c4f108eaf47` |
 | `xs753e5c` | PASS | 59 | `76ca02fa299a61022288cc37881c580f05c1b33b76ae60b4bb85579f9367b616` |
 | `xzxem_9s` | PASS | 59 | `5d3b23ee2b47b3d607f6f1ac5e425058157ddff138d053cb437e6462719c6730` |
+
+## Z-datum correction and targeted smoke follow-up
+
+[z-datum-regression.json](z-datum-regression.json) retains selected diagnostic
+properties from two failing pre-correction CHECKs, including their original hashes.
+[targeted-smoke.json](targeted-smoke.json) retains nine later report observations:
+four passes, three intended mutation rejections and two rolled-back missing-solid
+failures. See [verification](../verification.md) for attribution and coverage limits,
+including the supplied `rdx62f8q` versus actual `rdx62f8g` discrepancy.
+
+Reproduce the latter without modifying originals:
+
+```sh
+python3 -B docs/phase1c/evidence/preserve_smoke_reports.py /tmp /tmp/phase1c-smoke-reproduced.json
+```
+
+The extractor selects fixed IDs, provenance, parameters, errors, timeline states,
+bore measurements and relevant constraint/feature observations. It omits private
+traceback paths and full raw diagnostics. Original report hashes permit local
+comparison; neither bundle is a complete raw-report archive. Hashed document IDs
+and source-file hashes have the provenance limits stated in verification.

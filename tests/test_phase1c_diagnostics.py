@@ -1,6 +1,7 @@
 """Checker diagnostics with API-shaped doubles; no Fusion kernel simulation."""
 
 from datetime import datetime, timezone
+from fractions import Fraction
 import hashlib
 import json
 import platform
@@ -33,6 +34,30 @@ class Collection(list):
         return self[index]
 
 
+class Entity(NS):
+    """Native entity identity is not structural equality of its properties."""
+    def __eq__(self, other):
+        return self is other
+
+    def __ne__(self, other):
+        return not self == other
+
+
+class AssemblyProxy:
+    """Separate wrapper/assembly identity, with Fusion's nativeObject association."""
+    def __init__(self, native):
+        self.nativeObject = native
+
+    def __getattr__(self, name):
+        return getattr(self.nativeObject, name)
+
+    def __eq__(self, other):
+        return self is other
+
+    def __ne__(self, other):
+        return not self == other
+
+
 def box(bounds):
     points = [NS(**dict(zip("xyz", (v/10 for v in point)))) for point in bounds]
     return NS(minPoint=points[0], maxPoint=points[1])
@@ -42,7 +67,7 @@ class DiagnosticChecks(unittest.TestCase):
     def setUp(self):
         tree = ast.parse((FOLDER / "TesseractDockingFixture.py").read_text())
         self.identity = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
-        self.scope = dict(model=model, math=math, re=re, sys=sys, tempfile=tempfile, traceback=traceback,
+        self.scope = dict(Fraction=Fraction, model=model, math=math, re=re, sys=sys, tempfile=tempfile, traceback=traceback,
                           Path=Path, datetime=datetime, timezone=timezone, hashlib=hashlib, json=json, platform=platform, uuid=uuid, __file__=str(FOLDER / "TesseractDockingFixture.py"), PREFIX="t1c_", GROUP="TesseractPhase1C")
         self.scope["adsk"] = NS(core=NS(Matrix3D=NS(
             create=lambda: NS(asArray=lambda: list(self.identity)))))
@@ -55,7 +80,7 @@ class DiagnosticChecks(unittest.TestCase):
             VerticalConstraint=NS(classType=lambda: "adsk::fusion::VerticalConstraint"),
             FeatureOperations=NS(NewBodyFeatureOperation="new", CutFeatureOperation="cut"),
             DistanceExtentDefinition=cast("distance"), Profile=cast("profile"),
-            ConstructionPlaneOffsetDefinition=cast("offset"), ProfilePlaneStartDefinition=cast("start"))
+            ConstructionPlane=cast("plane"), ConstructionPlaneOffsetDefinition=cast("offset"), ProfilePlaneStartDefinition=cast("start"))
         functions = ast.Module(body=[n for n in tree.body if isinstance(n, ast.FunctionDef)],
                                type_ignores=[])
         exec(compile(functions, "diagnostic_contract", "exec"), self.scope)
@@ -71,8 +96,8 @@ class DiagnosticChecks(unittest.TestCase):
             volume = math.prod(b-a for a, b in zip(lo, hi))
             volume -= sum(math.pi*(model.evaluate(d, values)/2)**2 *
                           model.evaluate(part.size[2], values) for _, _, d in part.bores)
-            body = NS(boundingBox=box((lo, hi)), preciseBoundingBox=box((lo, hi)),
-                      volume=volume/1000, isSolid=True)
+            body = Entity(boundingBox=box((lo, hi)), preciseBoundingBox=box((lo, hi)),
+                      volume=volume/1000, isSolid=True, isValid=True, nativeObject=None)
             body.createForAssemblyContext = Mock(return_value=NS(
                 boundingBox=box((lo, hi)), preciseBoundingBox=box((lo, hi))))
             component = NS(attributes=NS(itemByName=lambda group, key, n=part.name: NS(value=n)),
@@ -99,7 +124,7 @@ class DiagnosticChecks(unittest.TestCase):
                 dim.entityOne, dim.entityTwo, dim.orientation = first, second, orientation
             lines = Collection([NS(startSketchPoint=corners[i], endSketchPoint=corners[(i+1)%4])
                                 for i in range(4)])
-            footprint = NS(name=part.name+"_footprint", healthState=0, isValid=True,
+            footprint = Entity(nativeObject=None, name=part.name+"_footprint", healthState=0, isValid=True,
                 errorOrWarningMessage="", isFullyConstrained=True, sketchDimensions=dims,
                 profiles=Collection([NS()]),
                 geometricConstraints=Collection([NS(objectType="adsk::fusion::"+axis+"Constraint")
@@ -107,8 +132,8 @@ class DiagnosticChecks(unittest.TestCase):
                 sketchCurves=NS(sketchLines=lines, sketchCircles=Collection()),
                 sketchToModelSpace=lambda p, z=lo[2]/10: NS(x=p.x, y=p.y, z=p.z+z))
             component.sketches.append(footprint)
-            component.constructionPlanes = Collection([NS(name=part.name+"_Z_datum", healthState=0, isValid=True)])
-            component.xYConstructionPlane = NS(name="XY")
+            component.constructionPlanes = Collection([Entity(kind="plane", nativeObject=None, name=part.name+"_Z_datum", healthState=0, isValid=True)])
+            component.xYConstructionPlane = Entity(kind="plane", nativeObject=None, isValid=True, name="XY")
             component.constructionPlanes[0].definition = NS(kind="offset", planarEntity=component.xYConstructionPlane,
                 offset=NS(expression=expr(part.xyz[2]), value=lo[2]/10))
             footprint.referencePlane = component.constructionPlanes[0]
@@ -126,7 +151,7 @@ class DiagnosticChecks(unittest.TestCase):
             for index, (bx, by, bd) in enumerate(part.bores, 1):
                 x, y, diameter = (model.evaluate(e, values)/10 for e in (bx, by, bd))
                 circle = NS(centerSketchPoint=NS(geometry=NS(x=x, y=y, z=0)), radius=diameter/2)
-                sketch = NS(name=f"Common_mount_hole_{index}_NOT_fastener_selection", healthState=0,
+                sketch = Entity(nativeObject=None, name=f"Common_mount_hole_{index}_NOT_fastener_selection", healthState=0,
                             isValid=True, isFullyConstrained=True, profiles=Collection([NS()]),
                             errorOrWarningMessage="", geometricConstraints=Collection(),
                             sketchCurves=NS(sketchCircles=Collection([circle]), sketchLines=Collection()),
@@ -332,6 +357,73 @@ class DiagnosticChecks(unittest.TestCase):
                 if change == "orientation": self.carrier.component.sketches[0].geometricConstraints.pop()
                 with self.assertRaises(ValueError): self.scope["check_design"](design)
 
+    def test_fresh_generated_datum_and_associations_accept_assembly_proxies(self):
+        design = self.design(160)
+        for occurrence in design.rootComponent.occurrences:
+            c = occurrence.component
+            datum = c.constructionPlanes[0]
+            datum.definition.planarEntity = AssemblyProxy(c.xYConstructionPlane)
+            self.assertNotEqual(datum.definition.planarEntity, c.xYConstructionPlane)
+            for sketch in c.sketches:
+                sketch.referencePlane = AssemblyProxy(datum)
+            for feature in c.features.extrudeFeatures:
+                feature.profile.parentSketch = AssemblyProxy(feature.profile.parentSketch)
+            for face in c.bRepBodies[0].faces:
+                face.body = AssemblyProxy(c.bRepBodies[0])
+        self.assertIn("Checked 59", self.scope["check_design"](design))
+
+    def test_wrong_native_reference_rejected_even_when_proxy_geometry_matches(self):
+        for target in ("XY", "coplanar replacement", "other component XY", "profile", "body", "invalid proxy"):
+            with self.subTest(target=target):
+                design = self.design(160)
+                c = self.mount
+                wrong = Entity(kind="plane", name="XY", isValid=True, nativeObject=None)
+                proxy = AssemblyProxy(wrong)
+                if target in ("XY", "other component XY"):
+                    c.constructionPlanes[0].definition.planarEntity = proxy
+                elif target == "coplanar replacement":
+                    # Identical visible attributes do not establish entity identity.
+                    wrong.name = c.constructionPlanes[0].name
+                    wrong.distinct_entity = True
+                    c.sketches[0].referencePlane = proxy
+                elif target == "profile":
+                    c.features.extrudeFeatures[0].profile.parentSketch = proxy
+                elif target == "body":
+                    c.bRepBodies[0].faces[0].body = proxy
+                else:
+                    proxy = AssemblyProxy(c.xYConstructionPlane)
+                    proxy.isValid = False
+                    c.constructionPlanes[0].definition.planarEntity = proxy
+                with self.assertRaises(ValueError):
+                    self.scope["check_design"](design)
+
+    def test_equivalent_literal_units_accepted_without_freezing_symbolic_drivers(self):
+        design = self.design(160)
+        base = design.rootComponent.occurrences[0].component
+        base.constructionPlanes[0].definition.offset.expression = "-6.8 cm"
+        base.features.extrudeFeatures[0].extentOne.distance.expression = "0.008 m"
+        self.assertIn("Checked 59", self.scope["check_design"](design))
+        self.scope["check_dimensions"](NS(name="literal test", sketchDimensions=[
+            NS(isDriving=True, parameter=NS(expression="0.5 cm"))]), ("5 mm",))
+        key = self.scope["expression_key"]
+        self.assertEqual(key("25.4 mm"), key("1 in"))
+        self.assertEqual(key("304.8 mm"), key("1 ft"))
+        self.assertEqual(key("-68 mm"), key("-6.8e-2 m"))
+        self.assertNotEqual(key("t1c_mount_bore"), key("5 mm"))
+        self.assertNotEqual(key("-68 mm"), key("-6.80000001 cm"))
+
+    def test_offset_changes_rejected_with_bounded_diagnostics(self):
+        for change in ("definition", "expression", "value", "nan"):
+            with self.subTest(change=change):
+                design = self.design(160)
+                datum = design.rootComponent.occurrences[0].component.constructionPlanes[0]
+                if change == "definition": datum.definition.kind = "angle"
+                if change == "expression": datum.definition.offset.expression = "-6.7 cm"
+                if change == "value": datum.definition.offset.value += 0.001
+                if change == "nan": datum.definition.offset.value = math.nan
+                with self.assertRaisesRegex(ValueError, "Z datum diagnostics"):
+                    self.scope["check_design"](design)
+
     def test_extrusion_changes_rejected(self):
         for change in ("operation", "depth", "profile", "taper", "nonparametric", "extent", "thin", "two sides", "start", "datum", "sketch plane"):
             with self.subTest(change=change):
@@ -347,7 +439,7 @@ class DiagnosticChecks(unittest.TestCase):
                 if change == "two sides": cut.hasTwoExtents = True
                 if change == "start": cut.startExtent.kind = "offset start"
                 if change == "datum": self.mount.constructionPlanes[0].definition.offset.expression = "-31 mm"
-                if change == "sketch plane": self.mount.sketches[1].referencePlane = NS(name="other")
+                if change == "sketch plane": self.mount.sketches[1].referencePlane = NS(name="other", nativeObject=None, isValid=True)
                 with self.assertRaises(ValueError): self.scope["check_design"](design)
 
     def test_brep_holes_checked_independently_of_volume_bounds_and_sketches(self):
@@ -366,7 +458,7 @@ class DiagnosticChecks(unittest.TestCase):
                 if change == "missing rim": face.edges.pop()
                 if change == "missing face": body.faces.pop()
                 if change == "duplicate": self.mount.features.extrudeFeatures[2].sideFaces = Collection([face])
-                if change == "wrong body": face.body = NS()
+                if change == "wrong body": face.body = NS(name="wrong", nativeObject=None, isValid=True)
                 with self.assertRaises(ValueError): self.scope["check_design"](design)
                 self.assertEqual((body.volume, body.boundingBox), before)
 

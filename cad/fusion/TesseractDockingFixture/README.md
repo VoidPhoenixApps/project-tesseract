@@ -27,6 +27,9 @@ the agent can read them directly without transcription. No automatic save occurs
 
 The independent-review correction adds strict feature/constraint and actual bore
 cut inspection. The historical matrix did not exercise this new acceptance logic;
-its targeted live smoke check remains pending. Reports now include source hashes,
+the corrected checker now has retained targeted macOS smoke evidence, ending in
+59-component PASS. Suppression was rejected by volume, so the suppression-specific
+guard is not independently runtime-proven. See the linked verification record.
+Reports now include source hashes,
 run/time/version metadata and a hashed document creation ID when available.
 Historical observations are archived in the linked Phase 1C evidence bundle.
