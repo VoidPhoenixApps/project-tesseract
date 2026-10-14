@@ -1,0 +1,1274 @@
+{
+  "attribution": "Maintainer-run Fusion; agent inspected retained reports, no live rerun",
+  "identifier_discrepancy": "User supplied rdx62f8q is unavailable; actual rdx62f8g records the matching altered mounting-hole expression rejection.",
+  "limits": "Selected observations, not full raw reports. Source hashes identify files at CHECK time, not loaded bytecode or original generation. Hashed document IDs do not independently prove sequence continuity.",
+  "reports": {
+    "89146d90": {
+      "errors": [],
+      "original_bytes": 238659,
+      "original_sha256": "c84cdaf85d8149e9289b563366888fdd95dbcbff2a1cf5b4fa4dfeda26fe3bb7",
+      "outcome": "PASS",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "612dbe70-0d27-49a8-8d2d-1165c3b58340",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:45:34.583208+00:00"
+      },
+      "selected_observations": [
+        "Checked 59 named solids/reservations against parameters.",
+        "Mounting B-Rep measurements: [{\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_1\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_2\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_3\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_4\", \"rim_z_mm\": [-32.0, -28.000000000000004]}]",
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)",
+        "Reinforcement_interface_2_NO_STOCK_SELECTED_thickness health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(244, 244)"
+      ]
+    },
+    "fo9cf9la": {
+      "errors": [],
+      "original_bytes": 238659,
+      "original_sha256": "4a5465a6ceb565bfc18adf8f53f6e54b0bfd69c98bee0aa5962cf3ed856b8d3c",
+      "outcome": "PASS",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "29bc7214-6c32-42f5-9609-9aad84cd226c",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:35:43.740896+00:00"
+      },
+      "selected_observations": [
+        "Checked 59 named solids/reservations against parameters.",
+        "Mounting B-Rep measurements: [{\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_1\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_2\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_3\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_4\", \"rim_z_mm\": [-32.0, -28.000000000000004]}]",
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)",
+        "Reinforcement_interface_2_NO_STOCK_SELECTED_thickness health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(244, 244)"
+      ]
+    },
+    "g6m024s6": {
+      "errors": [],
+      "original_bytes": 238659,
+      "original_sha256": "cc7ace7b702ea10ff097078b6f3e799703762ba7a2e882f9ebc6243c01817403",
+      "outcome": "PASS",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "524846e8-80aa-4bbc-8730-073bfb7ffc04",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:26:18.875417+00:00"
+      },
+      "selected_observations": [
+        "Checked 59 named solids/reservations against parameters.",
+        "Mounting B-Rep measurements: [{\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_1\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_2\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_3\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_4\", \"rim_z_mm\": [-32.0, -28.000000000000004]}]",
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)",
+        "Reinforcement_interface_2_NO_STOCK_SELECTED_thickness health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(244, 244)"
+      ]
+    },
+    "hs81n16e": {
+      "errors": [
+        "ValueError: Required sketch underconstrained or profile altered: Fixed_cold_carrier_footprint"
+      ],
+      "original_bytes": 234810,
+      "original_sha256": "c9fd3be56d4f9cccd51bca2e1ef52ef1ff6ba1471e33d9c6552e07efacb830b4",
+      "outcome": "FAIL",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "fc812398-4883-4fde-be57-2ecb4c6efad9",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:29:27.364490+00:00"
+      },
+      "selected_observations": [
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', False)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)",
+        "Reinforcement_interface_2_NO_STOCK_SELECTED_thickness health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(244, 244)"
+      ]
+    },
+    "jkut1vep": {
+      "errors": [],
+      "original_bytes": 238659,
+      "original_sha256": "c98f44f11111ea31db947a3ab96394bdf7a0609c1dfb8b6852e733a59eb3cae1",
+      "outcome": "PASS",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "7f89ce7d-3f9f-4b13-a009-c188995c7600",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:30:54.764682+00:00"
+      },
+      "selected_observations": [
+        "Checked 59 named solids/reservations against parameters.",
+        "Mounting B-Rep measurements: [{\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_1\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [230.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_2\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 70.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_3\", \"rim_z_mm\": [-32.0, -28.000000000000004]}, {\"area_mm2\": 62.83185307179584, \"center_xy_mm\": [330.5, 170.0], \"diameter_mm\": 5.0, \"feature\": \"Common_mount_bore_4\", \"rim_z_mm\": [-32.0, -28.000000000000004]}]",
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)",
+        "Reinforcement_interface_2_NO_STOCK_SELECTED_thickness health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(244, 244)"
+      ]
+    },
+    "p62klz0r": {
+      "errors": [
+        "ValueError: Body volume disagrees with primitive/bores: Common_cartridge_mount_plate"
+      ],
+      "original_bytes": 230899,
+      "original_sha256": "a9e6c73e3391b2b617307945ed6ef40fb399cd9ae3d8b310af8df0a6ccae2443",
+      "outcome": "FAIL",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "070aa5ba-fcee-4251-816f-8356f24fbcaa",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:39:09.049222+00:00"
+      },
+      "selected_observations": [
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(3, '', True)"
+      ],
+      "timeline_marker_count": [
+        "(243, 244)"
+      ]
+    },
+    "py9umo0p": {
+      "errors": [
+        "ValueError: Expected one solid: Reinforcement_interface_2_NO_STOCK_SELECTED"
+      ],
+      "original_bytes": 230867,
+      "original_sha256": "223752ce1385b93ab08ab5004ff50a4006a308aec74f62a23a9f399b21aa62c4",
+      "outcome": "FAIL",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "0ccc0567-d22c-4d79-8ec1-c89a723cde4a",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:41:25.372807+00:00"
+      },
+      "selected_observations": [
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(243, 244)"
+      ]
+    },
+    "rdx62f8g": {
+      "errors": [
+        "ValueError: Required driving dimensions altered: Common_mount_hole_1_NOT_fastener_selection"
+      ],
+      "original_bytes": 235175,
+      "original_sha256": "cb94cd88d4530489312efa6abc0be9652546e9f7ade2a78649bb6a9fd19dbf89",
+      "outcome": "FAIL",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "b25bd4f7-90af-48f8-9b30-ac7485d979b7",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:34:04.853627+00:00"
+      },
+      "selected_observations": [
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2 + 1 mm', 23.150000000000002, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)",
+        "Reinforcement_interface_2_NO_STOCK_SELECTED_thickness health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(244, 244)"
+      ]
+    },
+    "ynmp_nt4": {
+      "errors": [
+        "ValueError: Expected one solid: Reinforcement_interface_2_NO_STOCK_SELECTED"
+      ],
+      "original_bytes": 230867,
+      "original_sha256": "321f6f8482c3ee13ff90f088f2cfab504c06c2c3e161ad4973477e29fdeb3a13",
+      "outcome": "FAIL",
+      "parameters": {
+        "anchor_inset": [
+          "16 mm",
+          1.6
+        ],
+        "base_length": [
+          "t1c_dock_x + t1c_carrier / 2 + t1c_stroke + 30 mm",
+          43.05
+        ],
+        "base_width": [
+          "240 mm",
+          24.0
+        ],
+        "bed": [
+          "180 mm",
+          18.0
+        ],
+        "bottom": [
+          "t1c_center_y - t1c_carrier / 2",
+          4.0
+        ],
+        "carrier": [
+          "160 mm",
+          16.0
+        ],
+        "cartridge_side": [
+          "t1c_carrier + 12 mm",
+          17.2
+        ],
+        "center_y": [
+          "120 mm",
+          12.0
+        ],
+        "dock_x": [
+          "t1c_fixed_x + t1c_bed + t1c_gap",
+          28.05
+        ],
+        "fixed_x": [
+          "100 mm",
+          10.0
+        ],
+        "float_xy": [
+          "0.5 mm",
+          0.05
+        ],
+        "float_yaw_deg": [
+          "0.2",
+          0.2
+        ],
+        "gap": [
+          "0.5 mm",
+          0.05
+        ],
+        "guard_gap": [
+          "1.5 mm",
+          0.15000000000000002
+        ],
+        "left": [
+          "t1c_dock_x - t1c_carrier / 2",
+          20.05
+        ],
+        "mount_bore": [
+          "5 mm",
+          0.5
+        ],
+        "mount_pitch": [
+          "100 mm",
+          10.0
+        ],
+        "moving_x": [
+          "t1c_dock_x + t1c_travel_x",
+          28.05
+        ],
+        "moving_y": [
+          "t1c_center_y + t1c_travel_y",
+          12.0
+        ],
+        "pad_baseline": [
+          "120 mm",
+          12.0
+        ],
+        "print_xy": [
+          "200 mm",
+          20.0
+        ],
+        "print_z": [
+          "180 mm",
+          18.0
+        ],
+        "release_y": [
+          "8 mm",
+          0.8
+        ],
+        "stroke": [
+          "40 mm",
+          4.0
+        ],
+        "support_span": [
+          "100 mm",
+          10.0
+        ],
+        "travel_x": [
+          "0 mm",
+          0.0
+        ],
+        "travel_y": [
+          "0 mm",
+          0.0
+        ]
+      },
+      "provenance": {
+        "document_creation_id_sha256": "735838243d4fc39cdb0b3b4e660af916d868722db8ff29cd8f48d934988d57a9",
+        "fusion_version": "2705.1.30",
+        "os": "Darwin",
+        "os_version": "26.6.2",
+        "run_id": "2f180bb7-342b-49af-9e56-fe1ff281187e",
+        "schema": 1,
+        "source_sha256": {
+          "TesseractDockingFixture.py": "2026809d2dc76e8e949981e92cb1f39c7889fa6de7085abc916d4b8eade6a978",
+          "fixture_model.py": "2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18"
+        },
+        "utc": "2026-10-14T05:40:34.904200+00:00"
+      },
+      "selected_observations": [
+        "Fixed_cold_carrier_footprint health/message/fullyConstrained=(0, '', True)",
+        "Fixed_cold_carrier_footprint constraint types=['adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint', 'adsk::fusion::HorizontalConstraint', 'adsk::fusion::VerticalConstraint']",
+        "Common_mount_hole_1_NOT_fastener_selection dimensions (type, expression, internal value, driving)=[('adsk::fusion::SketchLinearDimension', 't1c_moving_x - t1c_mount_pitch / 2', 23.05, True), ('adsk::fusion::SketchLinearDimension', 't1c_moving_y - t1c_mount_pitch / 2', 7.0, True), ('adsk::fusion::SketchDiameterDimension', 't1c_mount_bore', 0.5, True)]",
+        "Common_mount_bore_1 health/message/suppressed=(0, '', False)"
+      ],
+      "timeline_marker_count": [
+        "(243, 244)"
+      ]
+    }
+  },
+  "schema": 1
+}

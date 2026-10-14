@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "id": "1d4c75b0-4e3e-4664-87d2-a928602d53cd",
+  "author": "Project Tesseract contributors",
+  "description": {"": "Phase 1C cold two-bed A/B docking concept; unvalidated, not fabrication-ready. Creates a new unsaved design or CHECKs its geometry."},
+  "version": "0.1.0",
+  "runOnStartup": false,
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}
