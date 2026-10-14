@@ -96,7 +96,8 @@ Both variants are intended to provide the **same core print capabilities**; no e
 
 **Approved mandatory requirement (2026-10-14):** Both the printable/reinforced-frame edition and the future 2020-extrusion edition must support enclosed and open-air printing configurations, including the separate imperial and metric reinforced-frame variants.
 
-- Support enclosure panels that can be installed and removed easily without dismantling the primary frame, motion system, electronics, or heated-bed mechanisms.
+- Enclosure panel installation and removal must be **tool-free**: users must be able to switch between open-air and enclosed configurations entirely by hand, without tools or structural disassembly, and without dismantling the primary frame, motion system, electronics, or heated-bed mechanisms.
+- Panel attachment must provide secure retention during normal operation while permitting convenient removal and reinstallation by hand. Tool-free installation and removal are mandatory, not preferences or optional design goals; the specific attachment mechanism remains open for engineering evaluation.
 - Provide an enclosed configuration suitable for materials benefiting from controlled, more stable chamber conditions; allow panels to be removed for ventilation and open-air printing of lower-temperature materials.
 - Preserve all required bed configurations, motion envelopes, service access, and operating capabilities in both enclosure configurations.
 - Provide practical access for maintenance, cleaning, wiring inspection, and component replacement.
