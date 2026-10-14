@@ -1,5 +1,94 @@
 # Reproduction and verification
 
+## Independent-review corrections — 2026-10-13
+
+**Current boundary:** the completed historical matrix below verifies the earlier
+CHECK implementation. The strengthened CHECK now has software-double coverage;
+**its new acceptance behavior is not yet Fusion-runtime verified**. The matrix
+must not be relabeled as testing this revision. PR #18 remains Draft and unmerged.
+
+### New acceptance checks
+
+CHECK retains the previous domain/one-ULP, sequence, complete component/pose,
+0.001 mm bounds, max(0.001 mm³, 1 ppm) volume and nominal sweep gates. It also
+requires the expected named sketches, offset datum and extrusion set; explicit
+`HealthyFeatureHealthState`, valid objects, fully constrained one-profile
+sketches, four rectangle orientations, and the original driving expression
+multisets (ignoring whitespace only). It rejects suppression, lost parametric
+history, changed profile association, operation, start/extent, taper and depth.
+Datum/reference-plane and offset-expression checks preserve the common source
+reference. No geometry, bore-sketch isolation or driving expression was changed.
+
+For each of the four bores, CHECK measures sketch center/diameter and the final
+B-Rep cylindrical side face associated with the named cut. It checks distinct
+plate faces, expected X/Y axis location, diameter, vertical axis, two complete
+circular rims at the plate's lower/upper Z, and full cylindrical area. These
+reads distinguish a displaced bore or blind cut from matching outer bounds and
+volume. Mount measurements are included in successful reports. Unavailable
+required properties reject CHECK; optional diagnostics remain best-effort.
+
+This is deliberately strict acceptance of the generated feature scheme, not a
+general equivalent-CAD recognizer or arbitrary-topology proof. Reordered/algebraically
+rewritten expressions, split faces or alternate feature constructions may be
+rejected even if physically equivalent. It is not full assembly interference,
+contact, capture, force closure, manufacturing or physical validation. The
+unchanged thresholds are source/kernel comparisons, not docking tolerances.
+
+The [durable evidence bundle](evidence/README.md) now preserves selected observations
+from all 35 historical matrix reports and the original trapezoid failure,
+with original hashes and explicit provenance gaps. This supersedes the earlier
+statements that evidence exists only in temporary files. Future reports add a
+run UUID, UTC time, source-file hashes at CHECK time, Fusion/OS versions and a
+hashed document creation ID. The latter can be shared by copied documents;
+it does not prove same-document continuity. Hashes identify checked source
+files, not the source that originally generated an existing timeline. Missing
+metadata is `unknown`; no private document title or source path is added to the
+provenance header. Local failure tracebacks still require sanitization before
+publication. Reports remain local until explicitly archived.
+
+### Minimal targeted live Fusion smoke check — pending
+
+Computer Use could inspect the existing unsaved design, but selecting Utilities
+had no effect, including after raising the window. No CAD edits, saves, exports
+or live CHECK execution were performed by the agent. Existing designs remain
+untouched. A maintainer needs only the following bounded check, **not another
+parameter matrix**:
+
+1. Run the updated script to create a **separate unsaved B,inset** concept at
+   defaults. Run `CHECK` and retain its report. Expect PASS with 59 components,
+   healthy constrained history and four 5 mm cuts centered at
+   (230.5,70), (230.5,170), (330.5,70), (330.5,170) mm, rims Z=-32/-28 mm.
+2. In that disposable design, remove one footprint horizontal/vertical
+   constraint without dragging geometry. CHECK must reject the underconstrained
+   or altered history even if the current bounds still match. Undo and CHECK
+   must pass. Preserve both reports.
+3. Change one bore's X driving expression by adding `1 mm`. CHECK must reject
+   altered driving history even though outside bounds and removed volume are
+   unchanged. Undo, then suppress that bore cut and CHECK: expect rejection.
+   Undo and CHECK must pass. Preserve the three rejection/restoration reports
+   (the prior footprint restoration may serve as the starting healthy state).
+
+Stop on an unexpected API error and retain the full local report. Do not weaken
+checks to obtain a pass. The live test establishes property availability and
+feature recognition on Fusion; deliberately corrupted B-Rep/dimension/health
+combinations remain separately covered by API-shaped software doubles. No
+physical test is requested. Before merge, inspect these results and review the
+changed acceptance logic; human merge approval remains required. Mechanical
+capture/retention/stiffness/access and safe-test planning block construction,
+not acceptance of an explicitly unvalidated research concept.
+
+### Autodesk API contracts consulted
+
+Context7's official landing-page index returned no matching feature-health
+content. Autodesk's official API pages were inspected directly on 2026-10-13:
+
+- [FeatureHealthStates](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_FeatureHealthStates.htm): explicit healthy enum; warning/error/suppression/rollback/unknown are distinct.
+- [Sketch.isFullyConstrained](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Sketch_isFullyConstrained.htm) and [Sketch.healthState](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Sketch_healthState.htm).
+- [ExtrudeFeature](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_ExtrudeFeature.htm), [DistanceExtentDefinition](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_DistanceExtentDefinition.htm) and [Profile.parentSketch](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Profile_parentSketch.htm).
+- [ConstructionPlaneOffsetDefinition](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_ConstructionPlaneOffsetDefinition.htm) and [ProfilePlaneStartDefinition](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_ProfilePlaneStartDefinition.htm).
+- [BRepFace.geometry](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_BRepFace_geometry.htm), [Cylinder](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/core_Cylinder.htm), [BRepEdge.geometry](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_BRepEdge_geometry.htm) and [face tempId](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_BRepFace_tempId.htm). Temporary face IDs are compared only within an unchanged body during one check, never across runs.
+- [Document.creationId](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/core_Document_creationId.htm) and [Application.version](https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/core_Application_version.htm).
+
 ## Completed planned macOS CHECK matrix — 2026-10-13
 
 The maintainer reports completion of the planned matrix on corrected Fusion

@@ -209,3 +209,27 @@ stops: retractable/selectable nests, mirrored lower/inward anchors, cable/head
 sweeps and occupied-region isolation remain open. No fixed diagonal linkage,
 shared row-only constraint, inter-bed load-sharing closure loop or vertical
 reseating is adopted by this fixture.
+
+## Independent-review reconciliation — 2026-10-13
+
+The two reviews of `c8dcc50` accept the scope only as an **unvalidated CAD
+concept**. Their observations are evidence and critique, not adopted loads,
+parts, tolerances or mechanism approval. See [review record](review.md).
+
+| Finding | Assessment and next engineering evidence |
+| --- | --- |
+| B capture collision | Accepted open risk: conservative sheet excursion ≈0.944 mm exceeds the nominal 0.5 mm gap. No verified pre-alignment mechanism exists. Develop a bounded approach/centering geometry and check finite yaw, uncertainty and faults before operation; the aligned sweep does not resolve capture. |
+| Stop-tower stiffness | Thin stems warrant redesign/analysis, but the review's 2.86 mm is an illustrative cantilever result, not measured deflection. For example, δ=FL³/(3EI), F=30 N, L=38 mm, E=3,000 N/mm² and I=12×4³/12=64 mm⁴ reproduce ≈2.86 mm. This assumes PLA-like modulus and bending through the 4 mm direction of a 4×12 mm section. Actual printed anisotropy, joints, load application and support differ. Neither PLA, E, 30 N nor an allowable deflection is approved. Establish loads/material/orientation and verify stiffness of the complete load path. |
+| B retention | Accepted: three sliding shoes supply compressive support, not positive hold-down against overturning or separating loads. Engineer retention while preserving planar float, then verify force closure, wear and fault behavior. |
+| Commercial guide stack | The ideal bands are not real guides. Rechecked [THK SRS12WMUU(GK), 202K12011000000](https://store-na.thk.com/Catalog/linear-motion/linear-motion-guide/srs12wmuu-block) on 2026-10-13: catalog block length 44.5 mm, width 40 mm, overall height 14 mm. This corroborates the Phase 1B example only; it does not select this guide or establish a 15–25 mm increase in this fixture. Full stack height requires a selected rail/block drawing, adapters, mounting/fastener envelopes and assembly layout. No particular increase is established. |
+| Flat contact geometry | Accepted: finite flat patches do not automatically realize the frictionless point-normal equations. They can introduce redundant moment restraint, friction and edge loading. Develop contact curvature/compliance, material pairs and stress/force models; rank six alone is insufficient. |
+| Fastener and service access | Accepted open packaging risk: bores are illustrative; installed hardware and tool sweeps are not modeled. Draw actual off-the-shelf hardware, insertion/removal paths and isolated-service access before calling the assembly buildable. |
+| Proposed acceptance values | Micron-level docking limits, preload forces and specific capture dimensions remain proposals. Derive an error budget with measurement uncertainty, representative loads and reviewed test criteria before adopting any values. The software's 0.001 mm comparison is not a mechanical docking specification. |
+
+These are future engineering obligations and construction/test blockers. They
+need not all be physically resolved to accept a clearly limited research
+concept. The review cleanup makes no final architecture, CAD-toolchain,
+reinforcement, material, electronics or licensing selection. Readily obtainable
+off-the-shelf components, printable-first/Ender 3 construction, distinct actual
+imperial/metric structural interfaces, later 2020 adaptation and all future
+four-bed configurations remain requirements.

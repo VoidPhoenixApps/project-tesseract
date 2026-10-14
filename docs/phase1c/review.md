@@ -1,10 +1,93 @@
 # Independent desk review record
 
-The review below covers the original concept implementation. It does **not**
-constitute independent review or Fusion acceptance of the subsequent 2026-10-13
-macOS runtime correction. See [verification](verification.md) for the observed
-failures, the completed planned macOS matrix and the remaining engineering limits.
-Historical test results below apply only to the source reviewed at that time.
+## Two independent reviews and focused corrections — 2026-10-13
+
+Reviewed starting source: `c8dcc50d58cc9718823994c1ebbce8b60a400ba7`, Draft
+[PR #18](https://github.com/VoidPhoenixApps/project-tesseract/pull/18).
+The maintainer supplied both reviewers' findings in this correction request.
+Their full standalone reports, reviewer identities and execution logs were not
+provided here; the summaries below retain that attribution. They do not imply
+these reviewers reviewed the subsequent implementation in this section.
+
+| Review | Reported evidence and conclusion | Disposition |
+| --- | --- | --- |
+| A | 47 automated tests passed; no critical or important defects within limited CAD-concept scope; two minor findings: CHECK feature/constraint enforcement and nondurable runtime evidence. B capture/retention remain unresolved. | Added strict history checks and archived available reports. Source-double tests do not replace the pending live acceptance smoke check. |
+| B | 47 automated tests passed; accepted an unvalidated CAD concept, not fabrication-ready. Identified capture collision, tower stiffness, missing hold-down, idealized guide envelopes, flat-contact overconstraint, mounting/tool access and bore verification gap. | Added direct bore inspection and reconciled each mechanical critique in the engineering record. No final mechanism or proposed numerical criterion adopted. |
+
+The independent Codex reviewer reported inspecting **35 CHECK reports: 33 PASS
+and two expected rejections**. The author of this correction retrieved all 35
+and the earlier trapezoid failure, verified all 11 published report hashes and
+preserved selected observations in the [evidence bundle](evidence/README.md).
+No extra live runs are inferred from repeated identical report hashes.
+
+[Engineering reconciliation](engineering.md#independent-review-reconciliation--2026-10-13)
+records why the 0.944/0.5 mm capture conflict and missing retention remain open;
+why 2.86 mm tower deflection depends on an illustrative load, modulus and bending
+axis; and why a verified 14 mm catalog guide height does not establish a claimed
+15–25 mm fixture expansion. Flat contacts, access and proposed tolerances remain
+explicit future engineering work.
+
+The stronger CHECK verifies healthy valid constrained history and final bore
+cut location/diameter/rims without changing numeric thresholds, domain rejection,
+release ordering or the four separate parametric bore sketches. Required API
+inspection fails closed. The [verification procedure](verification.md) requests
+only a small targeted live smoke check, not another completed parameter matrix.
+Until that evidence is reviewed, the new CHECK has software-double coverage only.
+No new independent review of this patch, physical test, fabrication or safety
+sign-off is claimed. Draft status and explicit human merge approval remain.
+
+Historical pending-review statements below are superseded for the reviewed
+`c8dcc50` concept by the two supplied reviews; historical no-publication
+statements do not override the current authorization to commit/push corrections.
+### Correction verification and scope — completed 2026-10-14
+
+- Final full repository suite: `python3 -B -m unittest discover -s tests -v`,
+  **59 passed (29.706 s)** on macOS. The earlier 58-test run also passed; the final
+  run adds valid bore acceptance across all four variants. API doubles exercise
+  all nonhealthy enum states, underconstraint, invalid/missing/suppressed/altered
+  history, misplaced and wrong-diameter bores, blind cuts, invalid faces and
+  unavailable inspection. Existing numeric/domain/sequence regressions remain.
+- Phase 1B suite: **11 passed (0.010 s)**; static Fusion smoke checker and
+  compilation of all changed/new Python passed. These do not execute Fusion.
+- All 41 Markdown files checked for local link targets and balanced fences:
+  passed. Requirement coverage/classification and cross-document status reviewed;
+  requirements, architecture, roadmap and geometry specification are unchanged.
+- Archive regenerated from originals and compared as JSON; all 36 original hashes
+  matched, including all 11 published hashes. All 2,063 retained successful sketch
+  expression snapshots satisfy the new expression predicate. This is inspection
+  of retained evidence, not a live rerun. An initial comparison was corrected to
+  normalize Python tuples to JSON arrays; no archived observations were changed.
+- Entire source/test/document diff and decompressed evidence reviewed. Archive
+  private-path/credential-pattern screening passed; this is not a comprehensive
+  secret scanner. Working and staged whitespace checks passed before commit.
+- Live Fusion unavailable through the attempted UI controls; targeted procedure
+  is in [verification](verification.md). Windows execution, exports, full physical
+  collision/contact, construction and energized tests were not performed: they
+  exceed this source/evidence correction and lack reviewed physical prerequisites.
+
+Changed files and reasons:
+
+| Files | Purpose |
+| --- | --- |
+| `cad/fusion/TesseractDockingFixture/TesseractDockingFixture.py` | Required history acceptance, direct bore inspection and future report provenance |
+| `cad/fusion/TesseractDockingFixture/README.md` | New CHECK and live-verification boundary |
+| `tests/test_phase1c_diagnostics.py` | Faithful healthy enum/API-shaped histories plus positive/negative acceptance regressions |
+| `tests/test_phase1c_evidence.py` | Archive integrity, failure preservation, provenance gaps and extractor isolation |
+| `docs/phase1c/evidence/README.md` | Provenance, sanitization limits, reader instructions and all original hashes |
+| `docs/phase1c/evidence/preserve_reports.py` | Reproducible fixed-ID observation extraction without changing source logs |
+| `docs/phase1c/evidence/runtime-observations.json.gz` | Compact retained observations from all 36 available reports |
+| `docs/phase1c/engineering.md` | Seven review findings reconciled and future engineering evidence identified |
+| `docs/phase1c/parameters.md` | Expanded acceptance rules without changing parameter domains |
+| `docs/phase1c/verification.md` | API rationale, evidence archive and exact minimal live smoke procedure |
+| `docs/phase1c/review.md` | Both supplied reviews, correction disposition and actual checks |
+| `docs/phase1c/README.md` | Current scope/navigation and corrected next action |
+
+No model geometry, requirements, other repositories, `.vscode`, existing Fusion
+designs, original reports or other worktrees were edited. AgentMemory was queried
+once and returned unrelated results. No Tesseract `CURRENT_STATE.md` was found
+in project-knowledge. No new cross-project decision needs promotion; after merge,
+any separately authorized project context update should link this evidence and
+its limits, not duplicate measurements or claim a physical gate passed.
 
 ## Completed matrix evidence review — 2026-10-13
 

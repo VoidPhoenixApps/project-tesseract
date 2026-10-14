@@ -69,12 +69,20 @@ this version does not promise arbitrary parametric topology edits.
 - CHECK reads current input parameters, recomputes geometry, checks complete named
   component set, identity occurrence poses, one solid per component, analytical
   bounds within 0.001 mm and volume within max(0.001 mm³, 1 ppm).
+- Require valid, explicitly healthy expected sketches/datums/extrusions; fully
+  constrained one-profile sketches, rectangle orientations, source driving
+  expressions and extrusion/datum relationships. Suppression and altered required
+  history fail even with matching geometry.
+- Inspect the four distinct final cylindrical bore cut faces, centers, diameters,
+  axes, areas and circular rims through the full plate thickness. Verify isolated
+  bore sketch centers and driving expressions as well. See [verification](verification.md)
+  for the strict supported scheme and pending targeted Fusion smoke check.
 
 These numerical comparison thresholds detect source/kernel disagreement, not
 manufacturing tolerance. Fusion can accept an unsupported edit before CHECK;
 there is **no event listener enforcing bounds continuously**. Run CHECK after
-every change; undo failed changes. Expressions/topology not covered by these
-checks require manual feature/history inspection.
+every change; undo failed changes. Equivalent but differently constructed histories
+can fail these strict checks. Arbitrary topology and physical behavior still require independent inspection.
 
 ## Inventory
 

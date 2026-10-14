@@ -1,5 +1,10 @@
 """Generate/check a cold Phase 1C concept inside Fusion. No save/export or motion."""
 
+from datetime import datetime, timezone
+import hashlib
+import json
+import platform
+import uuid
 import importlib.util
 import math
 from pathlib import Path
@@ -289,6 +294,159 @@ def part_diagnostics(design, occurrence, part, values,
     return "\n".join(rows)
 
 
+def require_close(actual, expected, label, tolerance=0.001):
+    if not math.isfinite(actual) or abs(actual-expected) > tolerance:
+        raise ValueError(f"{label}: actual={actual!r}, expected={expected!r}")
+
+
+def require_healthy(item):
+    # Healthy is enum value zero: truthiness would invert the acceptance test.
+    if not item.isValid or item.healthState != adsk.fusion.FeatureHealthStates.HealthyFeatureHealthState:
+        raise ValueError(f"Required history unhealthy/invalid: {item.name}")
+
+
+def named_items(collection, names, label):
+    items = {item.name: item for item in collection}
+    if collection.count != len(names) or set(items) != set(names):
+        raise ValueError("Required history missing, duplicated or altered: " + label)
+    for item in items.values():
+        require_healthy(item)
+    return items
+
+
+def normalized_expression(text):
+    return re.sub(r"\s+", "", text)
+
+
+def check_dimensions(sketch, formulas):
+    dims = list(sketch.sketchDimensions)
+    if (len(dims) != len(formulas) or any(not d.isDriving for d in dims)
+            or sorted(normalized_expression(d.parameter.expression) for d in dims)
+            != sorted(normalized_expression(expression(f)) for f in formulas)):
+        raise ValueError("Required driving dimensions altered: " + sketch.name)
+
+
+def check_history(component, part, values):
+    """Fail closed on missing API evidence; never roll back or repair the timeline."""
+    footprint_name = part.name+"_footprint"
+    hole_names = [f"Common_mount_hole_{i}_NOT_fastener_selection" for i in range(1, len(part.bores)+1)]
+    sketches = named_items(component.sketches, [footprint_name]+hole_names, part.name+" sketches")
+    planes = named_items(component.constructionPlanes, [part.name+"_Z_datum"], part.name+" datum")
+    datum = planes[part.name+"_Z_datum"]
+    offset = adsk.fusion.ConstructionPlaneOffsetDefinition.cast(datum.definition)
+    if (not offset or offset.planarEntity != component.xYConstructionPlane
+            or normalized_expression(offset.offset.expression) != normalized_expression(expression(part.xyz[2]))):
+        raise ValueError("Required Z datum altered: " + part.name)
+    require_close(offset.offset.value*10, model.evaluate(part.xyz[2], values), part.name+" Z datum")
+    feature_names = [part.name+"_thickness"] + [f"Common_mount_bore_{i}" for i in range(1, len(part.bores)+1)]
+    features = named_items(component.features.extrudeFeatures, feature_names, part.name+" extrusions")
+    if component.features.count != len(feature_names):
+        raise ValueError("Unexpected modeling features: " + part.name)
+    for sketch in sketches.values():
+        if (not sketch.isFullyConstrained or sketch.profiles.count != 1
+                or sketch.referencePlane != datum):
+            raise ValueError("Required sketch underconstrained or profile altered: " + sketch.name)
+    footprint = sketches[footprint_name]
+    lo, _ = part.bounds(values)
+    check_dimensions(footprint, (() if lo[0] == 0 and lo[1] == 0 else part.xyz[:2])+part.size[:2])
+    orientations = [c.objectType for c in footprint.geometricConstraints]
+    if (orientations.count(adsk.fusion.HorizontalConstraint.classType()) != 2
+            or orientations.count(adsk.fusion.VerticalConstraint.classType()) != 2
+            or footprint.sketchCurves.sketchLines.count != 4):
+        raise ValueError("Required rectangle orientations altered: " + footprint_name)
+    for hole_name, bore in zip(hole_names, part.bores):
+        check_dimensions(sketches[hole_name], bore)
+        if sketches[hole_name].sketchCurves.sketchCircles.count != 1:
+            raise ValueError("Required bore circle altered: " + hole_name)
+    for name, sketch_name in zip(feature_names, [footprint_name]+hole_names):
+        feature = features[name]
+        operation = (adsk.fusion.FeatureOperations.NewBodyFeatureOperation if name == feature_names[0]
+                     else adsk.fusion.FeatureOperations.CutFeatureOperation)
+        extent = adsk.fusion.DistanceExtentDefinition.cast(feature.extentOne)
+        profile = adsk.fusion.Profile.cast(feature.profile)
+        if (not feature.isParametric or feature.isSuppressed or not feature.isSolid
+                or feature.operation != operation or feature.hasTwoExtents or feature.isThinExtrude
+                or not adsk.fusion.ProfilePlaneStartDefinition.cast(feature.startExtent)
+                or not extent or not profile or profile.parentSketch != sketches[sketch_name]
+                or normalized_expression(extent.distance.expression) != normalized_expression(expression(part.size[2]))):
+            raise ValueError("Required extrusion altered: " + name)
+        require_close(extent.distance.value*10, model.evaluate(part.size[2], values), name+" depth")
+        require_close(feature.taperAngleOne.value, 0, name+" taper", 1e-9)
+    return sketches, features
+
+
+def check_bores(component, part, values, sketches, features):
+    """Inspect final native B-Rep and each cut, not merely seeded sketch circles."""
+    if not part.bores:
+        return []
+    body = component.bRepBodies.item(0)
+    cylinders = {face.tempId: face for face in body.faces if adsk.core.Cylinder.cast(face.geometry)}
+    if len(cylinders) != len(part.bores):
+        raise ValueError("Mount plate must have exactly four cylindrical bore faces")
+    lo, hi = part.bounds(values)
+    seen = set()
+    measurements = []
+    for index, bore in enumerate(part.bores, 1):
+        label = f"Common_mount_bore_{index}"
+        x, y, diameter = (model.evaluate(e, values) for e in bore)
+        radius = diameter/2
+        sketch = sketches[f"Common_mount_hole_{index}_NOT_fastener_selection"]
+        circle = sketch.sketchCurves.sketchCircles.item(0)
+        center = sketch.sketchToModelSpace(circle.centerSketchPoint.geometry)
+        for axis, expected in zip("xyz", (x, y, lo[2])):
+            require_close(getattr(center, axis)*10, expected, label+" sketch center "+axis)
+        require_close(circle.radius*20, diameter, label+" sketch diameter")
+        sides = features[label].sideFaces
+        if sides.count != 1:
+            raise ValueError("Bore cut must have one cylindrical side face: " + label)
+        face = sides.item(0)
+        if face.body != body or face.tempId not in cylinders or face.tempId in seen or not face.isValid:
+            raise ValueError("Bore cut does not identify a distinct final plate face: " + label)
+        seen.add(face.tempId)
+        cylinder = adsk.core.Cylinder.cast(face.geometry)
+        if not cylinder:
+            raise ValueError("Bore cut is not cylindrical: " + label)
+        for axis, expected in zip("xy", (x, y)):
+            require_close(getattr(cylinder.origin, axis)*10, expected, label+" cut center "+axis)
+        require_close(cylinder.radius*20, diameter, label+" cut diameter")
+        for axis, expected in zip("xyz", (0, 0, 1)):
+            require_close(abs(getattr(cylinder.axis, axis)), expected, label+" cut axis "+axis, 1e-9)
+        rims = [adsk.core.Circle3D.cast(edge.geometry) for edge in face.edges]
+        rims = [rim for rim in rims if rim]
+        if len(rims) != 2:
+            raise ValueError("Bore cut must have two complete circular rims: " + label)
+        rims.sort(key=lambda rim: rim.center.z)
+        for rim, z in zip(rims, (lo[2], hi[2])):
+            for axis, expected in zip("xyz", (x, y, z)):
+                require_close(getattr(rim.center, axis)*10, expected, label+" rim "+axis)
+            require_close(rim.radius*20, diameter, label+" rim diameter")
+        require_close(face.area*100, 2*math.pi*radius*(hi[2]-lo[2]), label+" cylindrical area",
+                      max(0.001, 2*math.pi*radius*(hi[2]-lo[2])*1e-6))
+        measurements.append({"feature": label, "center_xy_mm": [cylinder.origin.x*10, cylinder.origin.y*10],
+                             "diameter_mm": cylinder.radius*20,
+                             "rim_z_mm": [rim.center.z*10 for rim in rims], "area_mm2": face.area*100})
+    return measurements
+
+
+def report_provenance(design):
+    """No document titles, account IDs or machine paths in provenance."""
+    def optional(reader):
+        try:
+            return reader()
+        except Exception:
+            return "unknown"
+    def document_id():
+        identifier = design.parentDocument.creationId
+        return hashlib.sha256(identifier.encode("utf-8")).hexdigest() if identifier else "unknown"
+    return {"schema": 1, "run_id": str(uuid.uuid4()), "utc": datetime.now(timezone.utc).isoformat(),
+            "fusion_version": optional(lambda: adsk.core.Application.get().version),
+            "os": platform.system(), "os_version": platform.mac_ver()[0] or platform.release(),
+            "document_creation_id_sha256": optional(document_id),
+            "source_sha256": {name: optional(lambda name=name: hashlib.sha256(
+                Path(__file__).with_name(name).read_bytes()).hexdigest()) for name in
+                ("TesseractDockingFixture.py", "fixture_model.py")}}
+
+
 def check_design(design, diagnostics=None):
     root = design.rootComponent
     tag = root.attributes.itemByName(GROUP, "cartridge")
@@ -347,6 +505,7 @@ def check_design(design, diagnostics=None):
     if set(found) != {part.name for part in expected}:
         raise ValueError("Generated component set differs from the source specification")
     carrier_report = ""
+    mounting = []
     for part in expected:
         occurrence = found[part.name]
         component = occurrence.component
@@ -370,9 +529,12 @@ def check_design(design, diagnostics=None):
             volume -= math.pi*(model.evaluate(diameter, values)/2)**2*model.evaluate(part.size[2], values)
         if abs(body.volume*1000-volume) > max(0.001, volume*1e-6):
             raise ValueError("Body volume disagrees with primitive/bores: " + part.name)
+        sketches, features = check_history(component, part, values)
+        mounting.extend(check_bores(component, part, values, sketches, features))
     return (f"Checked {len(expected)} named solids/reservations against parameters.\n"
-            "Bounds and volume agree; nominal box release sweep has no penetrations.\n"
-            "Not a contact simulation, full interference certification or physical validation."
+            "Bounds, volume, required history and bore cuts agree; nominal box release sweep has no penetrations.\n"
+            + "Mounting B-Rep measurements: " + json.dumps(mounting, sort_keys=True) + "\n"
+            + "Not a contact simulation, full interference certification or physical validation."
             + carrier_report)
 
 
@@ -385,7 +547,7 @@ def check_report(design):
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", prefix="tesseract-phase1c-check-",
                                      suffix=".txt", dir=directory, delete=False) as report:
         report.write("Project Tesseract Phase 1C CHECK diagnostics\n")
-        report.write("Source: " + str(Path(__file__).resolve()) + "\n")
+        report.write("Provenance: " + json.dumps(report_provenance(design), sort_keys=True) + "\n")
         report.write("User parameters before CHECK: " +
                      str(diagnostic_read(lambda: parameter_snapshot(design))) + "\n\n")
         try:

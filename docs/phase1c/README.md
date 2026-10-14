@@ -12,7 +12,10 @@ mounting, anchor/contact, all four variants and expected negative rejections.
 See verification for report-inspected versus maintainer-observed evidence. Full
 parameter combinations, exports, independent Windows execution, physical docking,
 thermal/load validation and full collision certification remain unverified.
-No engineering gate or physical test is approved.
+No engineering gate or physical test is approved. The subsequent independent-review
+cleanup strengthens CHECK history and bore acceptance; a targeted live smoke
+check of that new logic is still pending. Historical runtime observations are
+now retained in the [evidence bundle](evidence/README.md).
 
 The [generator](../../cad/fusion/TesseractDockingFixture/TesseractDockingFixture.py)
 builds a new unsaved parametric assembly for **one selected cartridge and one
@@ -75,8 +78,9 @@ no licensing decision. No software, parts or services were installed or bought.
 
 ## Next experiments, in order
 
-1. Run the four CAD variants and the parameter/check matrix in
-   [verification](verification.md). Resolve kernel/API and geometry failures.
+1. Complete only the targeted smoke check of the strengthened CHECK in
+   [verification](verification.md). The earlier four-variant parameter matrix is
+   complete; do not repeat it merely for this acceptance-logic correction.
 2. Desk-design B capture, centering, retention and preload sequencing, including
    finite yaw near the seam, real contact curvature and an interference/force
    model. Draw adjustments, fasteners and tool access from actual component data.

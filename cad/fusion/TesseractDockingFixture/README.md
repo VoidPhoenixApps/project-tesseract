@@ -24,3 +24,9 @@ CHECK writes full success/failure diagnostics to a unique local
 `/tmp/tesseract-phase1c-check-*.txt` file on macOS (native temp folder on Windows).
 The dialog shows a short result and file path. Reports are outside the repository;
 the agent can read them directly without transcription. No automatic save occurs.
+
+The independent-review correction adds strict feature/constraint and actual bore
+cut inspection. The historical matrix did not exercise this new acceptance logic;
+its targeted live smoke check remains pending. Reports now include source hashes,
+run/time/version metadata and a hashed document creation ID when available.
+Historical observations are archived in the linked Phase 1C evidence bundle.
