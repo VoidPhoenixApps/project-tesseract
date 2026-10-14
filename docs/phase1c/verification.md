@@ -65,7 +65,7 @@ remains `2cf8d206ab5bd22210a62209283dd2d93d10fd06d8e3bf8c6122aeacc5cf4c18`.
 Together with the maintainer's execution confirmation, this identifies the exercised
 correction. Hashes are of files at CHECK time, not an independent attestation of
 loaded bytecode or generation history. UTC timestamps are retained verbatim;
-these runs occurred on October 13 locally (America/Chicago), October 14 UTC.
+these runs occurred on October 14 in both America/Chicago (CDT) and UTC.
 
 The final PASS records four 5 mm cylindrical cuts centered at (230.5,70),
 (230.5,170), (330.5,70), (330.5,170) mm, with rims at Z=-32/-28 mm within existing
