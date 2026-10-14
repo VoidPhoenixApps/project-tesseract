@@ -34,7 +34,18 @@ Derived parameters: `fixed_x=100`, `center_y=120`, `dock_x=fixed_x+bed+gap`,
 `cartridge_side=carrier+12`. Default base is **430.5 x 240 x 8 mm**.
 Do not override derived expressions or drag occurrences; CHECK rejects mismatched
 bodies/poses. The body sketches use driving offset and size dimensions, offset
-planes and extrusions. Mount bores have driving center/diameter dimensions.
+planes and extrusions. Each mount bore has its own sketch and through-cut, with
+driving X=`t1c_moving_x ± t1c_mount_pitch/2`,
+Y=`t1c_moving_y ± t1c_mount_pitch/2`, and diameter=`t1c_mount_bore`.
+All four sketches use the plate's Z datum and the same global XY origin. The
+plate uses the same moving center; changing carrier size changes edge margins,
+not pitch. Separate sketches avoid cross-hole constraint coupling without fixing
+the pattern at its initial coordinates. The user confirmed B,inset generation
+and the default four-hole pattern. The previous 164 mm failure was a trapezoidal footprint caused by missing edge
+constraints. After adding rectangle orientations, the maintainer's B,inset
+160→164→160→156→164→156→160 mm CHECK sequence passed with all 59 footprints fully
+constrained. See the [failure and runtime evidence record](verification.md).
+
 
 All non-base sketch lower corners must remain in positive XY so driving distance
 dimensions cannot change quadrant. Top Z=0 and the height bands are intentionally
@@ -44,6 +55,11 @@ this version does not promise arbitrary parametric topology edits.
 ## Validation rules
 
 - Reject unknown, nonnumeric, nonfinite and out-of-range input values.
+- Permit only the immediately adjacent floating-point representation outside a
+  nonzero declared bound, normalizing it to that bound before further checks.
+  This covers the reproduced cm/mm conversion error; two outward steps are
+  rejected. Zero and all in-range values remain exact. This is not a mechanical
+  tolerance or permission to exceed the parameter domain.
 - Reject travel beyond the selected strokes; X motion requires Y fully released.
 - Reject guard clearance no greater than the translation-plus-yaw corner bound.
 - Reject X-pad baseline without edge reserve, invalid/nonpositive boxes, negative

@@ -6,6 +6,6 @@
   "description": {"": "Phase 1C cold two-bed A/B docking concept; unvalidated, not fabrication-ready. Creates a new unsaved design or CHECKs its geometry."},
   "version": "0.1.0",
   "runOnStartup": false,
-  "supportedOS": "windows",
+  "supportedOS": "windows|mac",
   "editEnabled": true
 }

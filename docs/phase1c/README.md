@@ -1,11 +1,15 @@
 # Phase 1C — cold two-bed docking CAD concept
 
 **Status: reviewable source and analytical envelope checks, not fabrication-ready.**
-No execution of this generator in Fusion, F3D/STEP export, physical measurement,
-thermal feasibility, or hardware validation has been observed by Codex. The
-maintainer reported successful geometry, parameter edits/restoration and second
-execution of the separate PR #16 smoke test. That evidence does not transfer to
-this larger generator. No engineering gate or physical test is approved here.
+The maintainer reports successful B,inset generation and default bore inspection
+on macOS, plus gap/release/docking CHECKs and rejection of invalid X-first travel.
+The rectangle-edge correction now passed the maintainer's B,inset carrier sequence
+160→164→160→156→164→156→160 mm. Seven local CHECK reports confirm all 59 footprints
+fully constrained, matching bounds/volumes and passing nominal box sweeps.
+See [verification](verification.md) for the earlier failure, exact evidence and
+limits. Gap/release edits after this correction, other variants, the full parameter
+matrix, F3D/STEP export, thermal feasibility and hardware validation remain
+unverified. No engineering gate or physical test is approved.
 
 The [generator](../../cad/fusion/TesseractDockingFixture/TesseractDockingFixture.py)
 builds a new unsaved parametric assembly for **one selected cartridge and one

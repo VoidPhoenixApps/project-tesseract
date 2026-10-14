@@ -64,8 +64,18 @@ def parameters(overrides=None):
         values[key] = value
     for key, (_, low, high, _) in PARAMETERS.items():
         value = values[key]
-        if type(value) not in (int, float) or not math.isfinite(value) or not low <= value <= high:
-            raise ValueError(f"{key} must be finite and within [{low}, {high}]")
+        if type(value) not in (int, float) or not math.isfinite(value):
+            raise ValueError(f"{key}={value!r} must be finite and within [{low}, {high}]")
+        # A cm/mm roundtrip can land one representable float outside a limit:
+        # (164 * 0.1) * 10 == 164.00000000000003. Admit only that adjacent
+        # representation, then normalize before derived/geometry checks. This
+        # is not a dimensional tolerance. Keep zero and all in-range values exact.
+        if value < low and low != 0 and value == math.nextafter(float(low), -math.inf):
+            values[key] = low
+        elif value > high and high != 0 and value == math.nextafter(float(high), math.inf):
+            values[key] = high
+        elif not low <= value <= high:
+            raise ValueError(f"{key}={value!r} must be finite and within [{low}, {high}]")
     if values["travel_x"] > values["stroke"] or values["travel_y"] > values["release_y"]:
         raise ValueError("Displayed pose exceeds the transport range")
     if values["travel_x"] > 0 and values["travel_y"] < values["release_y"]:
