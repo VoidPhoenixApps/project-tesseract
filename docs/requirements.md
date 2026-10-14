@@ -6,11 +6,13 @@
 
 The source is the [approved design brief captured 2026-10-10](https://github.com/VoidPhoenixApps/home-infrastructure/blob/75f40a677e00407e40b0995504476f473c4c23f7/3d-printing/reconfigurable-quad-bed-printer-concept.md), verified against GitHub `main` on 2026-10-11. The user subsequently selected **Project Tesseract** and this repository. The source's placeholder name and future repository-selection wording are superseded by that instruction. Its engineering requirements remain intact below.
 
+On 2026-10-14, the user approved the additive [convertible, removable enclosure requirement](#convertible-removable-enclosure) for enclosed and open-air printing across both structural editions. This extends the historical brief; it approves the requirement, not a technical implementation or a claim of validation.
+
 The project intends to become fully open source. **Licensing is undecided; the repository is not currently distributed under a selected open-source license.** Commercial kits are an intended future permission, not an existing license grant.
 
 ## Requirement classification
 
-- **Mandatory targets:** The four-bed geometry, horizontal automatic reconfiguration, fixed-height common reconfiguration plane, retained individual sheets, all listed layout capabilities, printable-first sequence, Ender 3 part envelope, both reinforcement standards, future 2020 edition, editable sources, reproducibility, and engineering gates are requirements. They are not promises of demonstrated feasibility. Infeasibility requires a documented requirement review rather than silently dropping a mode.
+- **Mandatory targets:** The four-bed geometry, horizontal automatic reconfiguration, fixed-height common reconfiguration plane, retained individual sheets, all listed layout capabilities, printable-first sequence, Ender 3 part envelope, both reinforcement standards, future 2020 edition, convertible removable enclosure support, editable sources, reproducibility, and engineering gates are requirements. They are not promises of demonstrated feasibility. Infeasibility requires a documented requirement review rather than silently dropping a mode.
 - **Preferences and proposed approaches:** Wording such as “prefer,” “investigate,” “candidate,” “may,” and “where practicable” retains its original qualification. Frame topology, motion systems, sensing, CAD tools, and software suggestions are not selections.
 - **Stretch goal:** Four heads cooperating on one large print is separate from independent concurrent jobs and is not a baseline release gate.
 - **Unknowns:** Usable build extent, tolerances, performance limits, exact stock sizes, architecture, electronics, CAD toolchain, budget, and license remain unresolved. Define measurable limits in reviewed test plans before claiming validation.
@@ -89,6 +91,22 @@ Requirements:
 - Prefer parts/common interfaces that enable upgrading a printed-frame machine to extrusion without replacing all costly components.
 
 Both variants are intended to provide the **same core print capabilities**; no essential operating mode should be reserved only for extrusion without an explicit design review.
+
+### Convertible, removable enclosure
+
+**Approved mandatory requirement (2026-10-14):** Both the printable/reinforced-frame edition and the future 2020-extrusion edition must support enclosed and open-air printing configurations, including the separate imperial and metric reinforced-frame variants.
+
+- Enclosure panel installation and removal must be **tool-free**: users must be able to switch between open-air and enclosed configurations entirely by hand, without tools or structural disassembly, and without dismantling the primary frame, motion system, electronics, or heated-bed mechanisms.
+- Panel attachment must provide secure retention during normal operation while permitting convenient removal and reinstallation by hand. Tool-free installation and removal are mandatory, not preferences or optional design goals; the specific attachment mechanism remains open for engineering evaluation.
+- Provide an enclosed configuration suitable for materials benefiting from controlled, more stable chamber conditions; allow panels to be removed for ventilation and open-air printing of lower-temperature materials.
+- Preserve all required bed configurations, motion envelopes, service access, and operating capabilities in both enclosure configurations.
+- Provide practical access for maintenance, cleaning, wiring inspection, and component replacement.
+- Consider panel attachment, structural interfaces, thermal expansion, ventilation, chamber monitoring, fire safety, electronics temperature limits, and moving-part protection from the beginning of design.
+- Maintain compatibility with both structural editions and the separate imperial/metric reinforced-frame variants.
+
+**Preference:** Favor readily obtainable panel materials and hardware.
+
+**Unresolved implementation choices:** Compare mounting methods and panel materials in a trade study before selection; magnetic panels, hinges, latches, acrylic, polycarbonate, and other solutions are not mandated. Enclosure support does **not** approve an actively heated chamber. Active heating, filtration, exhaust, temperature targets, and additional safety measures remain separate design decisions subject to the existing safety and engineering review gates.
 
 ### Open-hardware / community commitment
 

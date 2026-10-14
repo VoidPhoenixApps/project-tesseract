@@ -17,6 +17,7 @@ The [Phase 1B investigation](phase1b/README.md) extends the Phase 1 baseline wit
 - Develop the printable frame first. Every printed part, including imperial and metric variants, must fit an ordinary Ender 3 with verified orientation and process margins.
 - Use one parametric reinforcement family with separately labeled, ready-to-print imperial and metric outputs, BOMs, cut lists, and validated physical interfaces. Do not substitute rounded dimensions or assume equivalent performance.
 - Plan replaceable interfaces for the later 2020 frame and the same core printing capabilities across editions; structural equivalence requires testing.
+- Support [convertible, removable enclosure panels](requirements.md#convertible-removable-enclosure) for enclosed and open-air printing in both structural editions and both imperial/metric reinforced-frame variants, preserving all required layouts, motion envelopes, service access and operating capabilities.
 
 ## Candidate systems and trade studies
 
@@ -32,6 +33,7 @@ The following are proposed study directions, not selected components or proven s
 | Supervision | Job-geometry and queue-aware configuration planner | Determine safe configurations, verify position/lock/surface state, protect running jobs, and reject impossible jobs. Slicer metadata and Klipper facilities are possible inputs, not complete solutions. |
 | Sheet verification | Optional sheet-presence/identity sensing | Assess whether sensing is needed and how surface readiness can be established reliably. Retaining four sheets and avoiding manual swaps remain mandatory regardless of sensing choice. |
 | CAD authoring | **Fusion 360 is the maintainer's strong preference if feasible**; FreeCAD and build123d remain full alternatives or potential reproducible companions | Compare native editable design history, assemblies, parameterization, reproducible imperial/metric variants, STEP and other interchange, source/version-control workflows, collaboration and license restrictions (including personal and commercial contributors). Demonstrate a usable public reproduction path that does not require a paid/proprietary tool. Fusion is preferred, **not yet selected**. |
+| Convertible enclosure | Removable-panel materials and attachment methods to compare; no mounting or material solution selected | From the beginning, compare structural interfaces, thermal expansion, ventilation, chamber monitoring, fire safety, electronics temperature limits, moving-part protection, ready availability and practical service access. Demonstrate mandatory tool-free panel installation/removal and configuration changes entirely by hand, without structural disassembly or dismantling the primary frame, motion, electronics or heated-bed mechanisms. Verify secure retention during normal operation and convenient removal/reinstallation; keep the attachment mechanism open for evaluation. |
 | Future frame | 2020 aluminum extrusion with adapted joints/bracing | Reuse costly components and interfaces where practical, then revalidate loads and modes; it is not automatically a drop-in replacement. |
 
 Elegoo OrangeStorm Giga and Voron Phoenix are reference machines identified by the brief for studying segmented surfaces. Fixed segmented beds do not prove that moving heated beds can repeatedly dock. Reference names imply neither adopted architecture nor endorsement.
@@ -63,6 +65,7 @@ Every item below is **unresolved**. A proposal must compare alternatives, cite r
 | Printing Z motion | Load path, precision, bed-plane compatibility and collision review |
 | Printed-frame topology and reinforcement profiles | Structural comparison, regional stock specifications, both variant tests |
 | Ender 3 envelope, materials and orientations | Verified usable print volume, margins, process constraints and printed fixtures |
+| Enclosure implementation and chamber conditions | Trade study of panel materials, mounting and interfaces across both editions and reinforced-stock variants; enclosed/open-air capability and access evidence. Active heating, filtration, exhaust, temperature targets and additional safety measures require separate decisions; enclosure support does not approve active chamber heating. |
 | Outer dimensions and usable print volumes | Full travel/clearance study and measured prototype limits |
 | Speed, acceleration, temperature and material targets | Reviewed operating envelope and acceptance limits before performance claims |
 | Electronics, power system and firmware integration | Channel/timing needs, heater loads, wiring, interlocks and fault response review |
