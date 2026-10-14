@@ -65,6 +65,49 @@ No CoreXY, IDEX, multi-gantry, robot-arm or rail layout is selected. Explore ful
 
 These are behavioral thought experiments, not proof that Z mechanisms can physically couple in both row and column directions. Geometry must be checked for every arrangement and travel state; real motion envelopes must respect each printed object's height.
 
+## Additional maintainer concepts — 2026-10-14 (later discussion)
+
+These ideas extend, but **do not select**, candidate Z-E and the independent-head XY study. Preserve the specific proposals for comparison, including their unresolved mechanics. No material, motor, pulley, servo, clutch, fixture or datum geometry is approved.
+
+### Z-F — Belt-switched lift and secondary joined-bed frame
+
+**Maintainer proposal:** Give each bed a belted independent Z drive. When beds join, servos and pulleys would redirect or switch belt drive from the individual bed lifts to a **secondary joined-bed lifting frame**. The secondary frame would have a rigid central **cross / “T” indexing fixture** against which the beds register; the coupled frame would then lift the selected joined-bed group as a common structure.
+
+**Functional hypothesis:** During independent printing, each bed has its own printing Z. For joined-region printing, a mechanically referenced secondary frame carries the joined beds and provides one group Z motion, potentially eliminating an entire independently Z-moving toolhead gantry. A separate joined-frame Z motor or shared-drive arrangement is possible but not selected. The cross fixture might serve as a common *cold-side indexing datum* and part of the load path.
+
+**Distinguish these choices before designing:**
+
+- **Literal belt-path selection:** A servo-driven idler/pulley selector moves or redirects a belt between the individual and shared lift paths. Check maintained tension, tooth engagement/phase, tracking, backlash, edge loading and whether changeover would be safe only when stopped and unloaded.
+- **Torque-path selection:** A servo actuates a positive clutch, dog engagement or other mechanical selector while timing belts stay on their own correctly tensioned pulley runs. This is a proposed alternative to evaluate, **not** a substitution for the maintainer's belt-switching concept.
+- **Load transfer and restraint:** Both drive-selection variants separately need verified support, clamping/retention, guided Z travel, appropriate counterbalance/braking or passive fall prevention, positive engagement sensing, and a defined stop/recovery response. A positioning servo must not be treated as the sole load-bearing safety element.
+- **Indexing versus rigidity:** A rigid central cross can provide a repeatable reference *if* its exact constraint set, capture/release travel, preload, stiffness, tolerances and thermal behavior work. Rigidity by itself **does not guarantee identical registration**. Check exactly constrained cold-carrier contacts, three noncollinear height supports or their appropriate equivalent, and thermal relief between reference frame and heated beds. Avoid four-way conflicting hard datums, parasitic load into plate edges, and locking out the inward-corner thermal strategy studied in [Phase 1B](../phase1b/README.md).
+- **Cross-shape ambiguity:** Record whether “T” means a top-view orthogonal **cross** for all four inward corners, a literal three-arm T, or a sectional spine. The final indexing geometry is deliberately unresolved. It must not obstruct print seams, nozzle paths, horizontal approach/release, or bed heater cabling.
+- **Partial-mode problem:** A permanently unified four-bed secondary lift does not by itself give two independently moving Z pairs or one Z pair plus two independent singles. Investigate selectively coupled/reconfigurable secondary sections, more than one shared lift group, or independent lifts remaining active in partial modes. Include row *and* column pair orientations, not only one.
+- **Safe transition:** At the required common fixed-height **horizontal-reconfiguration datum**, with all affected beds empty and motion protected: align and support; seat verified locators; engage and *sense* the belt/drive selection; safely transfer load; isolate the unused motion path; move only after all verified states agree. Determine which order actually avoids binding, falls, missed belt teeth or unintended motion. No vertical lifting/lowering *as the rearrangement method* is authorized.
+- **Faults to study:** power loss in mid-shift; selector half-engaged or false-positive; unexpected drive torque; timing-belt tooth skip/slack/breakage; a bed failing to seat or load-share; one Z support skew; heat-warped cross; frame growth; loss of a brake; and recovery from mixed/paired modes without disturbing active objects.
+
+**Specific early artifacts:** (a) belt-and-clutch power-flow diagrams for independent, paired, mixed and joined modes; (b) indexing and load-path free-body sketches; (c) fault-tree showing which independent supports remain carrying weight during each mode transition; (d) packaging/stroke study of shared frame, horizontal dock and toolhead clearance; (e) relative Z seam-step and angular error budget with explicit measurement plan. All numerical tolerance or strength limits await review, not intuition.
+
+### XY-E — Mirrored or oppositely oriented common toolheads
+
+**Maintainer proposal:** Use the *same basic toolhead*, arranged as mirrored/opposing units, to minimize clearance required between heads and around central bed seams.
+
+**Alternative ways to realize the intent:** (1) rotate/reorient an identical mechanically symmetric head and its accessory positions; (2) use common functional parts with interchangeable left/right ducts or brackets; (3) true left/right mirror builds if warranted. Compare common-BOM/service advantages against different printed parts or asymmetric cooling/filament routing. No claim of printable reach without swept-envelope analysis.
+
+**Specific checks:**
+
+- Compare nozzle-to-edge distances, full 3D body/fan/drive/connector envelopes, cooling and heat paths, service access, cable/bowden bend radii, parking and vertical strokes for all four positions.
+- Explicitly evaluate collisions between **simultaneously moving heads**, hotends, probes, heaters and *completed objects*, including unequal Z/layer progress, near seams and when only some heads are active.
+- For mirrored layouts, check opposite cooling asymmetry, extruder drive behavior, belt attachments, endstop/probe offsets, toolchange calibration, handed components, parts interchangeability and mirrored carriage dynamics.
+- Determine whether identical heads rotated 180 degrees produce the desired offset without introducing opposite-rotation axis, cable or cooling conflicts. Show a dimensioned/nozzle-centered clearance table rather than relying on a visual impression.
+- Keep full-region printing independent of the still-unproven four-head cooperative stretch goal: describe where inactive heads can park while a selected head traverses docked seams.
+
+**Suggested comparison:** two-to-four simple nozzle-centered CAD envelope blocks (not finished toolheads), first in identical orientations, then alternated/mirrored, using common measured/reference dimensions. Log the minimum collision-free center distance and actual reachable seam envelope for each mode. Any clearance benefit is a hypothesis until computed and tested.
+
+### Integration priority
+
+Add **Z-F** to the mode/kinematic matrix beside **Z-C dual-Z** and **Z-E coupled bed Z**, and **XY-E** to all head-layout comparisons. Before selecting a mechanical architecture, focus on the compatibility of XY-E + Z-F with both orthogonal pair arrangements, mixed groups, full four-bed join and a safe all-empty docking/changeover sequence. Preserve the simpler Z-E and Z-A alternatives as controls rather than assuming the extra switching frame earns its complexity.
+
 ## Priority research questions (start here)
 
 1. **Kinematics and reach:** Sketch four quadrants and all mandatory layouts. For XY-A through XY-D, show actual independent XY reachable sets, parking zones, collision/nozzle envelopes and at least one credible joined-print path without depending on cooperative heads.
@@ -79,9 +122,9 @@ These are behavioral thought experiments, not proof that Z mechanisms can physic
 
 ## Suggested first deliverables (desktop study only)
 
-- **D1: Mode/kinematic matrix** for XY-A–D × Z-A–E, flagging incompatible pairings and mandatory modes that each cannot support.
-- **D2: Two or three candidate concept sketches** with coordinate datums, Z travel/parking envelopes and a step-by-step coupling state sequence; label all diagrams unvalidated.
-- **D3: Coupled-Z failure-mode and constraints table** separating sheet alignment, load transfer, drive connection, thermal relief and detection.
+- **D1: Mode/kinematic matrix** for XY-A–E × Z-A–F, flagging incompatible pairings and mandatory modes that each cannot support.
+- **D2: Two or three candidate concept sketches** with coordinate datums, Z travel/parking envelopes and a step-by-step coupling or belt-selector state sequence, including a potential cross indexing fixture; label all diagrams unvalidated.
+- **D3: Coupled/switchable-Z failure-mode and constraints table** separating sheet alignment, load transfer, belt/drive selection, thermal relief and detection.
 - **D4: Preliminary parameterized calculations** for lift loads, torque, skew-induced seam step, structural deflection and coupling error with sourceable assumptions and no fabricated tolerance.
 - **D5: Decision matrix and open questions** ranking candidates for subsequent review; retain eliminated ideas and documented reasons.
 - **D6: Proposed optional two-bed Z-coupling bench study**, only **after** the existing cold docking/seam work is scoped and with reviewed hazards, measurement uncertainty, acceptance/abort criteria, repeatability and supervision. This is not permission to build or energize anything.
@@ -94,4 +137,4 @@ Evaluate every candidate against: mandatory arrangements; true independent concu
 
 **Community angle:** invite evidence-based critiques and alternative motion/coupling proposals through GitHub Discussions and the project Discord. Promote useful conclusions to GitHub review records; neither chat nor Discord votes settle engineering feasibility.
 
-**Next resumption point:** Begin with **D1 (XY/Z compatibility and all five bed arrangements)**, then compare **Z-E coupled lifts versus Z-C dual-Z**, especially the mechanical interface that would automatically engage when beds dock. Keep the two-bed docking proof in its current engineering sequence.
+**Next resumption point:** Begin with **D1 (XY-A–E / Z-A–F compatibility across every required bed arrangement)**, then compare **Z-E coupled bed lifts, Z-C dual-Z and Z-F belt-switched secondary joined frame**, while testing XY-E mirrored/common-toolhead clearance against other head packaging. Keep the two-bed docking proof in its current engineering sequence.
