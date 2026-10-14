@@ -42,6 +42,7 @@ You can help today with source checks, documentation, bounded research and revie
 | [Requirements](docs/requirements.md) | Complete approved brief, provenance, mandatory targets, preferences, and stretch goals |
 | [Architecture](docs/architecture.md) | Candidate systems, constraints, tradeoffs, and unresolved decisions |
 | [Roadmap](docs/roadmap.md) | Development phases and measurable engineering gates |
+| [Research-first plan](docs/research-first-plan.md) | Public comparative research sequence, evidence and diagrams to publish before more detailed CAD |
 | [Phase 1C cold docking CAD concept](docs/phase1c/README.md) | Parametric A/B fixture source, analytical checks and pending Fusion verification; not fabrication-ready |
 | [Contributing](CONTRIBUTING.md) | Contribution process, reproducible evidence, and review expectations |
 | [Community preparation](docs/community/README.md) | Published newcomer work, drafts, and community activation evidence |

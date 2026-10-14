@@ -41,6 +41,10 @@ A render, CAD assembly, simulation, calculation, or successful software check do
 - The project intends to become fully open source, but licensing is undecided. Do not add a license, imply an existing open-source grant, or select CERN-OHL-S without review. Track third-party sources and license compatibility.
 - Never commit credentials, keys, tokens, private authentication material, or secret values. Record only non-secret configuration and secret-location references where necessary.
 
+### External reference CAD model dependencies
+
+For future CAD tasks involving an off-the-shelf purchased component, check the project-approved reference-model folder and provenance catalog for the **exact selected manufacturer part and revision** before modeling interfaces around it. If the required reference model is absent, unusable or of uncertain rights/accuracy, **ask the maintainer for the correct file or approval of an acceptable source**. Provide a concise consolidated list with part identity, desired CAD format, established source link if known, geometry purpose, availability/rights uncertainty and blocked work. Do not quietly redesign or substitute the purchased component, invent dimensions, fabricate a supposed vendor model, or treat approximate stand-ins as verified geometry merely because Codex lacks a file. Only use a labeled preliminary envelope from traceable dimensions if the maintainer specifically approves it; continue independent unblocked work safely. Check model rights and preserve public reproducibility; no bulk downloads, licensing assumptions or hardware changes without approval. See [research-first CAD library plan](docs/research-first-plan.md#future-codex-cad-reference-parts-library-planning-only).
+
 ## GitHub workflow and verification
 
 Inspect Git status, branch and origin first. Start from a clean, current base; preserve unexpected local work and report divergence. Do not auto-stash, reset, clean, force-push or overwrite another contributor's work to bypass a guard. Respect the user's repository scope; do not run cross-repository synchronization when source repositories must remain unchanged.
