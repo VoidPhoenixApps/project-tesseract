@@ -122,9 +122,9 @@ Add **Z-F** to the mode/kinematic matrix beside **Z-C dual-Z** and **Z-E coupled
 
 ## Suggested first deliverables (desktop study only)
 
-- **D1: Mode/kinematic matrix** for XY-A–D × Z-A–E, flagging incompatible pairings and mandatory modes that each cannot support.
-- **D2: Two or three candidate concept sketches** with coordinate datums, Z travel/parking envelopes and a step-by-step coupling state sequence; label all diagrams unvalidated.
-- **D3: Coupled-Z failure-mode and constraints table** separating sheet alignment, load transfer, drive connection, thermal relief and detection.
+- **D1: Mode/kinematic matrix** for XY-A–E × Z-A–F, flagging incompatible pairings and mandatory modes that each cannot support.
+- **D2: Two or three candidate concept sketches** with coordinate datums, Z travel/parking envelopes and a step-by-step coupling or belt-selector state sequence, including a potential cross indexing fixture; label all diagrams unvalidated.
+- **D3: Coupled/switchable-Z failure-mode and constraints table** separating sheet alignment, load transfer, belt/drive selection, thermal relief and detection.
 - **D4: Preliminary parameterized calculations** for lift loads, torque, skew-induced seam step, structural deflection and coupling error with sourceable assumptions and no fabricated tolerance.
 - **D5: Decision matrix and open questions** ranking candidates for subsequent review; retain eliminated ideas and documented reasons.
 - **D6: Proposed optional two-bed Z-coupling bench study**, only **after** the existing cold docking/seam work is scoped and with reviewed hazards, measurement uncertainty, acceptance/abort criteria, repeatability and supervision. This is not permission to build or energize anything.
@@ -137,4 +137,4 @@ Evaluate every candidate against: mandatory arrangements; true independent concu
 
 **Community angle:** invite evidence-based critiques and alternative motion/coupling proposals through GitHub Discussions and the project Discord. Promote useful conclusions to GitHub review records; neither chat nor Discord votes settle engineering feasibility.
 
-**Next resumption point:** Begin with **D1 (XY/Z compatibility and all five bed arrangements)**, then compare **Z-E coupled lifts versus Z-C dual-Z**, especially the mechanical interface that would automatically engage when beds dock. Keep the two-bed docking proof in its current engineering sequence.
+**Next resumption point:** Begin with **D1 (XY-A–E / Z-A–F compatibility across every required bed arrangement)**, then compare **Z-E coupled bed lifts, Z-C dual-Z and Z-F belt-switched secondary joined frame**, while testing XY-E mirrored/common-toolhead clearance against other head packaging. Keep the two-bed docking proof in its current engineering sequence.
