@@ -7,9 +7,12 @@ The rectangle-edge correction now passed the maintainer's B,inset carrier sequen
 160→164→160→156→164→156→160 mm. Seven local CHECK reports confirm all 59 footprints
 fully constrained, matching bounds/volumes and passing nominal box sweeps.
 See [verification](verification.md) for the earlier failure, exact evidence and
-limits. Gap/release edits after this correction, other variants, the full parameter
-matrix, F3D/STEP export, thermal feasibility and hardware validation remain
-unverified. No engineering gate or physical test is approved.
+limits. The planned macOS CHECK matrix is now complete, including gap/release,
+mounting, anchor/contact, all four variants and expected negative rejections.
+See verification for report-inspected versus maintainer-observed evidence. Full
+parameter combinations, exports, independent Windows execution, physical docking,
+thermal/load validation and full collision certification remain unverified.
+No engineering gate or physical test is approved.
 
 The [generator](../../cad/fusion/TesseractDockingFixture/TesseractDockingFixture.py)
 builds a new unsaved parametric assembly for **one selected cartridge and one

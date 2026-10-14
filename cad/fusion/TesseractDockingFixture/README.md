@@ -15,8 +15,10 @@ The corrected B,inset generator passed the maintainer's carrier sequence
 160→164→160→156→164→156→160 mm. Seven local reports confirm all 59 footprints
 fully constrained and CHECK passing. The linked verification record preserves
 the earlier trapezoid failure and correction. Existing timelines are not
-retrofitted. Gap/release edits after this correction, remaining variants,
-Windows runtime, the full parameter matrix and exports remain pending.
+retrofitted. The remaining planned macOS CHECK matrix has now passed, including
+all four variants and the two expected negative rejections/restorations. See verification
+for evidence attribution. Independent Windows execution, full parameter
+combinations, exports and physical engineering validation remain unverified.
 
 CHECK writes full success/failure diagnostics to a unique local
 `/tmp/tesseract-phase1c-check-*.txt` file on macOS (native temp folder on Windows).

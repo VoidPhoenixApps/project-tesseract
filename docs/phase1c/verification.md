@@ -1,28 +1,86 @@
 # Reproduction and verification
 
-## Next bounded Fusion tests — pending observation
+## Completed planned macOS CHECK matrix — 2026-10-13
 
-Use the corrected B,inset document with carrier=160 mm, gap=0.5 mm,
-travel X/Y=0 mm and other defaults. Edit one parameter at a time, close the
-Parameters dialog, and run **CHECK after every arrow/setting**, including each
-restoration. Stop at any unexpected rejection, geometry change or feature warning;
-retain the local diagnostic file for direct inspection. Do not save over the
-existing document, remove constraints, or broaden tolerances to obtain a pass.
-Record the source commit, Fusion/OS versions, configuration and actual results.
+The maintainer reports completion of the planned matrix on corrected Fusion
+Personal/macOS designs. The agent read the available local reports directly,
+including both new negative tests and their restorations. No new Fusion test
+was run by the agent in this evidence-finalization task. Earlier Computer Use
+could inspect the local application but could not operate the custom controls;
+it produced no negative-test results. The maintainer subsequently performed them.
 
-| Order | Bounded sequence | Required observation |
+**Evidence classification:** report inspection independently confirms the recorded
+parameter snapshots, CHECK outcomes and component data. It is not an independent
+live rerun. Manual sequence continuity, visual movement/hole inspection and
+same-document use remain maintainer observations. Reports lack document IDs,
+embedded source hashes and Fusion/OS version numbers. Source is the corrected
+implementation published as `ecdd68e`; its previously recorded hash is unchanged.
+
+| Planned check | Result and evidence |
+| --- | --- |
+| Carrier 160→164→160→156→164→156→160 mm | Seven PASS reports, retained individually below; 59 fully constrained footprints |
+| Gap 1→0.5→0.2→2→0.5 mm | PASS reports `c8bl8bzi`, `ktzo4_2p`, `493onqe6`, `xs753e5c`, `4s22_vxj` |
+| (X,Y) (0,8)→(40,8)→(0,8)→(0,0) mm | PASS reports `m5w5komd`, `4lxhb_3v`, `6suhxuzl`, `krnw8b8w`; correct order also maintainer-reported |
+| Mount pitch 90→110→100 mm | PASS reports `flqonjex`, `lntp606d`, `rlgahkc_` |
+| Mount bore 4→6→5 mm | PASS reports `h1or_1v8`, `6ms7rolq`, `nu6ojds0`; visual geometry inspection and 100 mm center spacing maintainer-reported |
+| Anchor inset 14→20→16 mm | PASS reports `oe73bpp7`, `ukhsf0as`, `13jlczwi` |
+| B contact baseline 100→130→120 mm | PASS reports `8_3_xzwm`, `qb3wy0p3`, `_nfqa89y`; visible contact movement maintainer-reported |
+| A,center / A,inset / B,center | PASS reports `99_zv4yv` / `mmm883gw` / `b8y4p1hz`; component-name sets match each model variant, 51/51/59 solids. Generation and selected variants maintainer-reported |
+| B,inset | Confirmed throughout the carrier and negative/restoration records, 59 solids |
+
+Each short report identifier above expands to
+`/tmp/tesseract-phase1c-check-<identifier>.txt`. All listed files were examined;
+PASS reports contain the expected component count, healthy fully constrained
+footprints and bounds within 0.001 mm, and state that volume and nominal box
+release-sweep checks passed. CHECK does not independently measure hole center
+spacing or certify collision-free real geometry. No unexamined report is counted.
+
+### Negative tests and restorations
+
+| Test | Independently inspected report | Actual result |
 | --- | --- | --- |
-| 1 — next action | `t1c_gap`: 0.5 → 1 → 0.5 mm | Moving center X=281 then 280.5 mm; fixed center X=100; sheet gap matches; CHECK passes both edits |
-| 2 | Gap: 0.5 → 0.2 → 2 → 0.5 mm | CHECK passes endpoints/restoration; numerical gap is not thermal/capture acceptance |
-| 3 | `(travel_x,travel_y)`: (0,0) → (0,8) → (40,8) → (0,8) → (0,0) mm | Release Y before X; return X before Y; Z stays fixed; CHECK each pose |
-| 4 | `mount_pitch`: 100 → 90 → 110 → 100 mm; then `mount_bore`: 5 → 4 → 6 → 5 mm | Four through holes, measured pitch/diameter and plate-centered pattern follow edits; CHECK alone cannot locate equal-volume holes |
-| 5 | `anchor_inset`: 16 → 14 → 20 → 16 mm; then B `pad_baseline`: 120 → 100 → 130 → 120 mm | Inspect hidden inset reservations and B's two X contacts; offsets/separation follow parameters, CHECK passes |
-| 6 | Generate A,center; A,inset; B,center in separate new unsaved documents, default parameters; CHECK each | A=51/B=59 named solids/reservations; healthy fully constrained footprints; correct center/inset topology; no overwrite of B,inset |
-| 7 — expected rejection | In restored B,inset: carrier=165 mm, CHECK, restore160 and CHECK; then travel_x=1 with travel_y=0, CHECK, restore X=0 and CHECK | First CHECK rejects carrier domain; second rejects Y-before-X sequence; each restoration passes. An unexpected pass is a failure of this test |
+| Carrier=165 mm; gap0.5, X/Y0 | `tesseract-phase1c-check-uwuq5tzb.txt` | Expected CHECK rejection: `carrier=165.0 must be finite and within [156, 164]` |
+| Carrier restored160; X/Y0 | `tesseract-phase1c-check-_hq6gs8v.txt` | CHECK PASSED; 59 named solids/reservations |
+| X=1 mm, Y=0, carrier160 | `tesseract-phase1c-check-xhotdiee.txt` | Expected CHECK rejection: `Release Y fully before moving X; reverse this sequence to dock` |
+| X restored0; Y0, carrier160 | `tesseract-phase1c-check-3nb7l73f.txt` | CHECK PASSED; 59 named solids/reservations |
 
-These tests have **not** been observed on the corrected implementation. Expected
-negative-check rejections are deliberate; unexpected errors stop the sequence.
-No physical actuation, fabrication or thermal test is authorized.
+The rejection snapshots contain the invalid values, and tracebacks originate in
+`model.parameters`: these were CHECK domain/sequence rejections, not Fusion UI
+refusals or unexpected feature failures. Both restoration files have identical
+content hashes and matching default values. Their positions in local file-time
+order agree with the maintainer's stated sequence; hashes alone do not prove
+separate execution or document identity. The early rejections do not include
+body diagnostics because they precede geometry validation.
+
+| Report identifier | SHA-256 |
+| --- | --- |
+| `uwuq5tzb` | `d6d88978ff3b5667c99e198b527aefb67124c281845f8ab1e8a565116527067d` |
+| `_hq6gs8v` | `e23e6043e18721fb2391c3ac4c90b78e71f3563c56c48881d9f95250d9bcb6b9` |
+| `xhotdiee` | `4181dc24a84833c0102c9ff258147e945f8e259abc75a025d9e01c4f108eaf47` |
+| `3nb7l73f` | `e23e6043e18721fb2391c3ac4c90b78e71f3563c56c48881d9f95250d9bcb6b9` |
+
+### Engineering conclusion and review boundary
+
+The bounded planned macOS CHECK matrix is complete with expected results. It
+demonstrates editable parametric concept geometry across the tested settings,
+all four configurations, and rejection/recovery for the two invalid inputs.
+The missing-constraint trapezoid failure and corrected carrier evidence below
+remain part of the record. The 0.001 mm comparison and one-ULP normalization
+were not relaxed; no source change was made in finalizing this evidence.
+
+This is **not** physical docking, thermal/load validation, full collision/contact
+certification, or independent Windows verification. Full Cartesian parameter
+coverage, fabrication fit, force closure, preload/retention, stiffness, fatigue,
+thermal drift, safe capture, exports and a non-proprietary reproducible CAD
+backend remain unresolved. Independent engineering review of the corrected
+constraint scheme, contact/support assumptions and verification limits is still
+required; the original desk review does not cover later corrections. No hardware
+proof gate or final architecture is approved. PR #18 remains Draft; no merge.
+
+No further Fusion testing is requested by this task. Raw diagnostic files stay
+outside Git and are preserved locally; `/tmp` is not a durable raw-data archive.
+The sections below retain earlier investigation and acceptance checkpoints;
+this completed matrix supersedes their narrower pending-status statements.
 
 ## Accepted carrier-resize runtime evidence — 2026-10-13
 
@@ -69,7 +127,7 @@ This follow-up changes documentation only; Markdown/link and whitespace checks
 were repeated, not the unchanged Python suite. No commit, push, PR update, merge,
 Fusion save or hardware action was performed or authorized by the reported pass.
 
-## Evidence boundary
+## Earlier evidence boundary (historical)
 
 The maintainer reports successful `B,inset` generation on Fusion Personal for
 macOS, with 59 named solids/reservations and four 5 mm mounting holes on 100 mm

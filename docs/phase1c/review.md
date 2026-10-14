@@ -3,8 +3,40 @@
 The review below covers the original concept implementation. It does **not**
 constitute independent review or Fusion acceptance of the subsequent 2026-10-13
 macOS runtime correction. See [verification](verification.md) for the observed
-failures, the accepted B,inset carrier sequence and the remaining test matrix.
+failures, the completed planned macOS matrix and the remaining engineering limits.
 Historical test results below apply only to the source reviewed at that time.
+
+## Completed matrix evidence review — 2026-10-13
+
+The maintainer completed the planned macOS matrix. Direct inspection of local
+reports corroborates the seven carrier passes; gap and release/return states;
+pitch, bore, inset and B baseline values; and component sets for A,center,
+A,inset, B,center and B,inset. Both negative tests are expected CHECK rejections
+(carrier165 and X1/Y0); both restorations pass for 59 solids. The previously
+unlisted carrier-restoration report `_hq6gs8v` was found and inspected alongside
+the three supplied filenames. Exact outcomes, provenance and limitations are
+in [verification](verification.md). Visual inspection and test continuity are
+maintainer-reported, not independently executed by the agent.
+
+Engineering review summary: the source now demonstrates a constrained editable
+cold docking concept at the tested settings and configurations, including domain
+and release-order guards and recovery. Missing edge constraints caused the
+historical trapezoid; the successful corrected tests supersede that failure for
+the exercised scope without erasing it. Independent review of the corrected CAD
+scheme and contact/support/capture assumptions remains outstanding. No physical
+docking, thermal/load evidence, full collision certification or independent
+Windows verification is claimed. The full parameter space is not certified.
+
+Finalization checks: all **47 automated tests passed (15.099 s)** using
+`python3 -B -m unittest discover -s tests -v`. Static smoke validation passed;
+that command does not execute Fusion. Changed Markdown local links/fences,
+complete intended diff and working/staged whitespace checks passed. No source
+or test files changed. CI is linked from Draft PR #18 after the documentation push.
+
+This follow-up changes documentation only. No Fusion designs, source, tolerance,
+logs, local configuration or other repositories were altered. Earlier pending
+statements below are historical checkpoints. Draft PR #18 must not be merged
+without explicit approval.
 
 ## Publication review — 2026-10-13
 
