@@ -1,0 +1,221 @@
+{
+  "observed_date": "2026-10-15",
+  "pcb_repository_revision": "ea88166891ee0a1697a3899a5d55ab3722a2f125",
+  "method": "Pinned remote PCB text read in memory; source bytes not saved; narrow factual extraction only",
+  "sources": [
+    {
+      "source": "Original",
+      "sha256": "ed5eff88e1ab8f1cc5ae8db1a1188c1932a65c35a5df9f06b8910f73ff65b0d7",
+      "units": "mm",
+      "plain_holes": [
+        {
+          "x": "48.26",
+          "y": "20.32",
+          "drill": "2.54"
+        },
+        {
+          "x": "48.26",
+          "y": "2.54",
+          "drill": "2.54"
+        }
+      ],
+      "mounting_pads": [
+        {
+          "name": "U$31",
+          "package": "MOUNTINGHOLE_2.5_PLATED",
+          "x": "2.54",
+          "y": "20.32",
+          "rot": "R270",
+          "pads": [
+            {
+              "name": "P$1",
+              "x": "0",
+              "y": "0",
+              "drill": "2.5",
+              "diameter": "3.2"
+            }
+          ]
+        },
+        {
+          "name": "U$32",
+          "package": "MOUNTINGHOLE_2.5_PLATED",
+          "x": "2.54",
+          "y": "2.54",
+          "rot": "R270",
+          "pads": [
+            {
+              "name": "P$1",
+              "x": "0",
+              "y": "0",
+              "drill": "2.5",
+              "diameter": "3.2"
+            }
+          ]
+        }
+      ],
+      "components": {
+        "X1": {
+          "name": "X1",
+          "package": "JSTPH2_BATT",
+          "x": "10.922",
+          "y": "19.304",
+          "rot": null
+        },
+        "X6": {
+          "name": "X6",
+          "package": "USB_C_CUSB31-CFM2AX-01-X",
+          "x": "2.6035",
+          "y": "11.43",
+          "rot": "R270",
+          "board_pad_centers_mm": {
+            "M3": [
+              1.3935,
+              15.75
+            ],
+            "M4": [
+              1.3935,
+              7.11
+            ],
+            "M2": [
+              5.5735,
+              7.11
+            ],
+            "M1": [
+              5.5735,
+              15.75
+            ]
+          }
+        },
+        "CONN1": {
+          "name": "CONN1",
+          "package": "JST_SH4",
+          "x": "48.26",
+          "y": "8.255",
+          "rot": "R90"
+        },
+        "SW1": {
+          "name": "SW1",
+          "package": "BTN_KMR2_4.6X2.8",
+          "x": "11.811",
+          "y": "6.4135",
+          "rot": "R180"
+        },
+        "SW2": {
+          "name": "SW2",
+          "package": "BTN_KMR2_4.6X2.8",
+          "x": "49.022",
+          "y": "15.24",
+          "rot": "R90"
+        }
+      },
+      "path": "Adafruit Feather RP2040 Original.brd"
+    },
+    {
+      "source": "Later",
+      "sha256": "8ed4623de172bab6f33e27ac1675b28ac32fe68f8a6caf89c444167db343dda2",
+      "units": "mm",
+      "plain_holes": [
+        {
+          "x": "48.26",
+          "y": "20.32",
+          "drill": "2.54"
+        },
+        {
+          "x": "48.26",
+          "y": "2.54",
+          "drill": "2.54"
+        }
+      ],
+      "mounting_pads": [
+        {
+          "name": "U$31",
+          "package": "MOUNTINGHOLE_2.5_PLATED",
+          "x": "2.54",
+          "y": "20.32",
+          "rot": "R270",
+          "pads": [
+            {
+              "name": "P$1",
+              "x": "0",
+              "y": "0",
+              "drill": "2.5",
+              "diameter": "3.2"
+            }
+          ]
+        },
+        {
+          "name": "U$32",
+          "package": "MOUNTINGHOLE_2.5_PLATED",
+          "x": "2.54",
+          "y": "2.54",
+          "rot": "R270",
+          "pads": [
+            {
+              "name": "P$1",
+              "x": "0",
+              "y": "0",
+              "drill": "2.5",
+              "diameter": "3.2"
+            }
+          ]
+        }
+      ],
+      "components": {
+        "X1": {
+          "name": "X1",
+          "package": "JSTPH2_BATT",
+          "x": "10.922",
+          "y": "17.653",
+          "rot": null
+        },
+        "X6": {
+          "name": "X6",
+          "package": "USB_C_CUSB31-CFM2AX-01-X",
+          "x": "3.8735",
+          "y": "11.43",
+          "rot": "R270",
+          "board_pad_centers_mm": {
+            "M3": [
+              1.3935,
+              15.75
+            ],
+            "M4": [
+              1.3935,
+              7.11
+            ],
+            "M2": [
+              5.5735,
+              7.11
+            ],
+            "M1": [
+              5.5735,
+              15.75
+            ]
+          }
+        },
+        "CONN1": {
+          "name": "CONN1",
+          "package": "JST_SH4",
+          "x": "47.752",
+          "y": "8.255",
+          "rot": "R90"
+        },
+        "SW1": {
+          "name": "SW1",
+          "package": "BTN_KMR2_4.6X2.8",
+          "x": "11.811",
+          "y": "6.4135",
+          "rot": "R180"
+        },
+        "SW3": {
+          "name": "SW3",
+          "package": "SPST_TACTILE_RA_2*4*3.5MM",
+          "x": "49.149",
+          "y": "15.3035",
+          "rot": "R90"
+        }
+      },
+      "path": "Adafruit Feather RP2040.brd"
+    }
+  ]
+}

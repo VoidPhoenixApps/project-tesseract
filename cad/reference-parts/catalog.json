@@ -450,13 +450,14 @@
       "geometry": {
         "units": "mm",
         "coordinate_system": "Native root frame: board bottom at Z=0, lower-left board corner X=Y=0; X along 50.8 mm length, Y across 22.86 mm width, +Z toward components; USB projects toward -X.",
-        "interface_dimensions": "Fusion: PCB 50.8 x 22.86 x 1.57 mm; hole centers 45.72 x 17.78 mm, 2.54 mm edge offsets. Two holes diameter 2.50 mm, two 2.54 mm (drawing diameter not established). Assembly 51.946 x 22.86 x 6.37 mm. See stage-b-verification.md.",
+        "interface_dimensions": "Fusion: PCB 50.8 x 22.86 x 1.57 mm; hole centers 45.72 x 17.78 mm, 2.54 mm edge offsets. Two holes diameter 2.50 mm, two 2.54 mm (original and later PCB source drill fields agree; finished-hole tolerances unknown). Assembly 51.946 x 22.86 x 6.37 mm. See stage-b-verification.md.",
         "checks": [
           "SHA-256 and byte count recorded; Git blob SHA-1 matches official pinned metadata.",
           "STEP start/end, HEADER/DATA and two ENDSEC markers present; 50481 entity definitions; one SI millimetre unit declaration. Not a full STEP parser.",
           "AP214 AUTOMOTIVE_DESIGN schema; header timestamp 2021-05-10; header labels model rev C v2. Physical PCB revision correspondence not verified.",
           "Fusion 2705.1.30 local STEP import, unsaved temporary document: 47 occurrences, 58 BRep bodies, all reported solid; no import error observed.",
-          "PCB outline and mounting-center rectangle agree with official Original fabrication drawing; no manufacturing tolerance or physical fit established. Read-only API inspection repeated identically within one import."
+          "PCB outline and mounting-center rectangle agree with official Original fabrication drawing; no manufacturing tolerance or physical fit established. Read-only API inspection repeated identically within one import.",
+          "Stage C: original/later official PCB sources retain plated-pad drill 2.50 mm at X=2.54 and plain-hole drill 2.54 mm at X=48.26; source explanation established, not a finished-hole tolerance or physical fit check."
         ],
         "confidence": "dimension-checked"
       },
@@ -502,7 +503,7 @@
         "git_blob_sha1": "6b6c10b83c8e2648b036c741208101c5511affd6",
         "import_status": "dimension-checked"
       },
-      "notes": "Pinned root MIT applies; no folder override found. Model rev C v2 compared with Original fab print alongside rev C schematic, not current rev D. Partial dimension check only; hole diameter, connector mating clearances, purchased revision and physical fit remain unresolved. See stage-b-verification.md and feather-fusion-observations.json."
+      "notes": "Pinned STEP MIT grant retained; PCB-source rights are separate. Stage C explains the paired hole diameters from original and later PCB source definitions. Purchased revision, finished-hole limits and mating clearances remain unresolved. Later BOOTSEL, battery and STEMMA source changes prevent assuming the old STEP represents a current board. USB footprint-origin change is compensated in package coordinates. See stage-c-verification.md and feather-pcb-source-observations.json; Stage B import evidence remains historical."
     },
     {
       "id": "bigtreetech-skr-mini-e3-v3-0",
@@ -562,7 +563,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Firmware licenses do not establish hardware-model rights. Stage B inspected pinned repository tree, root README and available hardware readme: no root/hardware CAD grant established; licenses found under firmware cannot license these STEP files. All five permissions remain unknown."
+      "notes": "Firmware licenses do not establish hardware-model rights. Stage B inspected pinned repository tree, root README and available hardware readme: no root/hardware CAD grant established; licenses found under firmware cannot license these STEP files. All five permissions remain unknown. Stage C rechecked complete trees/current heads and scoped README evidence: no hardware-CAD grant established. Exact asset and five-action manufacturer request: stage-c-verification.md."
     },
     {
       "id": "bigtreetech-octopus-v1-0",
@@ -622,7 +623,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Do not use this V1.0 model for V1.1 or Pro without a revision audit. Stage B inspected pinned repository tree, root README and available hardware readme: no root/hardware CAD grant established; licenses found under firmware cannot license these STEP files. All five permissions remain unknown. Octopus Hardware/readme.txt notes V1.1 silkscreen and power-IC package changes; do not infer geometry equivalence."
+      "notes": "Do not use this V1.0 model for V1.1 or Pro without a revision audit. Stage B inspected pinned repository tree, root README and available hardware readme: no root/hardware CAD grant established; licenses found under firmware cannot license these STEP files. All five permissions remain unknown. Octopus Hardware/readme.txt notes V1.1 silkscreen and power-IC package changes; do not infer geometry equivalence. Stage C rechecked complete trees/current heads and scoped README evidence: no hardware-CAD grant established. Exact asset and five-action manufacturer request: stage-c-verification.md."
     },
     {
       "id": "duet3d-duet-3-mini-5-wifi",
@@ -802,7 +803,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "BLOCKED revision mapping: current listing offers 17HS08-1004S.STEP (1.2 MB), not downloaded. Older https://www.omc-stepperonline.com/download/17HS08-1004S.pdf has 20 +/-1 mm body; listing has 21.5 mm and notes black/silver appearances. Current Full_Datasheet.pdf returned HTTP 403. A dated drawing and confirmation of the offered STEP/physical lot are required; listing slug still contains 20mm and is not dimensional evidence."
+      "notes": "BLOCKED revision mapping: current listing offers 17HS08-1004S.STEP (1.2 MB), not downloaded. Older https://www.omc-stepperonline.com/download/17HS08-1004S.pdf has 20 +/-1 mm body; listing has 21.5 mm and notes black/silver appearances. Current Full_Datasheet.pdf returned HTTP 403. A dated drawing and confirmation of the offered STEP/physical lot are required; listing slug still contains 20mm and is not dimensional evidence. Stage C reconfirms live 21.5 mm claim; current PDF recognized by web service but usable drawing inspection still unavailable (direct retrieval 403). No revision resolution or STEP retrieval. See stage-c-verification.md."
     },
     {
       "id": "hiwin-mgn09c-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -860,7 +861,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution. Stage C adds order-code/drilling checklist from US catalog G99TE24-2410; this does not establish equivalence with the German HIRES product revision or select an assembly. See stage-c-verification.md."
     },
     {
       "id": "hiwin-mgn09h-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -918,7 +919,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution. Stage C adds order-code/drilling checklist from US catalog G99TE24-2410; this does not establish equivalence with the German HIRES product revision or select an assembly. See stage-c-verification.md."
     },
     {
       "id": "hiwin-mgn12c-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -976,7 +977,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution. Stage C adds order-code/drilling checklist from US catalog G99TE24-2410; this does not establish equivalence with the German HIRES product revision or select an assembly. See stage-c-verification.md."
     },
     {
       "id": "hiwin-mgn12h-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -1034,7 +1035,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution. Stage C adds order-code/drilling checklist from US catalog G99TE24-2410; this does not establish equivalence with the German HIRES product revision or select an assembly. See stage-c-verification.md."
     },
     {
       "id": "skf-625-2z-cn-clearance",
@@ -2224,7 +2225,7 @@
       "geometry": {
         "units": "mm",
         "coordinate_system": "unknown; preserve native frame on first import",
-        "interface_dimensions": "Manufacturer listing: 48 mm body, 5 mm shaft. Shaft projection and hole tolerances need exact VRN drawing.",
+        "interface_dimensions": "Live VRN table: body 48 mm max, shaft diameter 5 mm, shaft projection 24 +/-0.5 mm, mounting pitch 31 +/-0.1 mm, 4 x M3 depth 4.5 mm min; agrees with generic Rev A for these fields only. Not imported or accepted for exact supplied revision.",
         "checks": [],
         "confidence": "documentation-only"
       },
@@ -2261,7 +2262,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "VRN suffix retained; generic LDO-42STH48-2004AC Rev A drawing is not established equivalent. Manufacturer BOM corroborates identity: https://docs.ldomotors.com/en/voron/voron2/350_BOM/Rev_D . No torque suitability claim."
+      "notes": "VRN suffix retained; generic LDO-42STH48-2004AC Rev A drawing is not established equivalent. Manufacturer BOM corroborates identity: https://docs.ldomotors.com/en/voron/voron2/350_BOM/Rev_D . No torque suitability claim. Stage C generic Rev A PDF at fdc453d06e59b02ca5293f260e1d2b7259868901 agrees in selected mounting dimensions but differs from live VRN electrical/inertia data (2.8 vs 3.2 V; 1.4 vs 1.6 ohm; 68 vs 85 g cm^2). Exact suffix/revision remains unknown; see stage-c-verification.md."
     },
     {
       "id": "ldo-42sth40-1684cl350e-vrn",
@@ -2319,7 +2320,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "BLOCKED source inconsistency: Specifications table names a different LDO-36STH20-1004AH motor. Do not infer screw length from 350 in the identifier or copy that table. Overview references Rev D but drawing/revision mapping unverified. Request exact drawing before CAD."
+      "notes": "BLOCKED source inconsistency: Specifications table names a different LDO-36STH20-1004AH motor. Do not infer screw length from 350 in the identifier or copy that table. Overview references Rev D but drawing/revision mapping unverified. Request exact drawing before CAD. Stage C reconfirms mismatch; no exact CL350E/VRN drawing path found in official datasheet tree fdc453d06e59b02ca5293f260e1d2b7259868901. Consolidated request in stage-c-verification.md."
     },
     {
       "id": "igus-swm-08",

@@ -96,7 +96,7 @@ Changed files:
 - `scripts/inspect_feather_fusion.py`: reproducible read-only numerical inspection in existing Fusion.
 - `docs/research-first-plan.md`: Stage A merged / Stage B evidence status, with pause intact.
 
-Requirements, architecture, roadmap, original/Phase 1C CAD, licensing and hardware are unchanged. No hardware was operated, purchased or selected; no new model, engine or toolchain was authorized. Independent review and human merge approval remain pending for the Draft PR. No consequential architecture or safety change is proposed.
+Requirements, architecture, roadmap, original/Phase 1C CAD, licensing and hardware are unchanged. No hardware was operated, purchased or selected; no new model, engine or toolchain was authorized. Historical handoff: independent review and human merge approval were pending when Stage B was written. Stage B subsequently merged in [PR #34](https://github.com/VoidPhoenixApps/project-tesseract/pull/34) on 2026-10-15; [Stage C](stage-c-verification.md) supersedes the hole-source uncertainty while retaining physical-fit limits. No consequential architecture or safety change is proposed.
 
 Next: resolve Feather mounting diameters/revision and cable clearances; obtain corrected LDO/STEPPERONLINE drawings, BTT model-specific permission, and a complete HIWIN configuration; then request approval for a specifically identified additional sample if needed. Keep every request consolidated with exact part/revision, desired format/source, geometry purpose, rights uncertainty and blocked work per the [missing-model workflow](README.md#future-codex-sessions-missing-model-request). No additional download is required to review this Stage B PR.
 
