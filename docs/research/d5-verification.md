@@ -68,3 +68,41 @@ Separate visual verification did not complete: the Discord view still showed D4 
 the acknowledgement, and the next UI scroll returned `noWindowsAvailable`. No retry,
 recovery report or duplicate dispatch was attempted. Workflow success/acknowledgement
 is established; actual new-message content and channel visibility remain unverified.
+
+## Integrated-review interpretation correction — 2026-10-15
+
+The later D1–D6 integrated review identified one Important cross-cutting finding:
+D5/D6 could turn an unresolved hazard assessment into presumed guarding requirements,
+conflating environmental-panel removal, protective-guard access and maintenance. The
+maintainer clarified ordinary open-air RepRap capability; the earlier review above is
+retained as historical evidence, not the disposition of this later finding.
+
+Corrected `d5-safety.md`, `d5-engineering-study.md`, `d5-next-investigations.md`,
+`d5-public-summary.md`, `d5-mode-clearance.md`, `d5-diagrams.md`, `d5-attachments.md`
+and `d5-service.md`; this verification record documents the correction. Environmental
+panels are not automatically guards and their absence alone is not a protective fault
+or interlock requirement. Five activities now have distinct treatment. Hazard-specific
+assessment still justifies necessary electrical, heater, gravity/load and restart
+protections. All eight modes, independent jobs and tool-free conversion remain mandatory.
+No requirement, numerical result, model, historical failure or D1–D4 file was changed.
+
+Verification on the corrected D5 tree: 68 research, 11 Phase 1B and 63 repository tests
+passed (142 total); D1–D5 JSON outputs reproduced byte-identically from outside the repo.
+Python 3.9 grammar and all 47 research Markdown files' local links/anchors, tables,
+fences, titles and final newlines passed. Complete PR scope and correction diff reviewed;
+working-tree and parent-to-head whitespace checks passed. Staged whitespace is checked
+before commit. No external renderer or physical checks: documentation-only correction.
+
+A separate read-only AI reviewer inspected the original Important finding, maintainer
+clarification, correction diff, surrounding D5 documents, requirements and shared review
+policy. Result: **APPROVE for research publication; 0 Critical / 0 Important / 0 Minor**.
+The reviewer found the original finding resolved for D5, with high confidence in the
+documentation correction. This is not qualified safety certification or human merge
+approval; D6 requires its corresponding correction and review.
+
+Current main authority and shared standards were rechecked against the versions read
+for the integrated review; they matched. AgentMemory returned unrelated continuity,
+which was not used. No supporting repository or hardware changed. Final remote-head CI
+is verified separately after push; existing CI does not run the research suite. No
+routine corrective Discord milestone is dispatched. Research-pause and physical gates
+remain unchanged; first physical proof is two-bed docking and cross-seam printing.

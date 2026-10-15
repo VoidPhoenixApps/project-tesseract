@@ -12,7 +12,7 @@ hypothetical. The concepts do not select motion, support, enclosure or safety ar
        . . . . . . . . . . . . . . . . . . . . . . . . . .
        .  environmental panel boundary (unselected size)   .
        .  +-------------------------------------------+   .
-       .  | permanent structure / independent guards |   .
+       .  | structure / any justified guards          |   .
        .  |   root/park/cable reservations at edges   |   .
        .  |        +---------+  +---------+          |   .
        .  |        | 1 NW    |  | 2 NE    |          |   .
@@ -53,7 +53,7 @@ requiring a revised enclosure concept rather than a hole assumed safe around mov
 
 The panel supports its own weight only. Removing it cannot release a brace, bed/head
 restraint or electrical cover. The one fixed locating datum and floating followers need
-out-of-plane capture throughout their travel; thermal float is not a loose guard.
+out-of-plane capture throughout their travel; thermal float must not defeat panel retention.
 
 ## Removal-path counterexample: Y–Z section
 
@@ -96,11 +96,11 @@ view factors and convection paths. No active chamber heater is represented.
 ## Protection decision flow (conceptual review, not control logic)
 
 ```text
-Does removing environmental panels remove an essential protective function?
+Hazard-specific assessment: is a protective function explicitly assigned to a panel?
              | no                                  | yes
              v                                     v
-Assess remaining local guards,          Develop independent effective protection
-hot zones, emissions and service        for open-air mode, preserving all modes
+Retain open-air capability; assess      Develop independent effective protection
+motion, heat, emissions and service     for open-air mode, preserving all modes
              |                                     |
              +---------- qualified review ---------+
                               |

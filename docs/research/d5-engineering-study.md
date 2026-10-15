@@ -8,7 +8,7 @@ heating, controller choice or license decision is authorized by this package.
 cassettes with positive hand retainers; removable hinged cassettes; and captured-edge
 panels with hand-released end stops where extraction space exists. Compare transparent
 polycarbonate, acrylic and tempered-glass inserts with opaque metal and hybrid panels.
-No candidate yet demonstrates all-mode motion clearance, protective guarding, practical
+No candidate yet demonstrates all-mode motion clearance, hazard-specific risk reduction, practical
 handling or acceptable temperatures. Whole-machine feasibility remains unresolved.
 
 ## Package
@@ -53,12 +53,12 @@ also remains unchanged. A future stack rebase/retarget requires renewed dependen
 | --- | --- |
 | Mandatory | Four nominal 180 × 180 mm heated beds, four retained individual sheets, automatic horizontal configuration at a common fixed-height plane; all eight arrangements with independent jobs remain in the [matrix](d5-mode-clearance.md). Nominal joined dimensions do not promise usable area |
 | Mandatory | Enclosed and open-air printing, genuinely hand-only panel installation/removal without dismantling primary systems; [attachments](d5-attachments.md) and [service](d5-service.md) assess both directions |
-| Mandatory | Secure normal retention and repeated convenient conversion; separate weight support, outward retention, thermal relief, engagement verification and guarding |
+| Mandatory | Secure normal retention and repeated convenient conversion; separate weight support, outward retention, thermal relief and engagement verification. Protective functions require a documented hazard-specific risk basis; environmental panels are not automatically guards |
 | Mandatory | Cleaning, calibration, wiring inspection and component replacement access; no panel-as-brace or panel-as-gravity-restraint credit |
 | Mandatory | Printable-first, ordinary Ender 3 part envelope, separate imperial/metric structural interfaces, later 2020 edition; same capabilities require distinct fit/thermal/clearance verification |
 | Mandatory | Editable sources and public reproducibility without required paid/proprietary tooling; original Markdown diagrams and standard-library Python only |
 | Preference | Readily obtainable materials/hardware; compare sourcing and replacement burdens without selecting suppliers |
-| Proposed | Three enclosure concepts, floating followers, separate permanent protection and hypothetical sensitivity dimensions; no final architecture or material |
+| Proposed | Three enclosure concepts, floating followers, protective barriers/sensors/interlocks where justified by risk assessment, and hypothetical sensitivity dimensions; no final architecture or material |
 | Unknown | Temperature recipes, material grades/thicknesses, outer dimensions, ventilation, filtration, active heating, controller, operating limits, ratings and license |
 | Stretch | Four-head cooperation on one object remains unproven and separate; baseline J examines one full-region head |
 
@@ -96,7 +96,7 @@ keep acrylic as a transparent comparison with explicit brittle-failure concerns.
 Screen out **as sole claimed solutions**: friction/magnets alone for gravity or guarding;
 printed snap clips with assumed lifetime; panels relied on for frame stiffness; fixed
 roof/brace removal needed for conversion; permanently attached doors advertised as
-removable; tool-drive quarter-turns; interlocks simply bypassed for open-air printing.
+removable; tool-drive quarter-turns; necessary protective interlocks bypassed for open-air printing.
 These negative findings do not reject every use of magnets, snaps, hinges or sensors.
 
 Qualified mechanical, electrical/thermal and safeguarding review precedes adoption.

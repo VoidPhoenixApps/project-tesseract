@@ -54,7 +54,8 @@ compression must neither lock followers nor become a primary shear path. Compare
 replaceable grips, visible capture, captive hardware, two-hand support during final release,
 and a safe storage cradle. No loose keepers should fall into beds or electronics.
 
-Convenience latches and presence sensors do not establish protective guarding. If a panel
-must protect against access or ejection, its whole assembly, stopping/access time and
-interlock strategy need qualified review. Open-air operation cannot be achieved by defeating
+Environmental panels are not automatically protective guards, and their absence alone
+requires no interlock. Convenience latches and presence sensors do not establish protection.
+If hazard-specific assessment assigns a panel protection against access or ejection,
+its whole assembly, stopping/access time and interlock strategy need qualified review. Open-air operation cannot be achieved by defeating
 that protection; see the distinct protection alternatives in the [safety register](d5-safety.md).
