@@ -10,12 +10,12 @@ removing panels is **not** a prerequisite for changing bed arrangement.
 
 | Mode / independent groups | Panels installed: critical complete-envelope obligations | Panels removed: persistent obligations | Conversion/service discriminator | Status |
 | --- | --- | --- | --- | --- |
-| S: 1 / 2 / 3 / 4 | Four active heads at unrelated heights, outer roots/cables and four separate Z stages clear walls, roof, catches | Same internal motion conflicts; permanent guarding and panel supports cannot intrude into four jobs | Reach all latches without reaching through active-head zones; later service requires safe isolation | U / U |
+| S: 1 / 2 / 3 / 4 | Four active heads at unrelated heights, outer roots/cables and four separate Z stages clear walls, roof, catches | Same internal motion conflicts; any justified guards and panel supports cannot intrude into four jobs | Reach all latches without reaching through active-head zones; later service requires safe isolation | U / U |
 | R: 12 / 34 | Two independent row seam paths; full H2/H4 parked assemblies and beams clear side/roof panels | Removing wall does not make ±260 parks reachable or remove stationary beams; two groups still independent | NE/SE parked assemblies compete with right-side catches and removal sweep | U / U |
 | C: 13 / 24 | Two full Y paths; H3/H4 parks; stacked columns and full-width bridge restrictions persist | Full-width nonpassing bridge conflict remains; no scheduling restriction silently substitutes for independence | SW/SE parks compete with front extraction, door swing and hands | U / U |
-| M12: 12 / 3 / 4 | Top row pair plus two independently progressing lower singles; H2 park and north-side roots | Permanent protection must cover all three regions; moving pair cannot strike active singles | NE park competes with north/right panel; no assumed mirror equivalence | U / U |
+| M12: 12 / 3 / 4 | Top row pair plus two independently progressing lower singles; H2 park and north-side roots | Necessary protective functions remain effective for all three regions; no blanket region-guarding requirement; moving pair cannot strike active singles | NE park competes with north/right panel; no assumed mirror equivalence | U / U |
 | M34: 34 / 1 / 2 | Bottom row pair plus top singles; H4 park; asymmetric heater/cable routing | Same three-group obligations and open-air thermal gradients | SE park competes with front/right panel and service route | U / U |
-| M13: 13 / 2 / 4 | Left column pair full Y stroke beside independent right singles; H3 park | Internal columns/objects, guards and support remain obstacles | SW park competes with left/front extraction and left cantilever root | U / U |
+| M13: 13 / 2 / 4 | Left column pair full Y stroke beside independent right singles; H3 park | Internal columns/objects, any justified guards and support remain obstacles | SW park competes with left/front extraction and left cantilever root | U / U |
 | M24: 24 / 1 / 3 | Right column pair full Y stroke beside independent left singles; H4 park | Independent progress and right-side frame loads unchanged | SE park competes with right/front path; harness asymmetry assessed separately | U / U |
 | J: 1234 | One full-region head and three entire parked assemblies; center crossing; secondary lift if adopted | All four sheets retained; lift restraint and parked masses remain; wall absence supplies neither reach nor safety | Largest parked population; lifting roof panel must clear filament/stacked bridges without disconnecting primary systems | U / U |
 
@@ -42,7 +42,7 @@ or a validated minimum enclosure size. Both topologies happen to give these coun
 At 360 the modeled boxes fit this boundary, but all non-S modes still inherit
 `REACH_REJECTED` because the park carriages exceed travel. S remains `UNRESOLVED`.
 Panel-removed mode is not simulated as a safe infinite workspace; underlying collisions,
-travel limits, frame and fixed guarding remain. D2's limited layer samples are not full
+travel limits, frame and any hazard-justified guards remain. D2's limited layer samples are not full
 Z histories or transition sweeps. No 56-directed-transition pass is claimed.
 
 ## Architecture-independent reservations

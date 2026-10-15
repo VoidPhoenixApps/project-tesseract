@@ -28,10 +28,18 @@ wiring. Our simple heat balances demonstrate sensitivity to leakage and uneven h
 they do not establish actual chamber temperatures, safe ventilation or fire containment.
 Active heating, exhaust, filtration and operating-temperature targets remain unresolved.
 
-The largest open issue is protection with panels absent. The machine cannot depend on
-removable walls for its primary stiffness, gravity support or sole essential guarding.
-A panel-presence switch or firmware pause does not resolve that problem. Qualified
-mechanical, electrical/thermal and safeguarding review is needed before adoption.
+Ordinary open-air RepRap printing is intended in every required mode. Exposed belts,
+heads and hot surfaces do not automatically require full guarding, and environmental
+panels do not become protective guards merely by being installed. Their removal alone
+is not a protective fault or an interlock requirement. Existing open-frame printers are
+relevant precedent, not proof of Tesseract safety.
+
+A hazard-specific assessment must distinguish printing, automatic docking, panel
+conversion, actual protective-guard access and maintenance. Closing bed gaps, falling Z
+loads, transmission disengagement, exposed terminals, heater faults and unexpected motion
+need explicit evaluation. Frame stiffness, necessary restraint, electrical protection and
+justified fault protections remain effective with panels absent. Barriers, sensors and
+interlocks are candidates where justified; qualified review still precedes adoption.
 
 Read the [engineering study](d5-engineering-study.md), [comparisons](d5-materials.md),
 [eight-mode matrix](d5-mode-clearance.md), [calculations](d5-calculations.md) and

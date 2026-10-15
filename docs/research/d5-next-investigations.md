@@ -10,7 +10,7 @@ enclosure work must not replace it with an unreviewed four-bed build.
 
 | Priority / question | Smallest useful next investigation | Required evidence and decision gate |
 | --- | --- | --- |
-| P0 safeguarding conflict | Qualified review of effective protection with panels installed/removed; retain all eight operating modes | Hazard inventory, access/stop behavior, electrical covers and independent gravity restraint; reject proposals that require bypassing a protective function for open-air printing |
+| P0 hazard-specific risk allocation | Distinguish ordinary open-air printing, docking, panel conversion, actual guard access and maintenance; retain all eight operating modes | Document exposure, severity, likelihood and residual risk; justify protective functions for closing gaps, falling loads, electrical/heater faults and unexpected motion. No automatic panel interlock or blanket guarding requirement; preserve necessary protections |
 | P0 complete envelope | After geometry authorization, compare lift-out and removable-hinge cassettes against one perimeter-root and one stacked-bridge candidate, plus D3 underbody lift paths | Exact approved component references; full normal/park/fault/service sweeps, uncertainty and occupied-job constraints. No “fits the box” result substitutes for D2's unresolved reach |
 | P1 thermal operating requirements | Maintainer defines proposed materials/recipes, ambient and duty cases for review; estimate source power and a multi-node passive model | Temperature limits for every actual component, separate fault loads, heat-loss uncertainty and localized thermal map plan. Active heating/filtration/exhaust require separate decisions |
 | P1 material and retention coupons, later only | Compare exact sheet grades, support/retainer/gasket stack and printed boss in both structural variants under reviewed loading | Force/displacement, engagement, edge damage, clamp relaxation and retained capture over hot/cold/dirty repeated cycles; no universal cycle count/force limit invented |
@@ -53,7 +53,7 @@ invent printer performance tolerances or describe unsafe hardware fault-injectio
    timing; whether changes wait for print completion/cooling. Automatic bed reconfiguration
    must remain possible with panels installed and affected beds clear.
 2. Which architecture candidates deserve the next bounded geometry study; no final motion,
-   frame or enclosure selected by D5. Required independent guarding strategy needs review.
+   frame or enclosure selected by D5. Any proposed protective barrier, sensor or interlock needs a documented hazard-specific risk basis; environmental-panel absence alone requires none.
 3. Candidate exact material grades, sheet/cassette sizes and sourcing regions for quotes;
    relative importance of visibility, weight, scratches and replacement effort. No budget
    or procurement selected here.

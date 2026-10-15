@@ -2,7 +2,10 @@
 
 This is an access analysis, **not an executable machine-service procedure**. No hardware
 exists with established safe states. [Safety](d5-safety.md) owns isolation and fault needs.
-Tool-free conversion does not mean safe removal during active printing or while hot.
+Tool-free conversion does not itself establish safe handling during active printing or
+while hot. Assess conversion hazards separately; panel absence does not itself require
+service isolation, an interlock or a protective fault. Ordinary open-air printing retains
+all required modes; maintenance still requires reviewed energy isolation.
 
 ## Path definitions and counterexample
 
