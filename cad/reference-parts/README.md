@@ -1,8 +1,8 @@
-# Off-the-shelf reference parts library — Stage A
+# Off-the-shelf reference parts library — Stages A/B
 
-This is a reusable **candidate catalog**, not a Tesseract BOM or a component selection. It supports future research without resuming detailed printer CAD. No model, mechanism, electrical system or physical fit has been validated. [Issue #31](https://github.com/VoidPhoenixApps/project-tesseract/issues/31) owns the work.
+This is a reusable **candidate catalog**, not a Tesseract BOM or a component selection. It supports future research without resuming detailed printer CAD. The Feather sample has a partial reference-dimension check; no mechanism, electrical system or physical fit has been validated. [Stage B issue #33](https://github.com/VoidPhoenixApps/project-tesseract/issues/33) continues merged Stage A (#31 / PR #32).
 
-Start with the [readable index](INDEX.md), [machine-readable catalog](catalog.json), [schema](catalog.schema.json), and [verification record](verification.md). There are 34 candidates in 13 categories. Only the Adafruit Feather RP2040 (#4884) sample is authorized for local download; all other models remain link-only, even where a permissive license is recorded.
+Start with the [readable index](INDEX.md), [machine-readable catalog](catalog.json), [schema](catalog.schema.json), and [Stage A record](verification.md) and [Stage B verification](stage-b-verification.md). There are 45 candidates in 13 categories. Only the Adafruit Feather RP2040 (#4884) sample is authorized for local download; all other models remain link-only, even where a permissive license is recorded.
 
 ## Storage decision and actual access
 
@@ -23,7 +23,7 @@ Layout: `<category>/<manufacturer-slug>/<part-slug>/<source-revision>/<original-
 
 ### Manual Codex source configuration
 
-Open the local Project Tesseract project's menu, choose **Edit project → Add folder**, and add `/Users/todd/Development Projects/tesseract-cad-library/` as an **additional source folder**. Treat model bytes as read-only references; attaching a folder does not itself enforce read-only filesystem access. Keep `/Users/todd/Development Projects/project-tesseract` **Primary** and `/Users/todd/Development Projects/project-knowledge` as the existing additional source. Do not replace either source. This follows [official local-project guidance](https://learn.chatgpt.com/docs/projects#use-local-projects-for-folders-and-codebases); the installed configuration UI was not inspected or changed in this task. In a new session, explicitly list the folder and hash the sample to verify access.
+Open the local Project Tesseract project's menu, choose **Edit project**, inspect the current sources, and use **Add folder** only if missing to add `/Users/todd/Development Projects/tesseract-cad-library/` as an **additional source folder**. Treat model bytes as read-only references; attaching a folder does not itself enforce read-only filesystem access. Keep `/Users/todd/Development Projects/project-tesseract` **Primary** and `/Users/todd/Development Projects/project-knowledge` as the existing additional source. Do not replace either source. This follows [official local-project guidance](https://learn.chatgpt.com/docs/projects#use-local-projects-for-folders-and-codebases); the installed configuration UI remains unverified because Computer Use refused access to the Codex app. Inspect existing sources before adding a duplicate; no settings were changed. In a new session, explicitly list the folder and hash the sample to verify access.
 
 Repeat configuration and access verification separately on POTUS using its actual local path. Cloud sessions need separately authorized file availability; never upload the library merely to make it accessible. Follow the [local setup standard](https://github.com/VoidPhoenixApps/home-infrastructure/blob/main/standards/codex-local-project-setup.md). The sibling directory is outside Git backup; arrange its recovery/backup policy separately in Home Infrastructure when authorized. Approved assets can be recovered from pinned sources and verified against catalog hashes.
 
@@ -39,7 +39,7 @@ All records require exact manufacturer or vendor identity, model/part number, va
 
 A source access date records when the cited metadata/documentation was examined. It does not mean the linked model was downloaded. `source_revision` is distinct from the physical part revision. Undated live pages need rechecking. Availability is a candidate sourcing indication, not confirmed local stock, price, affordability or a purchasing recommendation. The first batch favors common interface families and documents industrial alternatives; it is not a comparative procurement study.
 
-The STEP sample declares millimetres, but its native assembly axes/origin have **not** been interpreted. Do not translate/rotate/scale it silently. PCB envelope, holes, connector protrusions, mating cables and tolerances still need checks. The catalog intentionally contains no claimed fit tolerance.
+The STEP sample was imported in installed Fusion without saving. Native axes, PCB outline, hole centers and assembly envelope are recorded in [Stage B evidence](stage-b-verification.md). Hole diameters differ between pairs; matching physical revision, connector mating clearances and tolerances remain unresolved. Do not translate/rotate/scale it silently. The catalog contains no claimed fit tolerance.
 
 ## Rights and authorization gates
 
@@ -106,4 +106,4 @@ Never fabricate a vendor model, substitute a purchased part silently, or invent 
 
 ## Next batch
 
-Prioritize completing existing evidence before growing counts: audit the authorized Feather sample through a usable engine; request a Pico sample only if useful; resolve the STEPPERONLINE short-motor revision conflict and BTT rights; obtain exact configured HIWIN/alternative-brand carriage and rail models. Then research traceable LDO motors, matched GT2 belt/pulley sets, a second bearing manufacturer, genuine probes, and specified smooth rods/leadscrews plus fractional-inch versus metric reinforcement stock. Add length, grade, wall/diameter and tolerances from purchasable stock. No new downloads, purchases or part selections are authorized by this list.
+Resolve the Feather hole-diameter/revision details, corrected STEPPERONLINE and LDO drawings, BTT hardware-model permissions and a fully configured HIWIN rail/carriage assembly. Refine stock grade/tolerances, rod length/end machining, probe stroke and Gates bore/drive configuration. Stage B added eleven link-only candidates; see its evidence for source errors and blocked work. Growth remains incremental and independent of Tesseract hardware selection. Request separate approval before any additional model download; no purchase, hardware test or detailed printer CAD is authorized by this backlog.

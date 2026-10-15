@@ -449,14 +449,16 @@
       "provenance": "Official Adafruit CAD repository pinned commit; file size and Git blob SHA-1 matched GitHub metadata; local SHA-256 recorded.",
       "geometry": {
         "units": "mm",
-        "coordinate_system": "unknown; preserve native frame on first import",
-        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "coordinate_system": "Native root frame: board bottom at Z=0, lower-left board corner X=Y=0; X along 50.8 mm length, Y across 22.86 mm width, +Z toward components; USB projects toward -X.",
+        "interface_dimensions": "Fusion: PCB 50.8 x 22.86 x 1.57 mm; hole centers 45.72 x 17.78 mm, 2.54 mm edge offsets. Two holes diameter 2.50 mm, two 2.54 mm (drawing diameter not established). Assembly 51.946 x 22.86 x 6.37 mm. See stage-b-verification.md.",
         "checks": [
           "SHA-256 and byte count recorded; Git blob SHA-1 matches official pinned metadata.",
           "STEP start/end, HEADER/DATA and two ENDSEC markers present; 50481 entity definitions; one SI millimetre unit declaration. Not a full STEP parser.",
-          "AP214 AUTOMOTIVE_DESIGN schema; header timestamp 2021-05-10; header labels model rev C v2. Physical PCB revision correspondence not verified."
+          "AP214 AUTOMOTIVE_DESIGN schema; header timestamp 2021-05-10; header labels model rev C v2. Physical PCB revision correspondence not verified.",
+          "Fusion 2705.1.30 local STEP import, unsaved temporary document: 47 occurrences, 58 BRep bodies, all reported solid; no import error observed.",
+          "PCB outline and mounting-center rectangle agree with official Original fabrication drawing; no manufacturing tolerance or physical fit established. Read-only API inspection repeated identically within one import."
         ],
-        "confidence": "file-checked"
+        "confidence": "dimension-checked"
       },
       "permissions": {
         "download": {
@@ -498,9 +500,9 @@
         "license_sha256": "f60436644e066301d4c2e8f1f0674a157b1f60e4fd5586717b99dde255cc18cd",
         "download_url": "https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/c128bceb1f96b6ea8b68f250bda986ba85da24ea/4884%20Feather%20RP2040/4884%20Feather%20RP2040.step",
         "git_blob_sha1": "6b6c10b83c8e2648b036c741208101c5511affd6",
-        "import_status": "not-run-no-verified-engine"
+        "import_status": "dimension-checked"
       },
-      "notes": "Root MIT license applies to official CAD repository; no per-folder override in the inspected pinned directory. Model header labels rev C v2; that is not verified physical PCB revision. No imported geometry or dimension check."
+      "notes": "Pinned root MIT applies; no folder override found. Model rev C v2 compared with Original fab print alongside rev C schematic, not current rev D. Partial dimension check only; hole diameter, connector mating clearances, purchased revision and physical fit remain unresolved. See stage-b-verification.md and feather-fusion-observations.json."
     },
     {
       "id": "bigtreetech-skr-mini-e3-v3-0",
@@ -560,7 +562,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Firmware licenses do not establish hardware-model rights."
+      "notes": "Firmware licenses do not establish hardware-model rights. Stage B inspected pinned repository tree, root README and available hardware readme: no root/hardware CAD grant established; licenses found under firmware cannot license these STEP files. All five permissions remain unknown."
     },
     {
       "id": "bigtreetech-octopus-v1-0",
@@ -620,7 +622,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Do not use this V1.0 model for V1.1 or Pro without a revision audit."
+      "notes": "Do not use this V1.0 model for V1.1 or Pro without a revision audit. Stage B inspected pinned repository tree, root README and available hardware readme: no root/hardware CAD grant established; licenses found under firmware cannot license these STEP files. All five permissions remain unknown. Octopus Hardware/readme.txt notes V1.1 silkscreen and power-IC package changes; do not infer geometry equivalence."
     },
     {
       "id": "duet3d-duet-3-mini-5-wifi",
@@ -751,17 +753,19 @@
       "revision": "unknown",
       "status": "candidate",
       "availability": "Commercial product documented; local stock and price not verified",
-      "documentation_url": "https://www.omc-stepperonline.com/download/17HS08-1004S.pdf",
-      "model_url": null,
-      "model_source_status": "not-located",
-      "source_revision": "Undated live source; revision not established",
+      "documentation_url": "https://www.omc-stepperonline.com/de/nema-17-bipolar-1-8deg-16ncm-22-6oz-in-1a-3-5v-42x42x20mm-4-draehte-17hs08-1004s",
+      "model_url": "https://www.omc-stepperonline.com/de/nema-17-bipolar-1-8deg-16ncm-22-6oz-in-1a-3-5v-42x42x20mm-4-draehte-17hs08-1004s",
+      "model_source_status": "listed",
+      "source_revision": "Live listing checked 2026-10-15 versus older drawing approved 2018-08-18; physical revision unresolved",
       "access_date": "2026-10-15",
-      "formats": [],
+      "formats": [
+        "STEP"
+      ],
       "provenance": "Manufacturer documentation; linked model bytes not inspected",
       "geometry": {
         "units": "mm",
         "coordinate_system": "unknown; preserve native frame on first import",
-        "interface_dimensions": "Older drawing: face 42.3 mm MAX; 31 +/-0.2 mm mounting square; 4-M3 depth 2.5 mm MIN. Body conflict unresolved.",
+        "interface_dimensions": "Current listing: 42 x 42 x 21.5 mm body, 5 mm shaft diameter, 20 mm shaft length. Older drawing: 20 +/-1 mm body, 42.3 mm MAX face, 31 +/-0.2 mm mounting square. Do not combine these into one interface.",
         "checks": [],
         "confidence": "documentation-only"
       },
@@ -798,7 +802,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "BLOCKED: older drawing body 20 +/-1 mm conflicts with current linked listing title 21.5 mm. Resolve revision with manufacturer; no envelope substitution."
+      "notes": "BLOCKED revision mapping: current listing offers 17HS08-1004S.STEP (1.2 MB), not downloaded. Older https://www.omc-stepperonline.com/download/17HS08-1004S.pdf has 20 +/-1 mm body; listing has 21.5 mm and notes black/silver appearances. Current Full_Datasheet.pdf returned HTTP 403. A dated drawing and confirmation of the offered STEP/physical lot are required; listing slug still contains 20mm and is not dimensional evidence."
     },
     {
       "id": "hiwin-mgn09c-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -856,7 +860,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
     },
     {
       "id": "hiwin-mgn09h-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -914,7 +918,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
     },
     {
       "id": "hiwin-mgn12c-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -972,7 +976,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
     },
     {
       "id": "hiwin-mgn12h-carriage-size-preload-accuracy-seal-options-unresolved",
@@ -1030,7 +1034,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review. Stage B: size code is incomplete for an exact rail/carriage assembly. Specify carriage suffix, preload, accuracy, seals/lubrication, rail grade, length, end-hole distances, carriage count and matched/interchangeable status. Official configurator https://www.hiwin.de/configurator/newConfiguration/3PQ_GW redirected to login; no configured CAD obtained. No generic MGN substitution."
     },
     {
       "id": "skf-625-2z-cn-clearance",
@@ -2026,6 +2030,644 @@
       },
       "local_asset": null,
       "notes": "Manufacturer example BOM identifies exact product; obtain individual drawing, tolerances/material and rights before use."
+    },
+    {
+      "id": "ntn-625zz",
+      "category": "bearings",
+      "manufacturer": "NTN",
+      "part_number": "625ZZ",
+      "variant": "double-shielded, CN clearance, ISO class 0",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/625zz",
+      "model_url": "https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/625zz",
+      "model_source_status": "listed",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "5 x 16 x 5 mm nominal bore x outside diameter x width.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Manufacturer CAD widget offered; exact export format and rights not established. Static load fields on page are inconsistent; no performance ratings transcribed. Not interchangeable with sealed variants without review."
+    },
+    {
+      "id": "ntn-608zz",
+      "category": "bearings",
+      "manufacturer": "NTN",
+      "part_number": "608ZZ",
+      "variant": "double-shielded, CN clearance, ISO class 0",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/608zz",
+      "model_url": "https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/608zz",
+      "model_source_status": "listed",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "8 x 22 x 7 mm nominal bore x outside diameter x width.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Manufacturer CAD widget offered; exact export format and rights not established. Static load fields on page are inconsistent; no performance ratings transcribed. Not interchangeable with sealed variants without review."
+    },
+    {
+      "id": "antclabs-bltouch-smart-v3-1",
+      "category": "sensors",
+      "manufacturer": "ANTCLABS",
+      "part_number": "BLTouch",
+      "variant": "Smart V3.1",
+      "revision": "V3.1",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.antclabs.com/bltouch-v3",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Mounting geometry, pin stroke and deployed/retracted envelope require the matching drawing; not inferred from lookalikes.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Genuine manufacturer revision candidate, not clone geometry. Exact licensed solid model not located; no probe accuracy, thermal or electrical safety validation."
+    },
+    {
+      "id": "ldo-42sth48-2004ac-vrn",
+      "category": "motors",
+      "manufacturer": "LDO Motors",
+      "part_number": "LDO-42STH48-2004AC(VRN)",
+      "variant": "Voron Z motor",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://store.ldomotion.com/products/ldo-42sth48-2004ac-vrn-nema17-stepper-motor-voron-z-axis",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Manufacturer listing: 48 mm body, 5 mm shaft. Shaft projection and hole tolerances need exact VRN drawing.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "VRN suffix retained; generic LDO-42STH48-2004AC Rev A drawing is not established equivalent. Manufacturer BOM corroborates identity: https://docs.ldomotors.com/en/voron/voron2/350_BOM/Rev_D . No torque suitability claim."
+    },
+    {
+      "id": "ldo-42sth40-1684cl350e-vrn",
+      "category": "motors",
+      "manufacturer": "LDO Motors",
+      "part_number": "LDO-42STH40-1684CL350E(VRN)",
+      "variant": "integrated Tr8x4 leadscrew with PEEK nut",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Manufacturer store documents product but showed Sold out on 2026-10-15; future supply unverified",
+      "documentation_url": "https://store.ldomotion.com/products/ldo-42sth40-1684cl350evrn-nema17-linear-stepper-motor-with-tr8x4-lead-screw-peek-nut-450mn-m-torque-for-voron-trident-z-axis-motion",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Overview identifies 40 mm body, Tr8x4(P2x2), PEEK nut and 300 +/-1 mm exposed screw; NOT accepted interface dimensions until corrected drawing is obtained.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "BLOCKED source inconsistency: Specifications table names a different LDO-36STH20-1004AH motor. Do not infer screw length from 350 in the identifier or copy that table. Overview references Rev D but drawing/revision mapping unverified. Request exact drawing before CAD."
+    },
+    {
+      "id": "igus-swm-08",
+      "category": "linear-rails-carriages",
+      "manufacturer": "igus",
+      "part_number": "SWM-08",
+      "variant": "solid steel smooth shaft; length unconfigured",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.igus.at/product/drylin_SWM",
+      "model_url": "https://www.igus.at/product/drylin_SWM",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "8 mm nominal diameter; steel 1.1213 (Cf53). Cut length, end machining and diameter/straightness tolerances not established.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact diameter series candidate; no invented length-specific order code. Configure length and obtain matching tolerance drawing before interface use."
+    },
+    {
+      "id": "igus-ws-10-40-cam-500",
+      "category": "linear-rails-carriages",
+      "manufacturer": "igus",
+      "part_number": "WS-10-40-CAM-500",
+      "variant": "weight-reduced double rail, camera-slider threads",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.igus.eu/product/drylin-ws-cam",
+      "model_url": "https://www.igus.eu/product/drylin-ws-cam",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "500 mm length, size 10-40; hard-anodized aluminium, round-profile double rail.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact manufacturer-listed length alternative; not MGN geometry or a selected printer rail. Carriage material/length/clearance not configured. 3/8-inch camera thread option differs from ordinary rail. No matched assembly claimed."
+    },
+    {
+      "id": "aluminium-warehouse-20x20x2-1000",
+      "category": "structural-components",
+      "manufacturer": "Aluminium Warehouse (supplier; mill unspecified)",
+      "part_number": "42374512902332",
+      "variant": "20 x 20 x 2 mm square tube; 1000 mm; mill finish",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.aluminiumwarehouse.co.uk/products/20-mm-x-20-mm-x-2-mm-aluminium-square-tube?variant=42374512902332",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Nominal 20 x 20 x 2 mm wall; 1000 mm cut length. Exact alloy/temper, corner radii and section tolerances unresolved.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Real supplier variant. Page only promises 6000-series alloy, gives 6082 T6 as an example, not an exact grant of grade. Conflicting length statements (+2/-1 mm versus +/-5 mm) need supplier clarification. Not a fabrication-ready reinforcement specification; no socket scaling/reaming assumption."
+    },
+    {
+      "id": "online-metals-18014-12-inch",
+      "category": "structural-components",
+      "manufacturer": "Online Metals (supplier; mill unspecified)",
+      "part_number": "18014",
+      "variant": "1 x 1 x 1/8 inch square tube; 12 inch length; 6061-T6 extruded",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.onlinemetals.com/en/buy/aluminum/1-x-0-125-aluminum-square-tube-6061-t6-extruded/pid/18014",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live manufacturer/supplier source; checked 2026-10-15",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Nominal 1 x 1 x 0.125 in wall, 12 in length = 25.4 x 25.4 x 3.175 mm wall, 304.8 mm length; supplier lists ASTM B221.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Purchasable stock option, not selected Tesseract stock. Supplier tolerance resource https://www.onlinemetals.com/en/aluminum-tolerances requires section/size-specific review; no tolerances assumed. Not equivalent to 25 mm or 20 mm metric tube; OEM/mill and corner radii unresolved."
+    },
+    {
+      "id": "gates-200-2mgt-06",
+      "category": "belts-pulleys",
+      "manufacturer": "Gates",
+      "part_number": "200-2MGT-06",
+      "variant": "PowerGrip GT3 closed-loop, 6 mm wide",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.gates.com/content/dam/documents-library/catalogs/power-transmission-catalog.pdf",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Manufacturer Industrial Power Transmission catalog; indexed table inspected 2026-10-15, publication revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "2 mm pitch, 200 mm pitch length, 100 teeth, 6 mm width.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Catalog product 9400-1100. Matched profile/width candidate with Gates 2MR-20S-06 GT2 sprocket; do not generalize to generic GT2/HTD teeth. Center distance, tension and torque not designed or validated."
+    },
+    {
+      "id": "gates-2mr-20s-06",
+      "category": "belts-pulleys",
+      "manufacturer": "Gates",
+      "part_number": "2MR-20S-06",
+      "variant": "PowerGrip GT2 sprocket, 20 teeth, 6 mm belt",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.gates.com/content/dam/documents-library/catalogs/power-transmission-catalog.pdf",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Manufacturer indexed catalog/manual tables checked 2026-10-15; exact drawing revision unresolved",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Official manufacturer documentation; supplier/OEM distinction explicit where applicable. No model downloaded or geometry inspected.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "2 mm pitch, 20 teeth; 6 mm belt width. Rough/plain bore requires exact current drawing and machining specification; not assumed 5 mm shaft-ready.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Profile/width pairing with 200-2MGT-06 supported by manufacturer Light Power manual GT3 drive / GT2 sprocket table: https://www.gates.com/content/dam/gates/home/knowledge-center/resource-library/catalogs/light-power-and-precision-manual.pdf . Indexed source available but direct manual fetch returned 404; re-obtain current drawing before procurement or CAD."
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Stage A verification — 2026-10-15
 
+Historical evidence for merged PR #32. [Stage B verification](stage-b-verification.md) supersedes the import limitation and records subsequent catalog growth; the observations below describe Stage A.
+
 Evidence category: **documentation and software/file checks**, not geometry or physical testing. [Scope/workflow](README.md); [issue #31](https://github.com/VoidPhoenixApps/project-tesseract/issues/31). Draft implementation requires maintainer review; no engineering gate is claimed passed.
 
 ## Authority and scope audit
