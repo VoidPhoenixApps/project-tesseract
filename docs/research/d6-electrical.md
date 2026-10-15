@@ -29,7 +29,7 @@ may need multiple independent drivers even though they share one logical coordin
 | Position / homing | Illustratively 8 XY + 4 Z home observations; extra limits/independent motor leveling increase count | 8 XY + 4z_b or other measured plane scheme; not necessarily one pin per observation | Z-E plus frame reference and retained-park feedback |
 | Bed transport / docking | r reference observations plus 4 bed pose/readiness records; at least one sheet-readiness assessment per bed | Same, plus independent group plane/tilt and slip observations | Same plus load-transfer and unused-drive isolation |
 | Lock feedback | Separate positional versus structural engagement observations at each implemented joint; channel count depends on diagnostic design | Same; drive selection is a third distinct state | Same; old/new support confirmation during handoff |
-| Guards / stop / isolation | Guarded access zones, emergency-stop inputs, output feedback, reset and isolation indication per safety review; no single-input sufficiency claim | Same | Same |
+| Assessed protective access / stop / isolation | Access sensing only where hazard assessment justifies it; emergency-stop inputs, output feedback, reset and isolation indication per safety review. Environmental panels do not automatically require sensors/interlocks; no single-input sufficiency claim | Same | Same |
 
 Counts describe installed channels, not simultaneous axis DOF: group progress is 4/2/3/1
 for S/R-or-C/M/J. Even if two mechanically linked lifts share one master motor, each

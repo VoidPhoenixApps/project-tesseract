@@ -33,6 +33,13 @@ how heater startup can greatly exceed typical consumption; all loads are hypothe
 A stopped motor can still allow a heavy Z mechanism to fall, and software cannot turn
 off a physically shorted heater switch. Protective functions need qualified design.
 
+Ordinary open-air printing remains available in all required modes. Environmental-panel
+removal alone is not a protective fault or an interlock requirement. Controls must
+distinguish printing, docking, panel handling, actual protective-guard access and
+maintenance isolation. Hazard-specific assessment still justifies necessary protection
+against closing gaps, falling loads, electrical/heater faults and unexpected restart;
+ordinary open-frame precedent does not prove those mechanisms safe.
+
 Next, establish firmware lifecycle limits, obtain the missing mechanical/geometry
 contracts, and compare grouped-Z failure behavior and real component load data.
 Qualified mechanical, electrical and controls/safety reviews are required before

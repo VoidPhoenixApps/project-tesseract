@@ -21,6 +21,29 @@ of jurisdiction or Tesseract compliance. Full applicable standards and qualified
 are still needed. Removing torque from Z may cause a drop; a brake upstream of a failed
 belt may not retain the load. Analyze where restraint acts and what remains supported.
 
+## Environmental status, protective access and service
+
+Ordinary open-air RepRap printing retains every required mode. Environmental panels
+primarily affect thermal/environmental conditions; being installed does not make them
+protective guards. Absence/removal alone is not a protective fault, interlock requirement
+or prohibition on printing. Existing open-frame practice is relevant precedent, not
+proof of Tesseract safety. Accessible belts, heads and hot surfaces do not automatically
+require full guarding; protective functions need documented hazard-specific assessment.
+
+Keep five activities distinct: ordinary printing; automatic docking/reconfiguration;
+environmental-panel conversion; access through a justified protective guard; and
+maintenance requiring energy isolation. Docking must still address closing gaps,
+occupied objects, supported load transfer and unexpected motion. Panel conversion needs
+its own hand/panel/heat assessment and may require reviewed stopped/cooled handling
+conditions without making ordinary panel-absent printing a fault. Necessary electrical,
+heater, gravity/load and restart protections remain effective in both panel states.
+
+Where a panel is explicitly assigned an essential protective function, its loss follows
+that assessed function's response. Retain the function by a reviewed means in open-air
+mode, rather than bypassing it. Environmental/recipe observations must remain separate
+from protective-guard observations and verified maintenance isolation; none substitutes
+for evidence of the other two. No panel sensor or interlock is selected here.
+
 ## Fault-response register
 
 Responses are requirements to design and verify, not instructions for energizing equipment.
@@ -38,7 +61,9 @@ job may continue only if independence is demonstrated; default uncertain scope i
 | Structural/position lock fails | No transfer/reconfiguration/start; if running, protective response with independent support | Lock command or switch alone does not prove engagement, strength, preload or datum; prove sensor mounting and diagnostic coverage |
 | Selector partly engaged / two owners | Inhibit torque transfer until supported, phase/engagement established; prevent fighting drives | D3 handoff and downstream restraint, not just an exclusive software lock |
 | Emergency stop | Hazard-based stop and energy handling, latched; deliberate reset does not restart | Response under every mode, load, single relevant fault and loss of power; retaining gravity may require independent mechanical means |
-| Guard/service access or panel removal | Stop/inhibit access-affected hazards; establish maintenance isolation as applicable | Both open-air and enclosed modes need a valid safeguarding concept; never bypass protection to satisfy open-air requirement |
+| Environmental panel removed/reinstalled | No protective fault or stop solely from panel absence. Apply reviewed handling conditions and any separate recipe constraints; retain all required open-air modes | Panel/hand path and heat assessment; environmental status is not protective-guard status. Any dual-role panel needs an explicit hazard-based protective-function assignment |
+| Actual protective guard opened / assessed protective function lost | Stop/inhibit the access-affected hazards as required by the assessed function; do not bypass necessary protection for open-air printing | Justified function allocation, access/stop performance and fault/restart verification; panel presence alone proves neither protection nor safe access |
+| Maintenance/service access | Prevent motion/restart, isolate relevant energy, independently restrain gravity/stored energy and verify the service condition | Isolation and support procedure, all command sources and residual heat; panel removal or a software service flag is not maintenance isolation |
 | Overtemperature in electronics / fan loss | Remove relevant heat/motion authorization while preserving required support/cooling | Local sensor locations, driver/connector/printed-joint temperatures, fan diagnostics, thermal inertia and D5 limits |
 | Sensor stale/contradictory/unavailable | Treat state unknown, reject admission/transition, latch running-state fault as appropriate | Timestamps, wiring faults, clock resets, spoofed/replayed data and disagreement; software truth value is no physical evidence |
 | Job cancel / barrier failure | Clear no physical occupancy until actual stop/removal; bounded handling of waiting peers | Independent lifecycle semantics and queued/executed distinction; no indefinite hazardous wait |

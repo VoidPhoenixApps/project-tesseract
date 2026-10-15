@@ -35,7 +35,7 @@ head, and the parks/approach paths of every unused head.
 
 | Entity | States / evidence carried |
 | --- | --- |
-| Machine | BOOT_INHIBITED, READY, RECONFIGURING, SERVICE_ISOLATED, FAULT_LATCHED; observed configuration epoch, guard policy, communication health, power budget |
+| Machine | BOOT_INHIBITED, READY, RECONFIGURING, SERVICE_ISOLATED, FAULT_LATCHED; observed configuration epoch, environmental/recipe status separate from assessed protective-function status, communication health, power budget |
 | Bed | UNAVAILABLE/UNKNOWN, EMPTY_READY, RESERVED, PRINTING, FINISHED_OCCUPIED, COOLING_OCCUPIED; retained sheet presence/readiness, pose, datum/mesh revision, temperature, support and lock observations |
 | Head | UNKNOWN, PARKED_CONFIRMED, RESERVED, PRINTING, PAUSED_HELD, FAULTED; full gantry/harness envelope, homing status, nozzle temperature and local frame transform |
 | Group | DISJOINT_SUPPORTED, PREPARING, DATUM_SUPPORTED, DOCKING, LOCK_CHECK, GROUP_READY, ACTIVE, DECOUPLING, FAULT_SUPPORTED_UNKNOWN; distinct position/load/transmission graphs and exactly one printing-Z authority |
@@ -47,11 +47,23 @@ source, disagreement detection and a defined maximum age. Absence/contradiction 
 unknown, not “last known safe.” Sheet sensing technology is undecided; reliable surface
 readiness is necessary even if achieved by a reviewed alternative to automatic sensing.
 
+Environmental-panel status is distinct from protective-guard status and maintenance
+isolation. All eight modes remain available for ordinary open-air printing. Panel absence
+alone does not enter FAULT_LATCHED or require an interlock. Recipe constraints and
+panel-handling conditions need their own justification; neither turns environmental
+status into a protective observation. An actual protective fault, unsupported load or
+unsafe restart remains inhibiting regardless of enclosure state.
+
+The unchanged synthetic model's `Evidence.guard_permitted` represents an injected
+assertion about any **assessed protective access conditions**, not environmental-panel
+presence. It does not prescribe a guard or sensor and supplies no physical evidence.
+No panel-presence input or hardware interlock is implemented by this correction.
+
 ## Transition contract
 
 | From → to | Preconditions and ordered obligations | On missing evidence |
 | --- | --- | --- |
-| BOOT_INHIBITED → READY | Outputs remain inhibited; establish real configuration/support, sheets, position, guard policy and thermal state; explicit enable | Stay inhibited; no automatic homing into existing objects |
+| BOOT_INHIBITED → READY | Outputs remain inhibited; establish real configuration/support, sheets, position, assessed protective-function status and thermal state; explicit enable | Stay inhibited; no automatic homing into existing objects |
 | QUEUED → RUNNING | Validate geometry/recipe; atomically reserve group, head, sweeps, Z and power; confirm evidence and local start acknowledgement | Queue with reason; no partial reservation or speculative motion |
 | RUNNING → PAUSED → RUNNING | Stop within owned envelope; retain beds, objects, support and heat budget; recheck evidence before resume | Fault if stop/position uncertain; never silently free resources |
 | RUNNING/PAUSED → CANCELLED_OCCUPIED | Controlled stop and reviewed heater disposition; keep object occupancy and reservations until removal | Fault uncertain stop, preserve conservative occupancy |
@@ -59,7 +71,9 @@ readiness is necessary even if achieved by a reviewed alternative to automatic s
 | S → pair/mixed → R/C | Compute affected pose/support/drive/reference closure; all affected beds empty; independent supports and restraints established; empty modules at common datum before horizontal movement; reserve complete route; position then structural/drive engagement checks; group calibration; commit new epoch | Reject route or latch fault if underway; preserve unaffected job states only with demonstrated mechanical/thermal isolation |
 | Pair/J → split | Same empty-domain and route gates; support loads independently before releasing links/selectors; horizontal undocking at datum; verify separate supports, datums and unused-drive isolation before commit | No release based solely on a command acknowledgement |
 | Any → FAULT_LATCHED | Inhibit new starts/reconfiguration; execute separately reviewed protective response over influence domain; retain occupancy/uncertain pose | No automatic restart after reconnect, power return or sensor recovery |
-| FAULT_LATCHED → recovery/READY | Human acknowledgement, cause correction, support/guard/temperature and position evidence; review object obstruction before any re-home; re-admit explicitly | Reset alone cannot enable motion or resume a buffered job |
+| FAULT_LATCHED → recovery/READY | Human acknowledgement, cause correction, support/assessed-protection/temperature and position evidence; review object obstruction before any re-home; re-admit explicitly | Reset alone cannot enable motion or resume a buffered job |
+| Environmental panel conversion → same operational state unless assessed conditions require a stop | Verify reviewed panel/hand paths, thermal handling and any explicitly assigned protective function; panel absence alone does not alter motion authority | Defer unsafe handling; invoke a protective response only for an actual assessed protective loss, not mere environmental-panel absence |
+| Actual protective access event → assessed stop/inhibit state | Apply the justified function response and scope; restore evidence and deliberate restart readiness | Never bypass necessary protection or treat closing a guard as restart authorization |
 | Safe stopped → SERVICE_ISOLATED | Independent maintenance isolation, stored-energy restraint and verified cooldown/access procedure | UI service flag is not isolation |
 
 Changing group membership affects the entire old and new connected group, including

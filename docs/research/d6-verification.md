@@ -88,3 +88,48 @@ D6 content or ordinary-member access testing.
 passed at research commit `6a06e639ec137e2cd4d769f58ff8627ab9b5b65a`. Existing CI runs
 repository reporting/CAD-source tests and whitespace checks; D6 research tests were
 executed locally and independently, not silently attributed to CI.
+
+## Integrated-review interpretation correction — 2026-10-15
+
+The subsequent integrated review identified one Important cross-cutting finding:
+D5/D6 could presume guarding before hazard-specific assessment and conflate environmental
+panels, actual protective access and maintenance isolation. The maintainer clarified
+ordinary open-air RepRap capability. The earlier approval and park-collision correction
+above remain historical records; no experimental failures or results were rewritten.
+
+Corrected D5 commit `d604c0b` was merged into this branch without conflict or history
+rewriting in merge commit `942bded`; the original D6 head `178f16e` is preserved as its
+other ancestry. D1–D4 remained unchanged. The D6 PR comparison against updated D5 still
+contains only its 13 original package files, with identical inherited D5 content.
+
+D6 correction files: `d6-safety.md`, `d6-states.md`, `d6-engineering-study.md`,
+`d6-electrical.md`, `d6-public-summary.md`, `d6-scheduling.md` and this record. The combined
+fault row is split into environmental conversion, actual protective access and service.
+Panel absence alone creates no protective fault/interlock requirement. The unchanged
+model's `guard_permitted` assertion concerns assessed protective access, not panel
+presence. No model, test, generated output, firmware or approved requirement changed.
+All eight modes, independent jobs, tool-free conversion and necessary electrical,
+heater, load-restraint and restart protection remain; no physical safety claim follows.
+
+Corrected integrated tree checks: **93 research + 11 Phase 1B + 63 repository tests =
+167 passed**. All six JSON outputs reproduced byte-identically from outside the repo;
+Python 3.9 grammar passed. All 57 research Markdown files' local links/anchors, tables,
+fences, titles and final newlines passed. Complete PR boundaries and correction diffs
+were inspected; working-tree and parent-to-head whitespace checks passed, with staged
+whitespace checked before commit. No external renderer, firmware runtime, CAD or hardware
+testing was performed because this is an interpretation/documentation correction.
+
+A separate read-only AI reviewer checked the exact original Important finding, maintainer
+clarification, D5/D6 corrections, surrounding requirements and complete D6 boundary.
+They independently ran 13 D5 and 25 D6 tests and whitespace checks; all passed. They did
+not run the full suites or conduct an external-source/physical audit. Integrated result:
+**APPROVE for preliminary research publication; 0 Critical / 0 Important / 0 Minor**.
+Original finding resolved; acceptance and architecture compliance Yes; correction-review
+confidence High. This is neither qualified physical safety certification nor human merge
+approval. Hazard-specific protective-function allocation remains future engineering work.
+
+Final GitHub CI is checked separately after push for both exact updated heads; its
+repository suite is not research-suite coverage. Both PRs remain open Drafts, with no
+PR merge, retarget, cross-repository edit or duplicate Discord milestone. Research-pause
+exit still needs maintainer review/authorization, and the first physical proof remains
+the separately reviewed two-bed docking and cross-seam test.

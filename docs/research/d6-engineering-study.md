@@ -75,7 +75,7 @@ is a separate unproven stretch goal; baseline J uses one full-region head.
 | [D2](d2-mode-coverage.md) | Pair/full reach, entire parked structures and swept paths remain unproven; the hypothetical ±260 mm parks failed reach. D6 synthetic strips do not replace that negative result |
 | [D3](d3-mode-constraints.md) | Separate position, load and transmission graphs; independent restraint and affected-domain closure required. A selector flag is not support evidence |
 | [D4](d4-load-paths.md) | Shared-frame deflection can disturb an apparently unrelated job. Lock sensors need datums downstream of compliance/slip; motor counts are not surface metrology |
-| [D5](d5-safety.md) | Open-air protection cannot be implemented by bypassing an enclosure interlock. Access, retained heat, panel conversion and electronics temperatures remain unresolved |
+| [D5](d5-safety.md) | Ordinary open-air printing retains all modes; environmental-panel absence is not automatically a protective fault or interlock requirement. Hazard-specific assessment assigns necessary protection; distinguish panel handling, actual guard access and maintenance isolation |
 | [Phase 1](../phase1/configuration-feasibility.md) | Rejected layout restrictions remain; queueing cannot make permanently unavailable required modes feasible |
 | [Phase 1B](../phase1b/thermal.md) | Failed fixed-center-anchor gap interval remains. Four independently regulated temperatures can create differential seam motion |
 | [Phase 1C](../phase1c/review.md) | Bounded CAD/checker evidence does not establish hot locks, capture, restraint or reliable sensors |

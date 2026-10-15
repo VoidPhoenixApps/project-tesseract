@@ -82,8 +82,11 @@ worst concurrent allocation; the caller must subtract fixed machine load from to
 capacity before setting `Model.budget`. The power arithmetic is a separate model.
 
 `Evidence` is a single aggregate injected observation with a maximum age, not a sensor
-subsystem. Every advance rechecks it before progressing; a failed check latches fault
-and retains reservations. Time is discrete; this is not a continuous fault-latency
+subsystem. Its `guard_permitted` assertion concerns assessed protective access conditions,
+not environmental-panel presence; an absent environmental panel alone does not invalidate
+evidence. The [state contract](d6-states.md) separates environmental status, protective
+access and maintenance isolation without selecting a guard, sensor or interlock. Every
+advance rechecks it before progressing; a failed check latches fault and retains reservations. Time is discrete; this is not a continuous fault-latency
 simulation. Parks must already be established; a late new job's supplied sweep must
 include its departure and final parking route. The caller must establish real end-state
 poses before removal/reassignment. Removal/access booleans are synthetic assertions,
