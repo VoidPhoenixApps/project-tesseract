@@ -2,6 +2,19 @@
 
 **Date:** 2026-10-14. **Status:** Initial desk research for public challenge; **unreviewed**, **not an architecture selection**, and **not physical validation**. All entries are conditional functional screens, not measured clearances, tolerances, stability, safety, or build volumes.
 
+## Follow-up audit and expanded package
+
+The [first comparative investigation](d1-engineering-study.md) extends this initial
+screen with all-mode integrated candidates, [equations and reproducible calculations](d1-calculations.md),
+[editable conceptual diagrams](d1-diagrams.md), a [failure-mode study](d1-failure-study.md)
+and [verified sources and limitations](d1-verification.md).
+
+**Audit correction:** The Z-C/Z-F partial-mode B entries below apply to the restricted
+single-gantry/locked-bed or unified-frame-only forms. Retaining independently grouped
+bed lifts can supply partial modes, conditionally, with E-like synchronization and
+support obligations. The expanded report supersedes any broader impossibility reading;
+these initial deductions remain visible as the reasoning being challenged.
+
 ## Purpose, inputs, and evidence classes
 
 This is the first bounded result of the [research-first plan](../research-first-plan.md). It screens all five mandatory layout families before more detailed CAD. The approved [requirements](../requirements.md) govern. The [toolhead/Z concept backlog](../concepts/toolhead-z-motion-exploration.md) contains XY-A–E and Z-A–F, but these labels describe ideas at different levels of abstraction.

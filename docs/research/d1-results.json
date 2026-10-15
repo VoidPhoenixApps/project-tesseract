@@ -1,0 +1,129 @@
+{
+  "compliance_mm_10N": {
+    "100": 0.1,
+    "2000": 0.005,
+    "500": 0.02
+  },
+  "engagement_1deg_mm": {
+    "40mm_belt": 0.11111111111111112,
+    "8mm_screw": 0.022222222222222223
+  },
+  "evidence": "Hypothetical analytical sensitivity; not validation or selection",
+  "free_fall_from_rest_mm": {
+    "10": 0.49033249999999995,
+    "20": 1.9613299999999998,
+    "50": 12.258312500000002
+  },
+  "head_sweep_conflict_low_object": false,
+  "head_sweep_conflict_tall_object": true,
+  "lift_16kg_sensitivity": [
+    {
+      "belt_motor_nm": 3.329657221700556,
+      "belt_tension_difference_n": 156.9064,
+      "efficiency": 0.3,
+      "force_n": 156.9064,
+      "reduction": 1,
+      "screw_motor_nm": 0.6659314443401111
+    },
+    {
+      "belt_motor_nm": 1.109885740566852,
+      "belt_tension_difference_n": 156.9064,
+      "efficiency": 0.3,
+      "force_n": 156.9064,
+      "reduction": 3,
+      "screw_motor_nm": 0.22197714811337038
+    },
+    {
+      "belt_motor_nm": 1.4269959521573812,
+      "belt_tension_difference_n": 156.9064,
+      "efficiency": 0.7,
+      "force_n": 156.9064,
+      "reduction": 1,
+      "screw_motor_nm": 0.2853991904314762
+    },
+    {
+      "belt_motor_nm": 0.47566531738579376,
+      "belt_tension_difference_n": 156.9064,
+      "efficiency": 0.7,
+      "force_n": 156.9064,
+      "reduction": 3,
+      "screw_motor_nm": 0.09513306347715873
+    },
+    {
+      "belt_motor_nm": 1.1098857405668519,
+      "belt_tension_difference_n": 156.9064,
+      "efficiency": 0.9,
+      "force_n": 156.9064,
+      "reduction": 1,
+      "screw_motor_nm": 0.22197714811337038
+    },
+    {
+      "belt_motor_nm": 0.3699619135222839,
+      "belt_tension_difference_n": 156.9064,
+      "efficiency": 0.9,
+      "force_n": 156.9064,
+      "reduction": 3,
+      "screw_motor_nm": 0.0739923827044568
+    }
+  ],
+  "lift_static_nominal": {
+    "1": {
+      "belt_motor_nm": 0.08918724700983632,
+      "belt_tension_difference_n": 9.80665,
+      "force_n": 9.80665,
+      "screw_motor_nm": 0.017837449401967263
+    },
+    "16": {
+      "belt_motor_nm": 1.4269959521573812,
+      "belt_tension_difference_n": 156.9064,
+      "force_n": 156.9064,
+      "screw_motor_nm": 0.2853991904314762
+    },
+    "2": {
+      "belt_motor_nm": 0.17837449401967265,
+      "belt_tension_difference_n": 19.6133,
+      "force_n": 19.6133,
+      "screw_motor_nm": 0.03567489880393453
+    },
+    "4": {
+      "belt_motor_nm": 0.3567489880393453,
+      "belt_tension_difference_n": 39.2266,
+      "force_n": 39.2266,
+      "screw_motor_nm": 0.07134979760786905
+    },
+    "8": {
+      "belt_motor_nm": 0.7134979760786906,
+      "belt_tension_difference_n": 78.4532,
+      "force_n": 78.4532,
+      "screw_motor_nm": 0.1426995952157381
+    }
+  },
+  "plate_mass_kg_180mm_square_2700kg_m3": {
+    "3": 0.26243999999999995,
+    "4": 0.34992,
+    "6": 0.5248799999999999
+  },
+  "seam_example_mm": 0.1685398362769144,
+  "short_stroke_intervals_mm": {
+    "10": [
+      0,
+      10
+    ],
+    "100": null,
+    "20": [
+      10,
+      10
+    ],
+    "21": null
+  },
+  "thermal_mm": {
+    "al_180_80K": 0.33984000000000003,
+    "inset10_pair_80K": 0.03776,
+    "steel_cross_360_20K": 0.0864
+  },
+  "tilt_edge_mm_90lever": {
+    "0.01": 0.015707963427446275,
+    "0.05": 0.07853983627691441,
+    "0.1": 0.15707979217699203
+  }
+}
