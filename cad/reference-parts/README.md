@@ -1,8 +1,8 @@
-# Off-the-shelf reference parts library — Stages A/B
+# Off-the-shelf reference parts library — Stages A/B/C
 
 This is a reusable **candidate catalog**, not a Tesseract BOM or a component selection. It supports future research without resuming detailed printer CAD. The Feather sample has a partial reference-dimension check; no mechanism, electrical system or physical fit has been validated. [Stage B issue #33](https://github.com/VoidPhoenixApps/project-tesseract/issues/33) continues merged Stage A (#31 / PR #32).
 
-Start with the [readable index](INDEX.md), [machine-readable catalog](catalog.json), [schema](catalog.schema.json), and [Stage A record](verification.md) and [Stage B verification](stage-b-verification.md). There are 45 candidates in 13 categories. Only the Adafruit Feather RP2040 (#4884) sample is authorized for local download; all other models remain link-only, even where a permissive license is recorded.
+Start with the [readable index](INDEX.md), [machine-readable catalog](catalog.json), [schema](catalog.schema.json), and [Stage A record](verification.md) and [Stage B verification](stage-b-verification.md). [Stage C findings](stage-c-verification.md) and [Fusion library research](fusion-library-research.md) record source/revision resolution, remaining requests and future workflows. Stage B merged in [PR #34](https://github.com/VoidPhoenixApps/project-tesseract/pull/34). There are 45 candidates in 13 categories. Only the Adafruit Feather RP2040 (#4884) sample is authorized for local download; all other models remain link-only, even where a permissive license is recorded.
 
 ## Storage decision and actual access
 
@@ -39,7 +39,7 @@ All records require exact manufacturer or vendor identity, model/part number, va
 
 A source access date records when the cited metadata/documentation was examined. It does not mean the linked model was downloaded. `source_revision` is distinct from the physical part revision. Undated live pages need rechecking. Availability is a candidate sourcing indication, not confirmed local stock, price, affordability or a purchasing recommendation. The first batch favors common interface families and documents industrial alternatives; it is not a comparative procurement study.
 
-The STEP sample was imported in installed Fusion without saving. Native axes, PCB outline, hole centers and assembly envelope are recorded in [Stage B evidence](stage-b-verification.md). Hole diameters differ between pairs; matching physical revision, connector mating clearances and tolerances remain unresolved. Do not translate/rotate/scale it silently. The catalog contains no claimed fit tolerance.
+The STEP sample was imported in installed Fusion without saving. Native axes, PCB outline, hole centers and assembly envelope are recorded in [Stage B evidence](stage-b-verification.md). Hole diameters differ between pairs; Stage C traces this to 2.50 mm plated-pad drills and 2.54 mm plain holes in both original and later PCB sources. Finished-hole tolerances, physical revision and connector mating clearances remain unresolved. Do not translate/rotate/scale it silently. The catalog contains no claimed fit tolerance.
 
 ## Rights and authorization gates
 
@@ -106,4 +106,4 @@ Never fabricate a vendor model, substitute a purchased part silently, or invent 
 
 ## Next batch
 
-Resolve the Feather hole-diameter/revision details, corrected STEPPERONLINE and LDO drawings, BTT hardware-model permissions and a fully configured HIWIN rail/carriage assembly. Refine stock grade/tolerances, rod length/end machining, probe stroke and Gates bore/drive configuration. Stage B added eleven link-only candidates; see its evidence for source errors and blocked work. Growth remains incremental and independent of Tesseract hardware selection. Request separate approval before any additional model download; no purchase, hardware test or detailed printer CAD is authorized by this backlog.
+Resolve the Feather finished-hole tolerances/physical revision and later-board clearances, corrected STEPPERONLINE and LDO drawings, BTT hardware-model permissions and a fully configured HIWIN rail/carriage assembly. Refine stock grade/tolerances, rod length/end machining, probe stroke and Gates bore/drive configuration. Stage B added eleven link-only candidates; see its evidence for source errors and blocked work. Growth remains incremental and independent of Tesseract hardware selection. Request separate approval before any additional model download; no purchase, hardware test or detailed printer CAD is authorized by this backlog.
