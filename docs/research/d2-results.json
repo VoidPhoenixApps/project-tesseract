@@ -1,0 +1,2991 @@
+{
+  "functional_matrix": {
+    "C": {
+      "extended": "REACH_ONLY",
+      "local": "FUNCTION_REJECTED",
+      "local+fifth": "FUNCTION_REJECTED",
+      "single-toolchanger": "FUNCTION_REJECTED"
+    },
+    "J": {
+      "extended": "REACH_ONLY",
+      "local": "FUNCTION_REJECTED",
+      "local+fifth": "REACH_ONLY",
+      "single-toolchanger": "REACH_ONLY"
+    },
+    "M12": {
+      "extended": "REACH_ONLY",
+      "local": "FUNCTION_REJECTED",
+      "local+fifth": "REACH_ONLY",
+      "single-toolchanger": "FUNCTION_REJECTED"
+    },
+    "M13": {
+      "extended": "REACH_ONLY",
+      "local": "FUNCTION_REJECTED",
+      "local+fifth": "REACH_ONLY",
+      "single-toolchanger": "FUNCTION_REJECTED"
+    },
+    "M24": {
+      "extended": "REACH_ONLY",
+      "local": "FUNCTION_REJECTED",
+      "local+fifth": "REACH_ONLY",
+      "single-toolchanger": "FUNCTION_REJECTED"
+    },
+    "M34": {
+      "extended": "REACH_ONLY",
+      "local": "FUNCTION_REJECTED",
+      "local+fifth": "REACH_ONLY",
+      "single-toolchanger": "FUNCTION_REJECTED"
+    },
+    "R": {
+      "extended": "REACH_ONLY",
+      "local": "FUNCTION_REJECTED",
+      "local+fifth": "FUNCTION_REJECTED",
+      "single-toolchanger": "FUNCTION_REJECTED"
+    },
+    "S": {
+      "extended": "REACH_ONLY",
+      "local": "REACH_ONLY",
+      "local+fifth": "REACH_ONLY",
+      "single-toolchanger": "FUNCTION_REJECTED"
+    }
+  },
+  "gap_sensitivity": [
+    {
+      "gap": 20,
+      "mode": "S",
+      "region_xy_sizes": [
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 20,
+      "mode": "R",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          350.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 20,
+      "mode": "C",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          350.0
+        ]
+      ]
+    },
+    {
+      "gap": 20,
+      "mode": "M12",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 20,
+      "mode": "M34",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 20,
+      "mode": "M13",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 20,
+      "mode": "M24",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 20,
+      "mode": "J",
+      "region_xy_sizes": [
+        [
+          350.0,
+          350.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "S",
+      "region_xy_sizes": [
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "R",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          350.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "C",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          350.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "M12",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "M34",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "M13",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "M24",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 40,
+      "mode": "J",
+      "region_xy_sizes": [
+        [
+          350.0,
+          350.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "S",
+      "region_xy_sizes": [
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "R",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          350.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "C",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          350.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "M12",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "M34",
+      "region_xy_sizes": [
+        [
+          350.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "M13",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "M24",
+      "region_xy_sizes": [
+        [
+          170.0,
+          350.0
+        ],
+        [
+          170.0,
+          170.0
+        ],
+        [
+          170.0,
+          170.0
+        ]
+      ]
+    },
+    {
+      "gap": 80,
+      "mode": "J",
+      "region_xy_sizes": [
+        [
+          350.0,
+          350.0
+        ]
+      ]
+    }
+  ],
+  "midpath_witness": {
+    "collision_time_interval": [
+      0.38333333333333336,
+      0.6166666666666667
+    ],
+    "endpoint_conflicts": [
+      false,
+      false
+    ]
+  },
+  "mirrored_seam_sensitivity": [
+    {
+      "body_inward": 5,
+      "body_outward": 35,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 40,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 10,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 35,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 42,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 12,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 35,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 45,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 15,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 35,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 43,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 16,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 35,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 45,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 18,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 35,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 48,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 21,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 35,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 50,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 30,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 35,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 52,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 32,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 35,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 55,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 35,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 35
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 50,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 55,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 10,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 50,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 57,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 12,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 50,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 60,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 15,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 50,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 58,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 16,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 50,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 60,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 18,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 50,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 63,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 21,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 50,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 65,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 30,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 50,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 67,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 32,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 50,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 70,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 35,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 50
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 65,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 70,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 10,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 65,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 72,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 12,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 5,
+      "body_outward": 65,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 75,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 15,
+      "outer_body_reservation_common_right": 5,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 65,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 73,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 16,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 65,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 75,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 18,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 8,
+      "body_outward": 65,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 78,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 21,
+      "outer_body_reservation_common_right": 8,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 65,
+      "clearance": 0,
+      "common_orientation_min_spacing_strictly_greater_than": 80,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 30,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 65,
+      "clearance": 2,
+      "common_orientation_min_spacing_strictly_greater_than": 82,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 32,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 65
+    },
+    {
+      "body_inward": 15,
+      "body_outward": 65,
+      "clearance": 5,
+      "common_orientation_min_spacing_strictly_greater_than": 85,
+      "mirrored_min_nozzle_spacing_strictly_greater_than": 35,
+      "outer_body_reservation_common_right": 15,
+      "outer_body_reservation_mirrored": 65
+    }
+  ],
+  "parameters_C_except_nominal_side_A": {
+    "beam_depth": 30,
+    "beam_level": 320,
+    "beam_offset": 80,
+    "beam_spacing": 40,
+    "beam_width": 30,
+    "bed_z_travel": 200,
+    "body_hi": [
+      8,
+      50,
+      70
+    ],
+    "body_lo": [
+      -50,
+      -8,
+      10
+    ],
+    "cable_radius": 30,
+    "clearance": 2,
+    "filament_radius": 40,
+    "frame_inner": 320,
+    "frame_reservation": 20,
+    "gap": 40,
+    "head_z_travel": 300,
+    "joined_gap": 0,
+    "margin": 5,
+    "nozzle_offset": [
+      20,
+      -20,
+      -50
+    ],
+    "object_height": 200,
+    "park": 260,
+    "side": 180
+  },
+  "parking_cable_sensitivity": [
+    {
+      "outward_with_cable": 68,
+      "park_nozzle": 220,
+      "required_frame_halfwidth": 310
+    },
+    {
+      "outward_with_cable": 80,
+      "park_nozzle": 220,
+      "required_frame_halfwidth": 322
+    },
+    {
+      "outward_with_cable": 100,
+      "park_nozzle": 220,
+      "required_frame_halfwidth": 342
+    },
+    {
+      "outward_with_cable": 68,
+      "park_nozzle": 260,
+      "required_frame_halfwidth": 350
+    },
+    {
+      "outward_with_cable": 80,
+      "park_nozzle": 260,
+      "required_frame_halfwidth": 362
+    },
+    {
+      "outward_with_cable": 100,
+      "park_nozzle": 260,
+      "required_frame_halfwidth": 382
+    },
+    {
+      "outward_with_cable": 68,
+      "park_nozzle": 300,
+      "required_frame_halfwidth": 390
+    },
+    {
+      "outward_with_cable": 80,
+      "park_nozzle": 300,
+      "required_frame_halfwidth": 402
+    },
+    {
+      "outward_with_cable": 100,
+      "park_nozzle": 300,
+      "required_frame_halfwidth": 422
+    }
+  ],
+  "screens": {
+    "moving-bridge": [
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              -45.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -215.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "UNRESOLVED",
+        "enclosure_outside": [],
+        "groups": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60,
+          200
+        ],
+        "machine_overlap_candidates": [],
+        "mode": "S",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [
+          "H1:beam/job2",
+          "H3:beam/job4"
+        ],
+        "park_nozzle_reach": {},
+        "park_required_carriage_mm": {},
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              -25.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -195.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              155.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H2:body",
+          "H2:carriage",
+          "H2:cable",
+          "H2:filament",
+          "H2:Z-column",
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          3
+        ],
+        "heights_mm": [
+          10,
+          150
+        ],
+        "machine_overlap_candidates": [],
+        "mode": "R",
+        "nominal_nozzle_reach": [
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "2": false,
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "2": {
+            "hi": [
+              280,
+              280,
+              350
+            ],
+            "lo": [
+              280,
+              280,
+              350
+            ]
+          },
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              175.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              -45.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -155.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -155.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H3:body",
+          "H3:carriage",
+          "H3:cable",
+          "H3:filament",
+          "H3:Z-column",
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          2
+        ],
+        "heights_mm": [
+          10,
+          150
+        ],
+        "machine_overlap_candidates": [
+          "H3:beam/H4:beam",
+          "H3:beam/H4:Z-column",
+          "H3:Z-column/H4:beam"
+        ],
+        "mode": "C",
+        "nominal_nozzle_reach": [
+          true,
+          true
+        ],
+        "other_object_candidates": [
+          "H1:beam/job2"
+        ],
+        "park_nozzle_reach": {
+          "3": false,
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "3": {
+            "hi": [
+              -280,
+              -280,
+              350
+            ],
+            "lo": [
+              -280,
+              -280,
+              350
+            ]
+          },
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              -25.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -175.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -175.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -215.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H2:body",
+          "H2:carriage",
+          "H2:cable",
+          "H2:filament",
+          "H2:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          3,
+          4
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H3:body/H4:beam",
+          "H3:hotend/H4:beam",
+          "H3:probe/H4:beam"
+        ],
+        "mode": "M12",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [
+          "H4:beam/job2"
+        ],
+        "park_nozzle_reach": {
+          "2": false
+        },
+        "park_required_carriage_mm": {
+          "2": {
+            "hi": [
+              280,
+              280,
+              350
+            ],
+            "lo": [
+              280,
+              280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -195.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              -215.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              45.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            3,
+            4
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "heads": [
+          3,
+          1,
+          2
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H1:body/H2:beam",
+          "H1:hotend/H2:beam",
+          "H1:probe/H2:beam"
+        ],
+        "mode": "M34",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [
+          "H2:beam/job2"
+        ],
+        "park_nozzle_reach": {
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              -195.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              25.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              -45.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -155.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H3:body",
+          "H3:carriage",
+          "H3:cable",
+          "H3:filament",
+          "H3:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            3
+          ],
+          [
+            2
+          ],
+          [
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          2,
+          4
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H1:filament/H4:beam",
+          "H1:beam/H4:body",
+          "H1:beam/H4:carriage",
+          "H1:beam/H4:cable",
+          "H1:beam/H4:filament",
+          "H1:beam/H4:Z-column"
+        ],
+        "mode": "M13",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [
+          "H1:beam/job2"
+        ],
+        "park_nozzle_reach": {
+          "3": false
+        },
+        "park_required_carriage_mm": {
+          "3": {
+            "hi": [
+              -280,
+              -280,
+              350
+            ],
+            "lo": [
+              -280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              -25.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -175.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              215.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -155.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            2,
+            4
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "heads": [
+          2,
+          1,
+          3
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H2:filament/H3:beam",
+          "H2:beam/H3:body",
+          "H2:beam/H3:carriage",
+          "H2:beam/H3:cable",
+          "H2:beam/H3:filament",
+          "H2:beam/H3:Z-column"
+        ],
+        "mode": "M24",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [
+          "H2:beam/job2"
+        ],
+        "park_nozzle_reach": {
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              195.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -175.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              -155.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H2:body",
+          "H2:carriage",
+          "H2:cable",
+          "H2:filament",
+          "H2:Z-column",
+          "H3:body",
+          "H3:carriage",
+          "H3:cable",
+          "H3:filament",
+          "H3:Z-column",
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "heads": [
+          1
+        ],
+        "heights_mm": [
+          10
+        ],
+        "machine_overlap_candidates": [
+          "H3:beam/H4:beam",
+          "H3:beam/H4:Z-column",
+          "H3:Z-column/H4:beam"
+        ],
+        "mode": "J",
+        "nominal_nozzle_reach": [
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "2": false,
+          "3": false,
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "2": {
+            "hi": [
+              280,
+              280,
+              350
+            ],
+            "lo": [
+              280,
+              280,
+              350
+            ]
+          },
+          "3": {
+            "hi": [
+              -280,
+              -280,
+              350
+            ],
+            "lo": [
+              -280,
+              -280,
+              350
+            ]
+          },
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              -175.0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "stacked-bridge": [
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              -45.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -215.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "UNRESOLVED",
+        "enclosure_outside": [],
+        "groups": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60,
+          200
+        ],
+        "machine_overlap_candidates": [
+          "H1:beam/H2:Z-column",
+          "H3:beam/H4:Z-column"
+        ],
+        "mode": "S",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {},
+        "park_required_carriage_mm": {},
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              -25.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -195.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              155.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H2:body",
+          "H2:carriage",
+          "H2:cable",
+          "H2:filament",
+          "H2:Z-column",
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          3
+        ],
+        "heights_mm": [
+          10,
+          150
+        ],
+        "machine_overlap_candidates": [],
+        "mode": "R",
+        "nominal_nozzle_reach": [
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "2": false,
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "2": {
+            "hi": [
+              280,
+              280,
+              310
+            ],
+            "lo": [
+              280,
+              280,
+              310
+            ]
+          },
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              175.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              -45.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -155.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -155.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H3:body",
+          "H3:carriage",
+          "H3:cable",
+          "H3:filament",
+          "H3:Z-column",
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          2
+        ],
+        "heights_mm": [
+          10,
+          150
+        ],
+        "machine_overlap_candidates": [
+          "H1:beam/H2:Z-column",
+          "H3:beam/H4:Z-column"
+        ],
+        "mode": "C",
+        "nominal_nozzle_reach": [
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "3": false,
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "3": {
+            "hi": [
+              -280,
+              -280,
+              350
+            ],
+            "lo": [
+              -280,
+              -280,
+              350
+            ]
+          },
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              -25.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -175.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -175.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -215.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H2:body",
+          "H2:carriage",
+          "H2:cable",
+          "H2:filament",
+          "H2:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          3,
+          4
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H3:beam/H4:Z-column"
+        ],
+        "mode": "M12",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "2": false
+        },
+        "park_required_carriage_mm": {
+          "2": {
+            "hi": [
+              280,
+              280,
+              310
+            ],
+            "lo": [
+              280,
+              280,
+              310
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -195.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              -215.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              45.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            3,
+            4
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "heads": [
+          3,
+          1,
+          2
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H1:beam/H2:Z-column"
+        ],
+        "mode": "M34",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              -195.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              25.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              -45.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -155.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              215.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H3:body",
+          "H3:carriage",
+          "H3:cable",
+          "H3:filament",
+          "H3:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            3
+          ],
+          [
+            2
+          ],
+          [
+            4
+          ]
+        ],
+        "heads": [
+          1,
+          2,
+          4
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H1:beam/H2:Z-column",
+          "H1:beam/H4:Z-column"
+        ],
+        "mode": "M13",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "3": false
+        },
+        "park_required_carriage_mm": {
+          "3": {
+            "hi": [
+              -280,
+              -280,
+              350
+            ],
+            "lo": [
+              -280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              -25.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -175.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              195.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              215.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              45.0,
+              -155.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              215.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              45.0,
+              50
+            ]
+          },
+          {
+            "hi": [
+              -45.0,
+              -45.0,
+              50
+            ],
+            "lo": [
+              -215.0,
+              -215.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            2,
+            4
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "heads": [
+          2,
+          1,
+          3
+        ],
+        "heights_mm": [
+          10,
+          150,
+          60
+        ],
+        "machine_overlap_candidates": [
+          "H1:beam/H2:Z-column",
+          "H2:beam/H3:Z-column"
+        ],
+        "mode": "M24",
+        "nominal_nozzle_reach": [
+          true,
+          true,
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              195.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              25.0,
+              -175.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              195.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              25.0,
+              0
+            ]
+          },
+          {
+            "hi": [
+              -25.0,
+              -25.0,
+              0
+            ],
+            "lo": [
+              -195.0,
+              -195.0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "bed_mechanism_candidates": [],
+        "carriage_bounds_at_z0_mm": [
+          {
+            "hi": [
+              155.0,
+              195.0,
+              50
+            ],
+            "lo": [
+              -195.0,
+              -155.0,
+              50
+            ]
+          }
+        ],
+        "classification": "REACH_REJECTED",
+        "enclosure_outside": [
+          "H2:body",
+          "H2:carriage",
+          "H2:cable",
+          "H2:filament",
+          "H2:Z-column",
+          "H3:body",
+          "H3:carriage",
+          "H3:cable",
+          "H3:filament",
+          "H3:Z-column",
+          "H4:body",
+          "H4:carriage",
+          "H4:cable",
+          "H4:filament",
+          "H4:Z-column"
+        ],
+        "groups": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "heads": [
+          1
+        ],
+        "heights_mm": [
+          10
+        ],
+        "machine_overlap_candidates": [
+          "H3:beam/H4:Z-column"
+        ],
+        "mode": "J",
+        "nominal_nozzle_reach": [
+          true
+        ],
+        "other_object_candidates": [],
+        "park_nozzle_reach": {
+          "2": false,
+          "3": false,
+          "4": false
+        },
+        "park_required_carriage_mm": {
+          "2": {
+            "hi": [
+              280,
+              280,
+              310
+            ],
+            "lo": [
+              280,
+              280,
+              310
+            ]
+          },
+          "3": {
+            "hi": [
+              -280,
+              -280,
+              350
+            ],
+            "lo": [
+              -280,
+              -280,
+              350
+            ]
+          },
+          "4": {
+            "hi": [
+              280,
+              -280,
+              350
+            ],
+            "lo": [
+              280,
+              -280,
+              350
+            ]
+          }
+        },
+        "reason": "Envelope candidates are not physical contact proof; fixed supports, belts, deformation, actual paths and stop bounds remain unverified.",
+        "region_bounds_mm": [
+          {
+            "hi": [
+              175.0,
+              175.0,
+              0
+            ],
+            "lo": [
+              -175.0,
+              -175.0,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "stack_separation_needed_mm": [
+    {
+      "beam_depth": 20,
+      "height_divergence": 100,
+      "minimum_offset_strictly_greater_than": 122
+    },
+    {
+      "beam_depth": 30,
+      "height_divergence": 100,
+      "minimum_offset_strictly_greater_than": 132
+    },
+    {
+      "beam_depth": 50,
+      "height_divergence": 100,
+      "minimum_offset_strictly_greater_than": 152
+    },
+    {
+      "beam_depth": 20,
+      "height_divergence": 200,
+      "minimum_offset_strictly_greater_than": 222
+    },
+    {
+      "beam_depth": 30,
+      "height_divergence": 200,
+      "minimum_offset_strictly_greater_than": 232
+    },
+    {
+      "beam_depth": 50,
+      "height_divergence": 200,
+      "minimum_offset_strictly_greater_than": 252
+    },
+    {
+      "beam_depth": 20,
+      "height_divergence": 300,
+      "minimum_offset_strictly_greater_than": 322
+    },
+    {
+      "beam_depth": 30,
+      "height_divergence": 300,
+      "minimum_offset_strictly_greater_than": 332
+    },
+    {
+      "beam_depth": 50,
+      "height_divergence": 300,
+      "minimum_offset_strictly_greater_than": 352
+    }
+  ],
+  "status": "synthetic analytical screening; no physical feasibility pass",
+  "units": "mm"
+}
