@@ -59,8 +59,32 @@ could link this research; no existing Tesseract CURRENT_STATE was found or inven
 
 ## Publication and reporting
 
-Publication is pending. Before dispatch, retained Actions history contained 31 reporting
+Published as stacked [Draft PR #30](https://github.com/VoidPhoenixApps/project-tesseract/pull/30)
+from research commit `6a06e639ec137e2cd4d769f58ff8627ab9b5b65a`, targeting D5.
+Parent PRs remained open Drafts at the recorded heads; no parent changed or merged.
+Before dispatch, retained Actions history contained 31 reporting
 runs and no D6 milestone. Discord's development-updates view was inspected and showed
 D5's report with PR #29 and matching public content; no D6 report was present. This also
 establishes later visibility of the D5 message whose original record left that check open;
 the historical D5 file is preserved unchanged.
+
+Dispatched `d6-controls-scheduling-study` exactly once through `discord-reporting.yml`
+on main with public text and evidence category `concept`.
+[Actions run 38688477155](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38688477155)
+completed successfully and logged acknowledgement for message `1560166648638607371`.
+The [acknowledged message](https://discord.com/channels/1558743337735954512/1558750555097145384/1560166648638607371)
+was then confirmed in Discord's actual development-updates accessibility view: the
+full D6 text, PR #30 link and `development:d6-controls-scheduling-study` ID matched.
+Thus execution, acknowledgement and app-content inspection were checked separately.
+
+Screenshot-level viewport verification remains incomplete: the first stale view showed
+D5, native scrolling returned `noWindowsAvailable`, and raising the existing window
+refreshed accessibility content to include D6. A screenshot still showed D5; another
+scroll failed with the same error. No duplicate/recovery dispatch was made. This is
+stronger evidence than acknowledgement alone but is not a claim of screenshot-visible
+D6 content or ordinary-member access testing.
+
+[PR CI run 38688437353](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38688437353)
+passed at research commit `6a06e639ec137e2cd4d769f58ff8627ab9b5b65a`. Existing CI runs
+repository reporting/CAD-source tests and whitespace checks; D6 research tests were
+executed locally and independently, not silently attributed to CI.
