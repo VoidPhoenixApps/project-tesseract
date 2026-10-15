@@ -26,6 +26,8 @@ Moving a bed is only the start: separate heated surfaces must return to a repeat
 
 The printable-first RepRap approach makes reproducibility part of the challenge: builders should eventually be able to make the printed parts on an ordinary Ender 3 and use documented local reinforcement stock. Imperial and metric interfaces must each work without mesh scaling, socket reaming or improvised shims.
 
+The [off-the-shelf reference-parts library](cad/reference-parts/README.md) catalogs candidate commercial components and their source/permission status for future CAD. Catalog inclusion does not select printer hardware or validate fit.
+
 ## Follow, discuss, contribute
 
 - **Follow progress:** star this repository to bookmark it and use GitHub Watch to choose notifications. Reviewed work and evidence live here.

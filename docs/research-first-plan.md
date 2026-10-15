@@ -27,6 +27,12 @@ Use existing [requirements](requirements.md), [architecture](architecture.md), [
 
 ## Future Codex CAD reference-parts library (planning only)
 
+**Stage A implementation (2026-10-15; pending PR review):** The [reference-parts catalog and workflow](../cad/reference-parts/README.md) now contain 34 candidates across 13 categories, a schema, validation and one explicitly authorized local Adafruit STEP sample. The maintainer selected the sibling library on Forbidden Fruit; read access and file/hash checks are recorded in [Stage A verification](../cad/reference-parts/verification.md). CAD import/dimension checks remain pending. All other models are link-only. This supersedes the library-only planning status below; it does not authorize detailed printer CAD, hardware selection, additional downloads or physical work. The heading is retained for existing links.
+
+### Historical library proposal — 2026-10-14
+
+The following proposal records the original alternatives and gates. Its uncreated-folder and planning-only statements describe that earlier state; use the Stage A workflow above for current library operations. Rights, missing-model and engineering safeguards continue to apply.
+
 **Maintainer preference (2026-10-14):** When detailed CAD resumes, make it easier for Codex to reuse legitimate, accurate third-party CAD models of standard purchased parts rather than recreating every motor, bearing, pulley, hotend, sensor, rail and fastener. Evaluate local downloads on **Forbidden Fruit** first and a reproducible approach usable on POTUS and by community contributors. This is a **proposed workflow**, not an established library, completed installation, vendor choice or authorization for bulk downloads.
 
 **Proposed two-layer architecture:**
@@ -52,7 +58,7 @@ For each task that needs a purchased component's geometry:
 4. Never silently substitute another motor/rail/fastener/hotend, approximate unverified physical interfaces, reverse-engineer a proprietary model or redraw an off-the-shelf part as a fake manufacturer model to keep work moving. A conservative **explicitly labeled non-fabrication clearance placeholder** may be proposed **only with maintainer authorization** and traceable source dimensions; it must not be promoted to a fit-validated model.
 5. Continue unrelated documentation, calculations, approved original printed-part design or other unblocked work where safe. Report missing geometry and its design impact at handoff. Do **not** download, redistribute or ingest rights-restricted models without appropriate permission and task authorization.
 
-This rule applies when preparing future CAD work; it does not trigger any downloads, reconfiguration or detailed CAD during the current research-first pause.
+This rule applies when preparing future CAD work. The separately authorized Stage A sample is documented above; the rule itself does not authorize additional downloads, reconfiguration or detailed printer CAD during the research-first pause.
 
 **Storage and portability:** Keep protected source assets out of public Git where redistribution is not allowed. Publish approved-redistribution files only after their rights are confirmed, using sensible size/version controls. Ensure Forbidden Fruit and POTUS access are verified separately, with machine-local details recorded in **Home Infrastructure**, not duplicated as unverified device state in Tesseract. Do not assume Codex Cloud, local Codex Desktop, Fusion 360, FreeCAD or build123d have identical file-system, licensing, import or automation capabilities.
 
