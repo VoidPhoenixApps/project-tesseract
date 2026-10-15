@@ -1,0 +1,766 @@
+{
+  "clearance_sensitivity": [
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "UNRESOLVED",
+      "mode": "S",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "R",
+      "outside": [
+        "H2:body",
+        "H2:carriage",
+        "H2:cable",
+        "H2:filament",
+        "H2:Z-column",
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "C",
+      "outside": [
+        "H3:body",
+        "H3:carriage",
+        "H3:cable",
+        "H3:filament",
+        "H3:Z-column",
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M12",
+      "outside": [
+        "H2:body",
+        "H2:carriage",
+        "H2:cable",
+        "H2:filament",
+        "H2:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M34",
+      "outside": [
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M13",
+      "outside": [
+        "H3:body",
+        "H3:carriage",
+        "H3:cable",
+        "H3:filament",
+        "H3:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M24",
+      "outside": [
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "J",
+      "outside": [
+        "H2:body",
+        "H2:carriage",
+        "H2:cable",
+        "H2:filament",
+        "H2:Z-column",
+        "H3:body",
+        "H3:carriage",
+        "H3:cable",
+        "H3:filament",
+        "H3:Z-column",
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "UNRESOLVED",
+      "mode": "S",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "R",
+      "outside": [
+        "H2:cable",
+        "H2:filament",
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "C",
+      "outside": [
+        "H3:cable",
+        "H3:filament",
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M12",
+      "outside": [
+        "H2:cable",
+        "H2:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M34",
+      "outside": [
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M13",
+      "outside": [
+        "H3:cable",
+        "H3:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M24",
+      "outside": [
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "J",
+      "outside": [
+        "H2:cable",
+        "H2:filament",
+        "H3:cable",
+        "H3:filament",
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "UNRESOLVED",
+      "mode": "S",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "R",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "C",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M12",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M34",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M13",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M24",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "J",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "moving-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "UNRESOLVED",
+      "mode": "S",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "R",
+      "outside": [
+        "H2:body",
+        "H2:carriage",
+        "H2:cable",
+        "H2:filament",
+        "H2:Z-column",
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "C",
+      "outside": [
+        "H3:body",
+        "H3:carriage",
+        "H3:cable",
+        "H3:filament",
+        "H3:Z-column",
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M12",
+      "outside": [
+        "H2:body",
+        "H2:carriage",
+        "H2:cable",
+        "H2:filament",
+        "H2:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M34",
+      "outside": [
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M13",
+      "outside": [
+        "H3:body",
+        "H3:carriage",
+        "H3:cable",
+        "H3:filament",
+        "H3:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M24",
+      "outside": [
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 300,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "J",
+      "outside": [
+        "H2:body",
+        "H2:carriage",
+        "H2:cable",
+        "H2:filament",
+        "H2:Z-column",
+        "H3:body",
+        "H3:carriage",
+        "H3:cable",
+        "H3:filament",
+        "H3:Z-column",
+        "H4:body",
+        "H4:carriage",
+        "H4:cable",
+        "H4:filament",
+        "H4:Z-column"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "UNRESOLVED",
+      "mode": "S",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "R",
+      "outside": [
+        "H2:cable",
+        "H2:filament",
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "C",
+      "outside": [
+        "H3:cable",
+        "H3:filament",
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M12",
+      "outside": [
+        "H2:cable",
+        "H2:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M34",
+      "outside": [
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M13",
+      "outside": [
+        "H3:cable",
+        "H3:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M24",
+      "outside": [
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 320,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "J",
+      "outside": [
+        "H2:cable",
+        "H2:filament",
+        "H3:cable",
+        "H3:filament",
+        "H4:cable",
+        "H4:filament"
+      ],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "UNRESOLVED",
+      "mode": "S",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "R",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "C",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M12",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M34",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M13",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "M24",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    },
+    {
+      "clear_half_width_mm": 360,
+      "inherited_status": "REACH_REJECTED",
+      "mode": "J",
+      "outside": [],
+      "panels_removed_status": "UNRESOLVED: same internal collision and reach obligations; guards absent from model",
+      "topology": "stacked-bridge"
+    }
+  ],
+  "creep_sensitivity": [
+    {
+      "assumed_friction_n": 40.0,
+      "remaining_fraction": 1,
+      "reserve_n": 20.0
+    },
+    {
+      "assumed_friction_n": 20.0,
+      "remaining_fraction": 0.5,
+      "reserve_n": 0.0
+    },
+    {
+      "assumed_friction_n": 10.0,
+      "remaining_fraction": 0.25,
+      "reserve_n": -10.0
+    }
+  ],
+  "frame_growth_mm": {
+    "al_20k": 0.2832,
+    "steel_20k": 0.14400000000000002,
+    "steel_5k_gradient": 0.036000000000000004
+  },
+  "panels": {
+    "al5754_reference": {
+      "conductance_w_k_at_5m3h": 7.434846404095891,
+      "growth_mm_at_40k": 0.5736,
+      "mass_kg": 1.4364000000000001,
+      "relative_to_steel_mm_panel40k_frame20k": 0.4295999999999999,
+      "strip_at_50pa": {
+        "deflection_mm": 4.25531914893617,
+        "linear_warning": true,
+        "w_over_t": 2.8368794326241136
+      },
+      "thickness_m": 0.0015
+    },
+    "glass_property_proxy": {
+      "conductance_w_k_at_5m3h": 7.374208443271768,
+      "growth_mm_at_40k": 0.216,
+      "mass_kg": 3.5999999999999996,
+      "relative_to_steel_mm_panel40k_frame20k": 0.072,
+      "strip_at_50pa": {
+        "deflection_mm": 0.22600446428571427,
+        "linear_warning": false,
+        "w_over_t": 0.05650111607142857
+      },
+      "thickness_m": 0.004
+    },
+    "pc_reference": {
+      "conductance_w_k_at_5m3h": 7.156570996978853,
+      "growth_mm_at_40k": 1.5599999999999998,
+      "mass_kg": 1.7279999999999998,
+      "relative_to_steel_mm_panel40k_frame20k": 1.4159999999999997,
+      "strip_at_50pa": {
+        "deflection_mm": 6.878396739130434,
+        "linear_warning": true,
+        "w_over_t": 1.7195991847826084
+      },
+      "thickness_m": 0.004
+    },
+    "pmma_reference": {
+      "conductance_w_k_at_5m3h": 7.128820598006645,
+      "growth_mm_at_40k": 1.68,
+      "mass_kg": 1.7135999999999998,
+      "relative_to_steel_mm_panel40k_frame20k": 1.5359999999999998,
+      "strip_at_50pa": {
+        "deflection_mm": 4.79403409090909,
+        "linear_warning": true,
+        "w_over_t": 1.1985085227272725
+      },
+      "thickness_m": 0.004
+    }
+  },
+  "removal": {
+    "installed_overlap": false,
+    "lift_then_out_hit_segments": [
+      0,
+      1
+    ],
+    "limits": "Translation only; alternate order requires an interface that permits it. Hands, rotation and other obstacles absent.",
+    "out_then_lift_hit_segments": [],
+    "reverse_install_hit_segments": []
+  },
+  "retention_glass": [
+    {
+      "ideal_per_support_n": 21.258000000000003,
+      "lower_normal_reaction_n": 12.44904,
+      "supports": 2,
+      "upper_retainer_total_n": 17.55096,
+      "vertical_total_n": 42.516000000000005
+    },
+    {
+      "ideal_per_support_n": 42.516000000000005,
+      "lower_normal_reaction_n": 12.44904,
+      "supports": 1,
+      "upper_retainer_total_n": 17.55096,
+      "vertical_total_n": 42.516000000000005
+    }
+  ],
+  "status": "Hypothetical research; no physical validation or capacity rating",
+  "thermal": [
+    {
+      "g_w_k": 5.481570996978853,
+      "leakage_m3_h": 0,
+      "power_w": 100,
+      "rise_k": 11.441768442332494,
+      "steady_rise_k": 18.242945326278658,
+      "tau_s": 1824.2945326278657
+    },
+    {
+      "g_w_k": 7.156570996978853,
+      "leakage_m3_h": 5,
+      "power_w": 100,
+      "rise_k": 10.119770134417061,
+      "steady_rise_k": 13.97317235338195,
+      "tau_s": 1397.317235338195
+    },
+    {
+      "g_w_k": 12.181570996978852,
+      "leakage_m3_h": 20,
+      "power_w": 100,
+      "rise_k": 7.2928450457448655,
+      "steady_rise_k": 8.209121797574465,
+      "tau_s": 820.9121797574464
+    },
+    {
+      "g_w_k": 5.481570996978853,
+      "leakage_m3_h": 0,
+      "power_w": 300,
+      "rise_k": 34.32530532699748,
+      "steady_rise_k": 54.72883597883597,
+      "tau_s": 1824.2945326278657
+    },
+    {
+      "g_w_k": 7.156570996978853,
+      "leakage_m3_h": 5,
+      "power_w": 300,
+      "rise_k": 30.359310403251186,
+      "steady_rise_k": 41.91951706014585,
+      "tau_s": 1397.317235338195
+    },
+    {
+      "g_w_k": 12.181570996978852,
+      "leakage_m3_h": 20,
+      "power_w": 300,
+      "rise_k": 21.878535137234596,
+      "steady_rise_k": 24.627365392723394,
+      "tau_s": 820.9121797574464
+    },
+    {
+      "g_w_k": 5.481570996978853,
+      "leakage_m3_h": 0,
+      "power_w": 600,
+      "rise_k": 68.65061065399496,
+      "steady_rise_k": 109.45767195767193,
+      "tau_s": 1824.2945326278657
+    },
+    {
+      "g_w_k": 7.156570996978853,
+      "leakage_m3_h": 5,
+      "power_w": 600,
+      "rise_k": 60.71862080650237,
+      "steady_rise_k": 83.8390341202917,
+      "tau_s": 1397.317235338195
+    },
+    {
+      "g_w_k": 12.181570996978852,
+      "leakage_m3_h": 20,
+      "power_w": 600,
+      "rise_k": 43.75707027446919,
+      "steady_rise_k": 49.25473078544679,
+      "tau_s": 820.9121797574464
+    }
+  ],
+  "thermal_two_zone": [
+    {
+      "difference_k": 23.333333333333332,
+      "loss_w": 300.0,
+      "lower_rise_k": 25.833333333333332,
+      "mixing_w_k": 1,
+      "upper_rise_k": 49.166666666666664
+    },
+    {
+      "difference_k": 11.666666666666668,
+      "loss_w": 300.0,
+      "lower_rise_k": 31.666666666666668,
+      "mixing_w_k": 4,
+      "upper_rise_k": 43.333333333333336
+    },
+    {
+      "difference_k": 3.181818181818187,
+      "loss_w": 300.0,
+      "lower_rise_k": 35.90909090909091,
+      "mixing_w_k": 20,
+      "upper_rise_k": 39.09090909090909
+    }
+  ]
+}
