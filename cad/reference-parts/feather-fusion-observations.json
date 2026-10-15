@@ -1,0 +1,133 @@
+{
+  "app_version": "2705.1.30",
+  "document_name": "4884-feather-rp2040",
+  "document_is_saved": false,
+  "display_length_units": "mm",
+  "reported_length_units": "mm",
+  "api_to_mm_factor": 10,
+  "coordinate_frame": "root assembly context; no transform applied by script",
+  "body_count": 58,
+  "solid_count": 58,
+  "assembly_bounds": {
+    "min_mm": [
+      -1.1459999999999981,
+      0.0,
+      0.0
+    ],
+    "max_mm": [
+      50.8,
+      22.86,
+      6.37
+    ],
+    "size_mm": [
+      51.946,
+      22.86,
+      6.37
+    ]
+  },
+  "observed_date": "2026-10-15",
+  "source_sha256": "de85fb7f6644cdea17808208d888e64264d691573da8cd0fee808e2fd44d477f",
+  "raw_observation_sha256": "bbabd08bbf84dca9db9020f80b2952de368fa0b50e706fe3ef09c19a7f4db702",
+  "occurrence_count": 47,
+  "board": {
+    "occurrence": "PCB Component:1+Board:1",
+    "body": "Body1",
+    "is_solid": true,
+    "face_count": 143,
+    "bounds": {
+      "min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_mm": [
+        50.8,
+        22.86,
+        1.5700000000000003
+      ],
+      "size_mm": [
+        50.8,
+        22.86,
+        1.5700000000000003
+      ]
+    }
+  },
+  "board_occurrence": {
+    "path": "PCB Component:1+Board:1",
+    "transform_cm": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "body_count": 1
+  },
+  "mounting_cylinders": [
+    {
+      "diameter_mm": 2.5,
+      "origin_mm": [
+        2.54,
+        20.32,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "diameter_mm": 2.5,
+      "origin_mm": [
+        2.54,
+        2.54,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "diameter_mm": 2.54,
+      "origin_mm": [
+        48.260000000000005,
+        20.32,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "diameter_mm": 2.54,
+      "origin_mm": [
+        48.260000000000005,
+        2.54,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "selection_note": "Four 2.50/2.54 mm cylindrical surfaces at board-corner mounting centers. Excludes 5.08 mm outside-corner cylindrical surfaces and smaller pin holes. Not a full topology or fit check.",
+  "same_import_repeat_equal": true
+}

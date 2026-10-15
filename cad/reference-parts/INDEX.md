@@ -38,16 +38,18 @@ Candidates only; no purchasing or printer architecture selection. Unknown revisi
 
 ## motors
 
-2 records.
+4 records.
 
 | Manufacturer / part | Variant / revision | Model source | Local asset |
 | --- | --- | --- | --- |
 | [STEPPERONLINE 17HS19-2004S1](https://www.omc-stepperonline.com/nema-17-bipolar-59ncm-84oz-in-2a-42x48mm-4-wires-w-1m-cable-connector-17hs19-2004s1) | 1m cable / unknown | [listed](https://www.omc-stepperonline.com/nema-17-bipolar-59ncm-84oz-in-2a-42x48mm-4-wires-w-1m-cable-connector-17hs19-2004s1) | None |
-| [STEPPERONLINE 17HS08-1004S](https://www.omc-stepperonline.com/download/17HS08-1004S.pdf) | short body / unknown | Not located | None |
+| [STEPPERONLINE 17HS08-1004S](https://www.omc-stepperonline.com/de/nema-17-bipolar-1-8deg-16ncm-22-6oz-in-1a-3-5v-42x42x20mm-4-draehte-17hs08-1004s) | short body / unknown | [listed](https://www.omc-stepperonline.com/de/nema-17-bipolar-1-8deg-16ncm-22-6oz-in-1a-3-5v-42x42x20mm-4-draehte-17hs08-1004s) | None |
+| [LDO Motors LDO-42STH48-2004AC(VRN)](https://store.ldomotion.com/products/ldo-42sth48-2004ac-vrn-nema17-stepper-motor-voron-z-axis) | Voron Z motor / unknown | Not located | None |
+| [LDO Motors LDO-42STH40-1684CL350E(VRN)](https://store.ldomotion.com/products/ldo-42sth40-1684cl350evrn-nema17-linear-stepper-motor-with-tr8x4-lead-screw-peek-nut-450mn-m-torque-for-voron-trident-z-axis-motion) | integrated Tr8x4 leadscrew with PEEK nut / unknown | Not located | None |
 
 ## linear-rails-carriages
 
-4 records.
+6 records.
 
 | Manufacturer / part | Variant / revision | Model source | Local asset |
 | --- | --- | --- | --- |
@@ -55,33 +57,41 @@ Candidates only; no purchasing or printer architecture selection. Unknown revisi
 | [HIWIN MGN09H](https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500) | carriage size; preload accuracy seal options unresolved / unknown | [portal-unconfigured](https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500) | None |
 | [HIWIN MGN12C](https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500) | carriage size; preload accuracy seal options unresolved / unknown | [portal-unconfigured](https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500) | None |
 | [HIWIN MGN12H](https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500) | carriage size; preload accuracy seal options unresolved / unknown | [portal-unconfigured](https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500) | None |
+| [igus SWM-08](https://www.igus.at/product/drylin_SWM) | solid steel smooth shaft; length unconfigured / unknown | [portal-unconfigured](https://www.igus.at/product/drylin_SWM) | None |
+| [igus WS-10-40-CAM-500](https://www.igus.eu/product/drylin-ws-cam) | weight-reduced double rail, camera-slider threads / unknown | [portal-unconfigured](https://www.igus.eu/product/drylin-ws-cam) | None |
 
 ## bearings
 
-1 records.
+3 records.
 
 | Manufacturer / part | Variant / revision | Model source | Local asset |
 | --- | --- | --- | --- |
 | [SKF 625-2Z](https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/625-2z) | CN clearance / unknown | Not located | None |
+| [NTN 625ZZ](https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/625zz) | double-shielded, CN clearance, ISO class 0 / unknown | [listed](https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/625zz) | None |
+| [NTN 608ZZ](https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/608zz) | double-shielded, CN clearance, ISO class 0 / unknown | [listed](https://bearingfinder.ntnamericas.com/item/deep-groove-ball-bearings/single-row-radial-ball-bearings/608zz) | None |
 
 ## structural-components
 
-3 records.
+5 records.
 
 | Manufacturer / part | Variant / revision | Model source | Local asset |
 | --- | --- | --- | --- |
 | [80/20 20-2020](https://8020.net/20-2020.html) | 500mm unmachined / unknown | [portal-unconfigured](https://8020.net/) | None |
 | [80/20 1010-S](https://8020.net/1010-s.html) | 12 inch unmachined / unknown | [portal-unconfigured](https://8020.net/) | None |
 | [MISUMI HFS5-2020-200](https://us.misumi-ec.com/us/incadlibrary/detail/000028.html) | 200mm / unknown | [portal-unconfigured](https://us.misumi-ec.com/us/incadlibrary/detail/000028.html) | None |
+| [Aluminium Warehouse (supplier; mill unspecified) 42374512902332](https://www.aluminiumwarehouse.co.uk/products/20-mm-x-20-mm-x-2-mm-aluminium-square-tube?variant=42374512902332) | 20 x 20 x 2 mm square tube; 1000 mm; mill finish / unknown | Not located | None |
+| [Online Metals (supplier; mill unspecified) 18014](https://www.onlinemetals.com/en/buy/aluminum/1-x-0-125-aluminum-square-tube-6061-t6-extruded/pid/18014) | 1 x 1 x 1/8 inch square tube; 12 inch length; 6061-T6 extruded / unknown | Not located | None |
 
 ## belts-pulleys
 
-2 records.
+4 records.
 
 | Manufacturer / part | Variant / revision | Model source | Local asset |
 | --- | --- | --- | --- |
 | [Adafruit 1253](https://www.adafruit.com/product/1253) | GT2 36 teeth 5mm bore / unknown | [listed](https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/1253%20Aluminum%20Timing%20Pulley/1253%20Aluminum%20Timing%20Pulley.step) | None |
 | [Adafruit 1184](https://www.adafruit.com/product/1184) | GT2 2mm pitch 6mm width 1164mm loop / unknown | Not located | None |
+| [Gates 200-2MGT-06](https://www.gates.com/content/dam/documents-library/catalogs/power-transmission-catalog.pdf) | PowerGrip GT3 closed-loop, 6 mm wide / unknown | Not located | None |
+| [Gates 2MR-20S-06](https://www.gates.com/content/dam/documents-library/catalogs/power-transmission-catalog.pdf) | PowerGrip GT2 sprocket, 20 teeth, 6 mm belt / unknown | Not located | None |
 
 ## extruders-hotends
 
@@ -94,11 +104,12 @@ Candidates only; no purchasing or printer architecture selection. Unknown revisi
 
 ## sensors
 
-1 records.
+2 records.
 
 | Manufacturer / part | Variant / revision | Model source | Local asset |
 | --- | --- | --- | --- |
 | [OMRON D2F-01L](https://components.omron.com/sites/default/files/datasheet_pdf/B036-E1.pdf) | hinge lever PCB terminals / unknown | Not located | None |
+| [ANTCLABS BLTouch](https://www.antclabs.com/bltouch-v3) | Smart V3.1 / V3.1 | Not located | None |
 
 ## fans
 
