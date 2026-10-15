@@ -43,6 +43,8 @@ A render, CAD assembly, simulation, calculation, or successful software check do
 
 ### External reference CAD model dependencies
 
+Use the [reference catalog and local-library workflow](cad/reference-parts/README.md) for exact identities, permission gates, approved local paths and verification status. Only the explicitly authorized sample may be downloaded; other records remain link-only until separately authorized.
+
 For future CAD tasks involving an off-the-shelf purchased component, check the project-approved reference-model folder and provenance catalog for the **exact selected manufacturer part and revision** before modeling interfaces around it. If the required reference model is absent, unusable or of uncertain rights/accuracy, **ask the maintainer for the correct file or approval of an acceptable source**. Provide a concise consolidated list with part identity, desired CAD format, established source link if known, geometry purpose, availability/rights uncertainty and blocked work. Do not quietly redesign or substitute the purchased component, invent dimensions, fabricate a supposed vendor model, or treat approximate stand-ins as verified geometry merely because Codex lacks a file. Only use a labeled preliminary envelope from traceable dimensions if the maintainer specifically approves it; continue independent unblocked work safely. Check model rights and preserve public reproducibility; no bulk downloads, licensing assumptions or hardware changes without approval. See [research-first CAD library plan](docs/research-first-plan.md#future-codex-cad-reference-parts-library-planning-only).
 
 ## GitHub workflow and verification

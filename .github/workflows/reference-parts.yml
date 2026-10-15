@@ -1,0 +1,32 @@
+name: Reference parts catalog
+on:
+  pull_request:
+    paths:
+      - 'cad/reference-parts/**'
+      - 'local-cad-references/**'
+      - 'scripts/check_reference_parts.py'
+      - 'tests/test_reference_parts.py'
+      - '.github/workflows/reference-parts.yml'
+      - '.gitignore'
+  push:
+    branches: [main]
+    paths:
+      - 'cad/reference-parts/**'
+      - 'local-cad-references/**'
+      - 'scripts/check_reference_parts.py'
+      - 'tests/test_reference_parts.py'
+      - '.github/workflows/reference-parts.yml'
+      - '.gitignore'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - run: python3 scripts/check_reference_parts.py
+      - run: python3 -m unittest discover -s tests -p 'test_reference_parts.py' -v
+      - run: git diff --check

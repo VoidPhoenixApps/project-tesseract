@@ -1,0 +1,2031 @@
+{
+  "schema_version": 1,
+  "categories": [
+    "sbcs",
+    "mcus",
+    "controller-boards",
+    "motors",
+    "linear-rails-carriages",
+    "bearings",
+    "structural-components",
+    "belts-pulleys",
+    "extruders-hotends",
+    "sensors",
+    "fans",
+    "electrical-hardware",
+    "fasteners"
+  ],
+  "parts": [
+    {
+      "id": "raspberry-pi-raspberry-pi-3-model-b-1gb",
+      "category": "sbcs",
+      "manufacturer": "Raspberry Pi",
+      "part_number": "Raspberry Pi 3 Model B+",
+      "variant": "1GB",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Official product documents identify board family; match physical PCB revision and connector clearances before CAD. Exact revision-matched STEP not located."
+    },
+    {
+      "id": "raspberry-pi-raspberry-pi-4-model-b-2gb",
+      "category": "sbcs",
+      "manufacturer": "Raspberry Pi",
+      "part_number": "Raspberry Pi 4 Model B",
+      "variant": "2GB",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.raspberrypi.com/products/raspberry-pi-4-model-b/",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Official product documents identify board family; match physical PCB revision and connector clearances before CAD. Exact revision-matched STEP not located."
+    },
+    {
+      "id": "raspberry-pi-raspberry-pi-5-4gb",
+      "category": "sbcs",
+      "manufacturer": "Raspberry Pi",
+      "part_number": "Raspberry Pi 5",
+      "variant": "4GB",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.raspberrypi.com/products/raspberry-pi-5/",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Official product documents identify board family; match physical PCB revision and connector clearances before CAD. Exact revision-matched STEP not located."
+    },
+    {
+      "id": "raspberry-pi-raspberry-pi-zero-2-w-unpopulated-gpio",
+      "category": "sbcs",
+      "manufacturer": "Raspberry Pi",
+      "part_number": "Raspberry Pi Zero 2 W",
+      "variant": "unpopulated GPIO",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Official product documents identify board family; match physical PCB revision and connector clearances before CAD. Exact revision-matched STEP not located."
+    },
+    {
+      "id": "raspberry-pi-pico-rp2040-without-headers",
+      "category": "mcus",
+      "manufacturer": "Raspberry Pi",
+      "part_number": "Pico",
+      "variant": "RP2040 without headers",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+      "model_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+      "model_source_status": "listed",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP",
+        "Cadence Allegro"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "allowed",
+          "basis_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+          "note": "Pico/Pico H design-resource section grants use, copying, modification and distribution for any purpose with or without fee. Local inspection inferred from broad use grant; no claim about model training."
+        },
+        "local_ai_processing": {
+          "status": "allowed",
+          "basis_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+          "note": "Pico/Pico H design-resource section grants use, copying, modification and distribution for any purpose with or without fee. Local inspection inferred from broad use grant; no claim about model training."
+        },
+        "derivative_use": {
+          "status": "allowed",
+          "basis_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+          "note": "Pico/Pico H design-resource section grants use, copying, modification and distribution for any purpose with or without fee. Local inspection inferred from broad use grant; no claim about model training."
+        },
+        "public_redistribution": {
+          "status": "allowed",
+          "basis_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+          "note": "Pico/Pico H design-resource section grants use, copying, modification and distribution for any purpose with or without fee. Local inspection inferred from broad use grant; no claim about model training."
+        },
+        "commercial_reuse": {
+          "status": "allowed",
+          "basis_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+          "note": "Pico/Pico H design-resource section grants use, copying, modification and distribution for any purpose with or without fee. Local inspection inferred from broad use grant; no claim about model training."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Non-wireless first-generation board; do not substitute Pico W or Pico H."
+    },
+    {
+      "id": "espressif-esp32-devkitc-esp32-wroom-32e-module",
+      "category": "mcus",
+      "manufacturer": "Espressif",
+      "part_number": "ESP32-DevKitC",
+      "variant": "ESP32-WROOM-32E module",
+      "revision": "V4",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Module and antenna variants matter; official dimensions PDF linked. Exact STEP not located."
+    },
+    {
+      "id": "stmicroelectronics-nucleo-f446re-mb1136-f446re-c04",
+      "category": "mcus",
+      "manufacturer": "STMicroelectronics",
+      "part_number": "NUCLEO-F446RE",
+      "variant": "MB1136-F446RE-C04",
+      "revision": "C04",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.st.com/en/evaluation-tools/nucleo-f446re.html",
+      "model_url": "https://www.st.com/en/evaluation-tools/nucleo-f446re.html",
+      "model_source_status": "listed",
+      "source_revision": "MB1136 design package 1.1, 2024-11-22; UM1724 Rev 17 identifies C04",
+      "access_date": "2026-10-15",
+      "formats": [
+        "board design package (format uninspected)"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Board design package is electrical CAD, not a verified mechanical STEP; account/terms gate needs review."
+    },
+    {
+      "id": "adafruit-4884-feather-rp2040",
+      "category": "mcus",
+      "manufacturer": "Adafruit",
+      "part_number": "4884",
+      "variant": "Feather RP2040",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.adafruit.com/product/4884",
+      "model_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/4884%20Feather%20RP2040/4884%20Feather%20RP2040.step",
+      "model_source_status": "listed",
+      "source_revision": "c128bceb1f96b6ea8b68f250bda986ba85da24ea",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP",
+        "Fusion 360",
+        "STL"
+      ],
+      "provenance": "Official Adafruit CAD repository pinned commit; file size and Git blob SHA-1 matched GitHub metadata; local SHA-256 recorded.",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [
+          "SHA-256 and byte count recorded; Git blob SHA-1 matches official pinned metadata.",
+          "STEP start/end, HEADER/DATA and two ENDSEC markers present; 50481 entity definitions; one SI millimetre unit declaration. Not a full STEP parser.",
+          "AP214 AUTOMOTIVE_DESIGN schema; header timestamp 2021-05-10; header labels model rev C v2. Physical PCB revision correspondence not verified."
+        ],
+        "confidence": "file-checked"
+      },
+      "permissions": {
+        "download": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "local_ai_processing": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "derivative_use": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "public_redistribution": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "commercial_reuse": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        }
+      },
+      "authorization": {
+        "status": "approved",
+        "scope": "Only pinned 4884 STEP and MIT license; local hashing/inspection; no third-party model upload",
+        "evidence": "Maintainer explicit authorization in Stage A chat, 2026-10-15"
+      },
+      "local_asset": {
+        "path": "mcus/adafruit/4884-feather-rp2040/c128bceb1f96b6ea8b68f250bda986ba85da24ea/4884-feather-rp2040.step",
+        "sha256": "de85fb7f6644cdea17808208d888e64264d691573da8cd0fee808e2fd44d477f",
+        "bytes": 2443088,
+        "license_path": "mcus/adafruit/4884-feather-rp2040/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE.txt",
+        "license_sha256": "f60436644e066301d4c2e8f1f0674a157b1f60e4fd5586717b99dde255cc18cd",
+        "download_url": "https://raw.githubusercontent.com/adafruit/Adafruit_CAD_Parts/c128bceb1f96b6ea8b68f250bda986ba85da24ea/4884%20Feather%20RP2040/4884%20Feather%20RP2040.step",
+        "git_blob_sha1": "6b6c10b83c8e2648b036c741208101c5511affd6",
+        "import_status": "not-run-no-verified-engine"
+      },
+      "notes": "Root MIT license applies to official CAD repository; no per-folder override in the inspected pinned directory. Model header labels rev C v2; that is not verified physical PCB revision. No imported geometry or dimension check."
+    },
+    {
+      "id": "bigtreetech-skr-mini-e3-v3-0",
+      "category": "controller-boards",
+      "manufacturer": "BIGTREETECH",
+      "part_number": "SKR MINI E3",
+      "variant": "V3.0",
+      "revision": "V3.0",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3",
+      "model_url": "https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/blob/d7fd822006628143222d1c3c8cdea85ffee29e66/hardware/BTT%20SKR%20MINI%20E3%20V3.0/3D/BTT%20E3%20SKR%20MINI%20V3.0.step",
+      "model_source_status": "listed",
+      "source_revision": "d7fd822006628143222d1c3c8cdea85ffee29e66",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Firmware licenses do not establish hardware-model rights."
+    },
+    {
+      "id": "bigtreetech-octopus-v1-0",
+      "category": "controller-boards",
+      "manufacturer": "BIGTREETECH",
+      "part_number": "Octopus",
+      "variant": "V1.0",
+      "revision": "V1.0",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-V1.0",
+      "model_url": "https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-V1.0/blob/9526ff16f68839626cb8875a299e73f99f2e57e8/3D/BIGTREETECH%20Octopus%20V1.0.stp",
+      "model_source_status": "listed",
+      "source_revision": "9526ff16f68839626cb8875a299e73f99f2e57e8",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Do not use this V1.0 model for V1.1 or Pro without a revision audit."
+    },
+    {
+      "id": "duet3d-duet-3-mini-5-wifi",
+      "category": "controller-boards",
+      "manufacturer": "Duet3D",
+      "part_number": "Duet 3 Mini 5+",
+      "variant": "WiFi",
+      "revision": "1.02",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://github.com/Duet3D/Duet3-Mini5plus",
+      "model_url": "https://github.com/Duet3D/Duet3-Mini5plus/tree/1dc1976f196fb968a4140397219c87f2c80efc38/v1.02_wifi",
+      "model_source_status": "listed",
+      "source_revision": "1dc1976f196fb968a4140397219c87f2c80efc38",
+      "access_date": "2026-10-15",
+      "formats": [
+        "KiCad"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "conditional",
+          "basis_url": "https://github.com/Duet3D/Duet3-Mini5plus/blob/1dc1976f196fb968a4140397219c87f2c80efc38/LICENSE",
+          "note": "CERN-OHL-S v2 or later plus additional Duet3D attribution/logo terms; compatibility and exact intended use require review. Not a Tesseract license selection."
+        },
+        "local_ai_processing": {
+          "status": "conditional",
+          "basis_url": "https://github.com/Duet3D/Duet3-Mini5plus/blob/1dc1976f196fb968a4140397219c87f2c80efc38/LICENSE",
+          "note": "CERN-OHL-S v2 or later plus additional Duet3D attribution/logo terms; compatibility and exact intended use require review. Not a Tesseract license selection."
+        },
+        "derivative_use": {
+          "status": "conditional",
+          "basis_url": "https://github.com/Duet3D/Duet3-Mini5plus/blob/1dc1976f196fb968a4140397219c87f2c80efc38/LICENSE",
+          "note": "CERN-OHL-S v2 or later plus additional Duet3D attribution/logo terms; compatibility and exact intended use require review. Not a Tesseract license selection."
+        },
+        "public_redistribution": {
+          "status": "conditional",
+          "basis_url": "https://github.com/Duet3D/Duet3-Mini5plus/blob/1dc1976f196fb968a4140397219c87f2c80efc38/LICENSE",
+          "note": "CERN-OHL-S v2 or later plus additional Duet3D attribution/logo terms; compatibility and exact intended use require review. Not a Tesseract license selection."
+        },
+        "commercial_reuse": {
+          "status": "conditional",
+          "basis_url": "https://github.com/Duet3D/Duet3-Mini5plus/blob/1dc1976f196fb968a4140397219c87f2c80efc38/LICENSE",
+          "note": "CERN-OHL-S v2 or later plus additional Duet3D attribution/logo terms; compatibility and exact intended use require review. Not a Tesseract license selection."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Repository has native KiCad v1.02 WiFi files; found STEP belongs to Expansion 2+, not this board. Do not substitute."
+    },
+    {
+      "id": "stepperonline-17hs19-2004s1-1m-cable",
+      "category": "motors",
+      "manufacturer": "STEPPERONLINE",
+      "part_number": "17HS19-2004S1",
+      "variant": "1m cable",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.omc-stepperonline.com/nema-17-bipolar-59ncm-84oz-in-2a-42x48mm-4-wires-w-1m-cable-connector-17hs19-2004s1",
+      "model_url": "https://www.omc-stepperonline.com/nema-17-bipolar-59ncm-84oz-in-2a-42x48mm-4-wires-w-1m-cable-connector-17hs19-2004s1",
+      "model_source_status": "listed",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Published body 42 x 42 x 48 mm; shaft diameter 5 mm, length 24 mm. Drawing tolerance audit pending.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Official page lists STEP; connector/cable and shaft D-cut require inspection."
+    },
+    {
+      "id": "stepperonline-17hs08-1004s-short-body",
+      "category": "motors",
+      "manufacturer": "STEPPERONLINE",
+      "part_number": "17HS08-1004S",
+      "variant": "short body",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.omc-stepperonline.com/download/17HS08-1004S.pdf",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Older drawing: face 42.3 mm MAX; 31 +/-0.2 mm mounting square; 4-M3 depth 2.5 mm MIN. Body conflict unresolved.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "BLOCKED: older drawing body 20 +/-1 mm conflicts with current linked listing title 21.5 mm. Resolve revision with manufacturer; no envelope substitution."
+    },
+    {
+      "id": "hiwin-mgn09c-carriage-size-preload-accuracy-seal-options-unresolved",
+      "category": "linear-rails-carriages",
+      "manufacturer": "HIWIN",
+      "part_number": "MGN09C",
+      "variant": "carriage size; preload accuracy seal options unresolved",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Live manufacturer MGN HIRES dimensional table; publication revision not stated",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "H 10, W 20, L 28.9; mounting B 15, C 10 mm, catalog nominal. No imported check.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+    },
+    {
+      "id": "hiwin-mgn09h-carriage-size-preload-accuracy-seal-options-unresolved",
+      "category": "linear-rails-carriages",
+      "manufacturer": "HIWIN",
+      "part_number": "MGN09H",
+      "variant": "carriage size; preload accuracy seal options unresolved",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Live manufacturer MGN HIRES dimensional table; publication revision not stated",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "H 10, W 20, L 39.9; mounting B 15, C 16 mm, catalog nominal. No imported check.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+    },
+    {
+      "id": "hiwin-mgn12c-carriage-size-preload-accuracy-seal-options-unresolved",
+      "category": "linear-rails-carriages",
+      "manufacturer": "HIWIN",
+      "part_number": "MGN12C",
+      "variant": "carriage size; preload accuracy seal options unresolved",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Live manufacturer MGN HIRES dimensional table; publication revision not stated",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "H 13, W 27, L 34.7; mounting B 20, C 15 mm, catalog nominal. No imported check.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+    },
+    {
+      "id": "hiwin-mgn12h-carriage-size-preload-accuracy-seal-options-unresolved",
+      "category": "linear-rails-carriages",
+      "manufacturer": "HIWIN",
+      "part_number": "MGN12H",
+      "variant": "carriage size; preload accuracy seal options unresolved",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/c/4500",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Live manufacturer MGN HIRES dimensional table; publication revision not stated",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "H 13, W 27, L 45.4; mounting B 20, C 20 mm, catalog nominal. No imported check.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact manufacturer MGN size/type; full order options and rail length/end pitch unresolved. Original indexed hiwin.hu PDF returned 404; replaced with live manufacturer table and rechecked dimensions. Use configurator for exact model after options and rights review."
+    },
+    {
+      "id": "skf-625-2z-cn-clearance",
+      "category": "bearings",
+      "manufacturer": "SKF",
+      "part_number": "625-2Z",
+      "variant": "CN clearance",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/625-2z",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Bore 5 mm; OD 16 mm; width 5 mm. No fit/tolerance audit.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Manufacturer marketplace identifies exact shielded bearing; do not substitute 625-2RS or another brand."
+    },
+    {
+      "id": "80-20-20-2020-500mm-unmachined",
+      "category": "structural-components",
+      "manufacturer": "80/20",
+      "part_number": "20-2020",
+      "variant": "500mm unmachined",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://8020.net/20-2020.html",
+      "model_url": "https://8020.net/",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "20 x 20 mm nominal section; 500 mm stock option",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Profile candidate only, not selected reinforcement. Resolve length and machining before model use."
+    },
+    {
+      "id": "80-20-1010-s-12-inch-unmachined",
+      "category": "structural-components",
+      "manufacturer": "80/20",
+      "part_number": "1010-S",
+      "variant": "12 inch unmachined",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://8020.net/1010-s.html",
+      "model_url": "https://8020.net/",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "inch",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "1 x 1 inch nominal section; 12 inch stock option, no machining. Not interchangeable with 20 x 20 mm.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Smooth 10-series profile candidate; direct current manufacturer page verified. Replaced the preliminary unsourced 1010 record during initial research, not a selected machine component. No reinforcement choice."
+    },
+    {
+      "id": "misumi-hfs5-2020-200-200mm",
+      "category": "structural-components",
+      "manufacturer": "MISUMI",
+      "part_number": "HFS5-2020-200",
+      "variant": "200mm",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://us.misumi-ec.com/us/incadlibrary/detail/000028.html",
+      "model_url": "https://us.misumi-ec.com/us/incadlibrary/detail/000028.html",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "2020 series, 200 mm length as BOM order code; slot and end machining drawing audit pending.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Manufacturer example BOM identifies exact stock length; no structural suitability claim."
+    },
+    {
+      "id": "adafruit-1253-gt2-36-teeth-5mm-bore",
+      "category": "belts-pulleys",
+      "manufacturer": "Adafruit",
+      "part_number": "1253",
+      "variant": "GT2 36 teeth 5mm bore",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.adafruit.com/product/1253",
+      "model_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/1253%20Aluminum%20Timing%20Pulley/1253%20Aluminum%20Timing%20Pulley.step",
+      "model_source_status": "listed",
+      "source_revision": "c128bceb1f96b6ea8b68f250bda986ba85da24ea",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP",
+        "Fusion 360"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "GT2 36 teeth 5mm bore; nominal listing, no dimensional audit.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "local_ai_processing": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "derivative_use": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "public_redistribution": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        },
+        "commercial_reuse": {
+          "status": "allowed",
+          "basis_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/LICENSE",
+          "note": "Repository MIT grant; retain Adafruit copyright and permission notice. Local CAD inspection inferred from unrestricted use grant; no model-training claim."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Sold under Adafruit SKU; underlying OEM not disclosed. Model mapping is to this SKU, not arbitrary GT2 pulleys."
+    },
+    {
+      "id": "adafruit-1184-gt2-2mm-pitch-6mm-width-1164mm-loop",
+      "category": "belts-pulleys",
+      "manufacturer": "Adafruit",
+      "part_number": "1184",
+      "variant": "GT2 2mm pitch 6mm width 1164mm loop",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.adafruit.com/product/1184",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated product page",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "GT2 2mm pitch 6mm width 1164mm loop; nominal listing, no dimensional audit.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Sold under Adafruit SKU; underlying OEM not disclosed. Belt stiffness and tension behavior not modeled."
+    },
+    {
+      "id": "bondtech-bmg-standard-right-hand",
+      "category": "extruders-hotends",
+      "manufacturer": "Bondtech",
+      "part_number": "BMG",
+      "variant": "standard right-hand",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.bondtech.se/product/bmg-extruder/",
+      "model_url": "https://www.bondtech.se/customer-service/",
+      "model_source_status": "listed",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP (ZIP)"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Official support page offers dummy geometry, not manufacturing CAD. Confirm current SKU and model revision before interface use."
+    },
+    {
+      "id": "e3d-revo-hemera-xs-direct-drive",
+      "category": "extruders-hotends",
+      "manufacturer": "E3D",
+      "part_number": "Revo Hemera XS",
+      "variant": "Direct drive",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://e3d-online.com/pages/revo-support-hemera-xs",
+      "model_url": "https://e3d-online.com/pages/revo-support-hemera-xs",
+      "model_source_status": "listed",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Official page routes reference CAD to E3D Printables; exact voltage/nozzle configuration and asset license must be resolved."
+    },
+    {
+      "id": "omron-d2f-01l-hinge-lever-pcb-terminals",
+      "category": "sensors",
+      "manufacturer": "OMRON",
+      "part_number": "D2F-01L",
+      "variant": "hinge lever PCB terminals",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://components.omron.com/sites/default/files/datasheet_pdf/B036-E1.pdf",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact suffix matters: do not substitute -FL, -L3 or different terminals. Drawing/operating position audit pending."
+    },
+    {
+      "id": "noctua-nf-a4x10-5v-3-pin",
+      "category": "fans",
+      "manufacturer": "Noctua",
+      "part_number": "NF-A4x10 5V",
+      "variant": "3-pin",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.noctua.at/en/products/nf-a4x10-5v/downloads",
+      "model_url": "https://www.noctua.at/en/products/nf-a4x10-5v/downloads",
+      "model_source_status": "listed",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "40 x 40 x 10 mm nominal; 32 x 32 mm hole spacing requires drawing/import comparison.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "conditional",
+          "basis_url": "https://www.noctua.at/en/3d-cad-models",
+          "note": "Reference, visualization and integration only; no performance simulation, printing or reproduction/commercialization of represented or substantially similar products. Does not resolve AI or redistribution permission."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "conditional",
+          "basis_url": "https://www.noctua.at/en/3d-cad-models",
+          "note": "Reference, visualization and integration only; no performance simulation, printing or reproduction/commercialization of represented or substantially similar products. Does not resolve AI or redistribution permission."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "conditional",
+          "basis_url": "https://www.noctua.at/en/3d-cad-models",
+          "note": "Reference, visualization and integration only; no performance simulation, printing or reproduction/commercialization of represented or substantially similar products. Does not resolve AI or redistribution permission."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Mounting/exterior reference only; impeller/internal geometry deliberately altered."
+    },
+    {
+      "id": "noctua-nf-a4x20-5v-3-pin",
+      "category": "fans",
+      "manufacturer": "Noctua",
+      "part_number": "NF-A4x20 5V",
+      "variant": "3-pin",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.noctua.at/en/products/nf-a4x20-5v/downloads",
+      "model_url": "https://www.noctua.at/en/products/nf-a4x20-5v/downloads",
+      "model_source_status": "listed",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [
+        "STEP"
+      ],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "40 x 40 x 20 mm nominal; 32 x 32 mm hole spacing requires drawing/import comparison.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "conditional",
+          "basis_url": "https://www.noctua.at/en/3d-cad-models",
+          "note": "Reference, visualization and integration only; no performance simulation, printing or reproduction/commercialization of represented or substantially similar products. Does not resolve AI or redistribution permission."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "conditional",
+          "basis_url": "https://www.noctua.at/en/3d-cad-models",
+          "note": "Reference, visualization and integration only; no performance simulation, printing or reproduction/commercialization of represented or substantially similar products. Does not resolve AI or redistribution permission."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "conditional",
+          "basis_url": "https://www.noctua.at/en/3d-cad-models",
+          "note": "Reference, visualization and integration only; no performance simulation, printing or reproduction/commercialization of represented or substantially similar products. Does not resolve AI or redistribution permission."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Mounting/exterior reference only; impeller/internal geometry deliberately altered."
+    },
+    {
+      "id": "sunon-mf50151vx-1b00u-g99-50x50x15-blower",
+      "category": "fans",
+      "manufacturer": "SUNON",
+      "part_number": "MF50151VX-1B00U-G99",
+      "variant": "50x50x15 blower",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.sunonusa.com/product/dc-blower-50x50x15-38/",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "mm",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "50 x 50 x 15 mm size class; outlet and hole pattern audit pending.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact blower suffix; not interchangeable with axial MF50151VX-1000U-A99."
+    },
+    {
+      "id": "wago-221-412-lever-connector",
+      "category": "electrical-hardware",
+      "manufacturer": "WAGO",
+      "part_number": "221-412",
+      "variant": "lever connector",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.wago.com/gb/products/electrical-interconnections/splicing-connectors-221",
+      "model_url": "https://www.wago.com/gb/products/electrical-interconnections/splicing-connectors-221",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact two-/three-conductor variant. No electrical-system approval."
+    },
+    {
+      "id": "wago-221-413-lever-connector",
+      "category": "electrical-hardware",
+      "manufacturer": "WAGO",
+      "part_number": "221-413",
+      "variant": "lever connector",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://www.wago.com/gb/products/electrical-interconnections/splicing-connectors-221",
+      "model_url": "https://www.wago.com/gb/products/electrical-interconnections/splicing-connectors-221",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Exact two-/three-conductor variant. No electrical-system approval."
+    },
+    {
+      "id": "mean-well-lrs-350-24-24v",
+      "category": "electrical-hardware",
+      "manufacturer": "MEAN WELL",
+      "part_number": "LRS-350-24",
+      "variant": "24V",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://display.meanwell.com/webapp/product/search.aspx?prod=LRS-350",
+      "model_url": null,
+      "model_source_status": "not-located",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Manufacturer LRS-350 selector includes -24. Model/dimensional drawing not inspected; electrical and enclosure safety assessment remains separate."
+    },
+    {
+      "id": "misumi-scbs4-10-m4-x-10-with-washer",
+      "category": "fasteners",
+      "manufacturer": "MISUMI",
+      "part_number": "SCBS4-10",
+      "variant": "M4 x 10 with washer",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://us.misumi-ec.com/us/incadlibrary/detail/000028.html",
+      "model_url": "https://us.misumi-ec.com/us/incadlibrary/detail/000028.html",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Manufacturer example BOM identifies exact product; obtain individual drawing, tolerances/material and rights before use."
+    },
+    {
+      "id": "misumi-hntt5-5-5-series-m5-pre-assembly-nut",
+      "category": "fasteners",
+      "manufacturer": "MISUMI",
+      "part_number": "HNTT5-5",
+      "variant": "5 series M5 pre-assembly nut",
+      "revision": "unknown",
+      "status": "candidate",
+      "availability": "Commercial product documented; local stock and price not verified",
+      "documentation_url": "https://us.misumi-ec.com/us/incadlibrary/detail/000028.html",
+      "model_url": "https://us.misumi-ec.com/us/incadlibrary/detail/000028.html",
+      "model_source_status": "portal-unconfigured",
+      "source_revision": "Undated live source; revision not established",
+      "access_date": "2026-10-15",
+      "formats": [],
+      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "geometry": {
+        "units": "unknown",
+        "coordinate_system": "unknown; preserve native frame on first import",
+        "interface_dimensions": "Not transcribed; consult source drawing before interface design.",
+        "checks": [],
+        "confidence": "documentation-only"
+      },
+      "permissions": {
+        "download": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "local_ai_processing": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "derivative_use": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "public_redistribution": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        },
+        "commercial_reuse": {
+          "status": "unknown",
+          "basis_url": null,
+          "note": "No asset-specific grant established; approval required before download or processing."
+        }
+      },
+      "authorization": {
+        "status": "not-requested",
+        "scope": "No model retrieval authorized",
+        "evidence": null
+      },
+      "local_asset": null,
+      "notes": "Manufacturer example BOM identifies exact product; obtain individual drawing, tolerances/material and rights before use."
+    }
+  ]
+}

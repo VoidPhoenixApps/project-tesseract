@@ -1,0 +1,433 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "categories",
+    "parts"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 13
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "manufacturer",
+          "part_number",
+          "variant",
+          "revision",
+          "status",
+          "availability",
+          "documentation_url",
+          "model_url",
+          "model_source_status",
+          "source_revision",
+          "access_date",
+          "formats",
+          "provenance",
+          "geometry",
+          "permissions",
+          "authorization",
+          "local_asset",
+          "notes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "manufacturer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "part_number": {
+            "type": "string",
+            "minLength": 1
+          },
+          "variant": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "candidate",
+              "retired"
+            ]
+          },
+          "availability": {
+            "type": "string",
+            "minLength": 1
+          },
+          "documentation_url": {
+            "type": "string",
+            "format": "https-url",
+            "minLength": 1
+          },
+          "model_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "https-url",
+            "minLength": 1
+          },
+          "model_source_status": {
+            "enum": [
+              "listed",
+              "portal-unconfigured",
+              "not-located"
+            ]
+          },
+          "source_revision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "access_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "formats": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "provenance": {
+            "type": "string",
+            "minLength": 1
+          },
+          "geometry": {
+            "type": "object",
+            "required": [
+              "units",
+              "coordinate_system",
+              "interface_dimensions",
+              "checks",
+              "confidence"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "units": {
+                "enum": [
+                  "mm",
+                  "inch",
+                  "unknown"
+                ]
+              },
+              "coordinate_system": {
+                "type": "string",
+                "minLength": 1
+              },
+              "interface_dimensions": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checks": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0
+              },
+              "confidence": {
+                "enum": [
+                  "documentation-only",
+                  "file-checked",
+                  "imported-unvalidated",
+                  "dimension-checked"
+                ]
+              }
+            }
+          },
+          "permissions": {
+            "type": "object",
+            "required": [
+              "download",
+              "local_ai_processing",
+              "derivative_use",
+              "public_redistribution",
+              "commercial_reuse"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "download": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "basis_url",
+                  "note"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unknown",
+                      "allowed",
+                      "conditional",
+                      "prohibited"
+                    ]
+                  },
+                  "basis_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "https-url",
+                    "minLength": 1
+                  },
+                  "note": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "local_ai_processing": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "basis_url",
+                  "note"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unknown",
+                      "allowed",
+                      "conditional",
+                      "prohibited"
+                    ]
+                  },
+                  "basis_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "https-url",
+                    "minLength": 1
+                  },
+                  "note": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "derivative_use": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "basis_url",
+                  "note"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unknown",
+                      "allowed",
+                      "conditional",
+                      "prohibited"
+                    ]
+                  },
+                  "basis_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "https-url",
+                    "minLength": 1
+                  },
+                  "note": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "public_redistribution": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "basis_url",
+                  "note"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unknown",
+                      "allowed",
+                      "conditional",
+                      "prohibited"
+                    ]
+                  },
+                  "basis_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "https-url",
+                    "minLength": 1
+                  },
+                  "note": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "commercial_reuse": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "basis_url",
+                  "note"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unknown",
+                      "allowed",
+                      "conditional",
+                      "prohibited"
+                    ]
+                  },
+                  "basis_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "https-url",
+                    "minLength": 1
+                  },
+                  "note": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          },
+          "authorization": {
+            "type": "object",
+            "required": [
+              "status",
+              "scope",
+              "evidence"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "not-requested",
+                  "pending",
+                  "approved",
+                  "denied"
+                ]
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              }
+            }
+          },
+          "local_asset": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "required": [
+              "path",
+              "sha256",
+              "bytes",
+              "license_path",
+              "license_sha256",
+              "download_url",
+              "git_blob_sha1",
+              "import_status"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "license_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "license_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "download_url": {
+                "type": "string",
+                "format": "https-url",
+                "minLength": 1
+              },
+              "git_blob_sha1": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "import_status": {
+                "enum": [
+                  "not-run-no-verified-engine",
+                  "imported-unvalidated",
+                  "dimension-checked"
+                ]
+              }
+            }
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project Tesseract reference parts catalog v1",
+  "description": "All keys required; unknowns explicit. Validator also enforces identity, rights, paths, local hash and publication constraints."
+}

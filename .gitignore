@@ -2,3 +2,5 @@ __pycache__/
 *.py[cod]
 .env
 .env.*
+# Optional project-local reference cache; never publish purchased-part models.
+/local-cad-references/
