@@ -1,0 +1,442 @@
+{
+  "12kg_arrest_0p01m_s_1mm_stroke": {
+    "10": {
+      "absorbed_energy_j": 0.1877500105335,
+      "average_catch_force_n": 187.7500105335,
+      "catch_speed_m_s": 0.1080665,
+      "precatch_drop_mm": 0.5903325,
+      "total_drop_mm": 1.5903325000000001
+    },
+    "20": {
+      "absorbed_energy_j": 0.372624682134,
+      "average_catch_force_n": 372.624682134,
+      "catch_speed_m_s": 0.206133,
+      "precatch_drop_mm": 2.16133,
+      "total_drop_mm": 3.16133
+    },
+    "50": {
+      "absorbed_energy_j": 1.6196754633375,
+      "average_catch_force_n": 1619.6754633374999,
+      "catch_speed_m_s": 0.5003325,
+      "precatch_drop_mm": 12.758312500000002,
+      "total_drop_mm": 13.758312500000002
+    }
+  },
+  "12kg_reactions_spacing_240mm": {
+    "0": [
+      58.8399,
+      58.8399
+    ],
+    "150": [
+      -14.709975,
+      132.389775
+    ],
+    "60": [
+      29.41995,
+      88.25985
+    ]
+  },
+  "12kg_tripod_120mm": {
+    "(0, 0)": [
+      29.41995,
+      29.41995,
+      58.8399
+    ],
+    "(90, 90)": [
+      -36.7749375,
+      51.4849125,
+      102.969825
+    ]
+  },
+  "J_frame_mass_sweep": [
+    {
+      "belt_motor_nm": 0.891872470098363,
+      "belt_tension_difference_n": 98.06649999999999,
+      "force_n": 98.06649999999999,
+      "frame_kg": 0,
+      "screw_motor_nm": 0.1783744940196726
+    },
+    {
+      "belt_motor_nm": 1.0702469641180359,
+      "belt_tension_difference_n": 117.6798,
+      "force_n": 117.6798,
+      "frame_kg": 2,
+      "screw_motor_nm": 0.21404939282360716
+    },
+    {
+      "belt_motor_nm": 1.2486214581377084,
+      "belt_tension_difference_n": 137.29309999999998,
+      "force_n": 137.29309999999998,
+      "frame_kg": 4,
+      "screw_motor_nm": 0.24972429162754162
+    }
+  ],
+  "arm_20N_90mm": {
+    "1000000.0": {
+      "root_moment_nm": 1.8,
+      "tip_deflection_mm": 4.86
+    },
+    "10000000.0": {
+      "root_moment_nm": 1.8,
+      "tip_deflection_mm": 0.486
+    },
+    "100000000.0": {
+      "root_moment_nm": 1.8,
+      "tip_deflection_mm": 0.0486
+    }
+  },
+  "assumed_masses_kg": {
+    "1": 1.0,
+    "2": 2.0,
+    "3": 3.0,
+    "4": 4.0
+  },
+  "backlash_1deg_each_3to1_belt40_mm": 0.14814814814814814,
+  "guide_loop_200mm_1000N_mm": {
+    "0.01": {
+      "elastic_force_n": 4.90658539432505,
+      "mismatch_mm": 0.05490658539432505
+    },
+    "0.05": {
+      "elastic_force_n": 144.53296950425425,
+      "mismatch_mm": 0.19453296950425425
+    },
+    "0.1": {
+      "elastic_force_n": 319.0662048377601,
+      "mismatch_mm": 0.3690662048377601
+    }
+  },
+  "modes": {
+    "C": [
+      {
+        "beds": [
+          1,
+          3
+        ],
+        "belt_motor_nm": 0.3567489880393453,
+        "belt_tension_difference_n": 39.2266,
+        "force_n": 39.2266,
+        "mass_kg": 4.0,
+        "screw_motor_nm": 0.07134979760786905
+      },
+      {
+        "beds": [
+          2,
+          4
+        ],
+        "belt_motor_nm": 0.5351234820590179,
+        "belt_tension_difference_n": 58.8399,
+        "force_n": 58.8399,
+        "mass_kg": 6.0,
+        "screw_motor_nm": 0.10702469641180358
+      }
+    ],
+    "J": [
+      {
+        "beds": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "belt_motor_nm": 0.891872470098363,
+        "belt_tension_difference_n": 98.06649999999999,
+        "force_n": 98.06649999999999,
+        "mass_kg": 10.0,
+        "screw_motor_nm": 0.1783744940196726
+      }
+    ],
+    "M12": [
+      {
+        "beds": [
+          1,
+          2
+        ],
+        "belt_motor_nm": 0.26756174102950897,
+        "belt_tension_difference_n": 29.41995,
+        "force_n": 29.41995,
+        "mass_kg": 3.0,
+        "screw_motor_nm": 0.05351234820590179
+      },
+      {
+        "beds": [
+          3
+        ],
+        "belt_motor_nm": 0.26756174102950897,
+        "belt_tension_difference_n": 29.41995,
+        "force_n": 29.41995,
+        "mass_kg": 3.0,
+        "screw_motor_nm": 0.05351234820590179
+      },
+      {
+        "beds": [
+          4
+        ],
+        "belt_motor_nm": 0.3567489880393453,
+        "belt_tension_difference_n": 39.2266,
+        "force_n": 39.2266,
+        "mass_kg": 4.0,
+        "screw_motor_nm": 0.07134979760786905
+      }
+    ],
+    "M13": [
+      {
+        "beds": [
+          1,
+          3
+        ],
+        "belt_motor_nm": 0.3567489880393453,
+        "belt_tension_difference_n": 39.2266,
+        "force_n": 39.2266,
+        "mass_kg": 4.0,
+        "screw_motor_nm": 0.07134979760786905
+      },
+      {
+        "beds": [
+          2
+        ],
+        "belt_motor_nm": 0.17837449401967265,
+        "belt_tension_difference_n": 19.6133,
+        "force_n": 19.6133,
+        "mass_kg": 2.0,
+        "screw_motor_nm": 0.03567489880393453
+      },
+      {
+        "beds": [
+          4
+        ],
+        "belt_motor_nm": 0.3567489880393453,
+        "belt_tension_difference_n": 39.2266,
+        "force_n": 39.2266,
+        "mass_kg": 4.0,
+        "screw_motor_nm": 0.07134979760786905
+      }
+    ],
+    "M24": [
+      {
+        "beds": [
+          2,
+          4
+        ],
+        "belt_motor_nm": 0.5351234820590179,
+        "belt_tension_difference_n": 58.8399,
+        "force_n": 58.8399,
+        "mass_kg": 6.0,
+        "screw_motor_nm": 0.10702469641180358
+      },
+      {
+        "beds": [
+          1
+        ],
+        "belt_motor_nm": 0.08918724700983632,
+        "belt_tension_difference_n": 9.80665,
+        "force_n": 9.80665,
+        "mass_kg": 1.0,
+        "screw_motor_nm": 0.017837449401967263
+      },
+      {
+        "beds": [
+          3
+        ],
+        "belt_motor_nm": 0.26756174102950897,
+        "belt_tension_difference_n": 29.41995,
+        "force_n": 29.41995,
+        "mass_kg": 3.0,
+        "screw_motor_nm": 0.05351234820590179
+      }
+    ],
+    "M34": [
+      {
+        "beds": [
+          3,
+          4
+        ],
+        "belt_motor_nm": 0.6243107290688542,
+        "belt_tension_difference_n": 68.64654999999999,
+        "force_n": 68.64654999999999,
+        "mass_kg": 7.0,
+        "screw_motor_nm": 0.12486214581377081
+      },
+      {
+        "beds": [
+          1
+        ],
+        "belt_motor_nm": 0.08918724700983632,
+        "belt_tension_difference_n": 9.80665,
+        "force_n": 9.80665,
+        "mass_kg": 1.0,
+        "screw_motor_nm": 0.017837449401967263
+      },
+      {
+        "beds": [
+          2
+        ],
+        "belt_motor_nm": 0.17837449401967265,
+        "belt_tension_difference_n": 19.6133,
+        "force_n": 19.6133,
+        "mass_kg": 2.0,
+        "screw_motor_nm": 0.03567489880393453
+      }
+    ],
+    "R": [
+      {
+        "beds": [
+          1,
+          2
+        ],
+        "belt_motor_nm": 0.26756174102950897,
+        "belt_tension_difference_n": 29.41995,
+        "force_n": 29.41995,
+        "mass_kg": 3.0,
+        "screw_motor_nm": 0.05351234820590179
+      },
+      {
+        "beds": [
+          3,
+          4
+        ],
+        "belt_motor_nm": 0.6243107290688542,
+        "belt_tension_difference_n": 68.64654999999999,
+        "force_n": 68.64654999999999,
+        "mass_kg": 7.0,
+        "screw_motor_nm": 0.12486214581377081
+      }
+    ],
+    "S": [
+      {
+        "beds": [
+          1
+        ],
+        "belt_motor_nm": 0.08918724700983632,
+        "belt_tension_difference_n": 9.80665,
+        "force_n": 9.80665,
+        "mass_kg": 1.0,
+        "screw_motor_nm": 0.017837449401967263
+      },
+      {
+        "beds": [
+          2
+        ],
+        "belt_motor_nm": 0.17837449401967265,
+        "belt_tension_difference_n": 19.6133,
+        "force_n": 19.6133,
+        "mass_kg": 2.0,
+        "screw_motor_nm": 0.03567489880393453
+      },
+      {
+        "beds": [
+          3
+        ],
+        "belt_motor_nm": 0.26756174102950897,
+        "belt_tension_difference_n": 29.41995,
+        "force_n": 29.41995,
+        "mass_kg": 3.0,
+        "screw_motor_nm": 0.05351234820590179
+      },
+      {
+        "beds": [
+          4
+        ],
+        "belt_motor_nm": 0.3567489880393453,
+        "belt_tension_difference_n": 39.2266,
+        "force_n": 39.2266,
+        "mass_kg": 4.0,
+        "screw_motor_nm": 0.07134979760786905
+      }
+    ]
+  },
+  "seam_example": {
+    "drive_mm": 0.02,
+    "elastic_mm": 0.02,
+    "engagement_mm": 0.01,
+    "measurement_guard_mm": 0.01,
+    "sheet_mm": 0.02,
+    "thermal_residual_mm": 0.02,
+    "tilt_mm": 0.036000000000000004,
+    "total_mm": 0.136
+  },
+  "selector_counterexample": [
+    {
+      "dlength_doffset": -0.3922322702763681,
+      "length_mm": 203.9607805437114,
+      "q_mm": -20,
+      "selector_force_n": -19.611613513818405
+    },
+    {
+      "dlength_doffset": -0.19900743804199783,
+      "length_mm": 200.9975124224178,
+      "q_mm": -10,
+      "selector_force_n": -9.950371902099892
+    },
+    {
+      "dlength_doffset": 0.0,
+      "length_mm": 200.0,
+      "q_mm": 0,
+      "selector_force_n": 0.0
+    },
+    {
+      "dlength_doffset": 0.19900743804199783,
+      "length_mm": 200.9975124224178,
+      "q_mm": 10,
+      "selector_force_n": 9.950371902099892
+    },
+    {
+      "dlength_doffset": 0.3922322702763681,
+      "length_mm": 203.9607805437114,
+      "q_mm": 20,
+      "selector_force_n": 19.611613513818405
+    }
+  ],
+  "selector_length_excursion_mm": 3.960780543711394,
+  "status": "Analytical sensitivities, not geometry, ratings or physical validation",
+  "thermal_reused": {
+    "center_cold_interval_mm": [
+      0.43984,
+      0.3
+    ],
+    "center_hot_gap_mm": -0.1398400000000114,
+    "inset10_cold_interval_mm": [
+      0.13776,
+      0.3
+    ],
+    "inset10_hot_gap_mm": 0.16223999999998862
+  },
+  "z_graphs": {
+    "joined_tree": [
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "two_columns": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "two_rows": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "unified_frame": [
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  }
+}
