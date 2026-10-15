@@ -48,3 +48,23 @@ are recorded in the [ledger](d5-references.md). No final material, mechanism, co
 thermal target, active heater, filtration/exhaust or license selected. Supporting source
 repositories unchanged; future separately authorized knowledge work is identified in
 [next investigations](d5-next-investigations.md).
+
+## Publication and reporting
+
+Published as stacked [Draft PR #29](https://github.com/VoidPhoenixApps/project-tesseract/pull/29)
+from research commit `74ec425999d1f0b2f13421b8da69d5361e7ddc96`, targeting D4's branch.
+Parents #25–#28 remained open Drafts at the pinned heads; none merged or modified.
+
+Before reporting, inspected retained workflow history (30 runs) and the development
+channel through D4; no existing D5 report found. Dispatched milestone
+`d5-convertible-enclosure-study` exactly once through the main-branch workflow with
+public text and evidence category `concept`.
+[Run 38686475979](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38686475979)
+completed successfully; the sender logged Discord acknowledgement for message
+`1560161059778732073`. The [acknowledged message location](https://discord.com/channels/1558743337735954512/1558750555097145384/1560161059778732073)
+is recorded for follow-up, **not claimed as visually verified**.
+
+Separate visual verification did not complete: the Discord view still showed D4 after
+the acknowledgement, and the next UI scroll returned `noWindowsAvailable`. No retry,
+recovery report or duplicate dispatch was attempted. Workflow success/acknowledgement
+is established; actual new-message content and channel visibility remain unverified.
