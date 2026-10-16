@@ -1,0 +1,364 @@
+{
+  "S_to_M12_with_shared_2_3_reference": [
+    1,
+    2,
+    3
+  ],
+  "affected_without_extra_influence": {
+    "M12->R": [
+      3,
+      4
+    ],
+    "M24->J": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "R->C": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "S->M12": [
+      1,
+      2
+    ]
+  },
+  "arm_sweep": [
+    {
+      "ei_n_mm2": 10000000.0,
+      "force_n": 20,
+      "length_mm": 90,
+      "root_moment_nm": 1.8,
+      "tip_deflection_mm": 0.486
+    },
+    {
+      "ei_n_mm2": 10000000.0,
+      "force_n": 20,
+      "length_mm": 180,
+      "root_moment_nm": 3.6,
+      "tip_deflection_mm": 3.888
+    },
+    {
+      "ei_n_mm2": 10000000.0,
+      "force_n": 20,
+      "length_mm": 360,
+      "root_moment_nm": 7.2,
+      "tip_deflection_mm": 31.104
+    }
+  ],
+  "arrest_sweep": [
+    {
+      "absorbed_energy_j": 0.015645834211125,
+      "average_catch_force_n": 15.645834211124999,
+      "catch_speed_m_s": 0.1080665,
+      "delay_s": 0.01,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 1,
+      "precatch_drop_mm": 0.5903325,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 1.5903325000000001
+    },
+    {
+      "absorbed_energy_j": 0.031052056844500003,
+      "average_catch_force_n": 31.0520568445,
+      "catch_speed_m_s": 0.206133,
+      "delay_s": 0.02,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 1,
+      "precatch_drop_mm": 2.16133,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 3.16133
+    },
+    {
+      "absorbed_energy_j": 0.13497295527812497,
+      "average_catch_force_n": 134.97295527812497,
+      "catch_speed_m_s": 0.5003325,
+      "delay_s": 0.05,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 1,
+      "precatch_drop_mm": 12.758312500000002,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 13.758312500000002
+    },
+    {
+      "absorbed_energy_j": 0.0625833368445,
+      "average_catch_force_n": 62.583336844499996,
+      "catch_speed_m_s": 0.1080665,
+      "delay_s": 0.01,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 4,
+      "precatch_drop_mm": 0.5903325,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 1.5903325000000001
+    },
+    {
+      "absorbed_energy_j": 0.12420822737800001,
+      "average_catch_force_n": 124.208227378,
+      "catch_speed_m_s": 0.206133,
+      "delay_s": 0.02,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 4,
+      "precatch_drop_mm": 2.16133,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 3.16133
+    },
+    {
+      "absorbed_energy_j": 0.5398918211124999,
+      "average_catch_force_n": 539.8918211124999,
+      "catch_speed_m_s": 0.5003325,
+      "delay_s": 0.05,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 4,
+      "precatch_drop_mm": 12.758312500000002,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 13.758312500000002
+    },
+    {
+      "absorbed_energy_j": 0.1877500105335,
+      "average_catch_force_n": 187.7500105335,
+      "catch_speed_m_s": 0.1080665,
+      "delay_s": 0.01,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 12,
+      "precatch_drop_mm": 0.5903325,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 1.5903325000000001
+    },
+    {
+      "absorbed_energy_j": 0.372624682134,
+      "average_catch_force_n": 372.624682134,
+      "catch_speed_m_s": 0.206133,
+      "delay_s": 0.02,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 12,
+      "precatch_drop_mm": 2.16133,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 3.16133
+    },
+    {
+      "absorbed_energy_j": 1.6196754633375,
+      "average_catch_force_n": 1619.6754633374999,
+      "catch_speed_m_s": 0.5003325,
+      "delay_s": 0.05,
+      "downward_speed_m_s": 0.01,
+      "mass_kg": 12,
+      "precatch_drop_mm": 12.758312500000002,
+      "stopping_stroke_mm": 1,
+      "total_drop_mm": 13.758312500000002
+    }
+  ],
+  "guide_sweep": [
+    {
+      "angle_deg": 0.05,
+      "elastic_force_n": 0,
+      "free_mm": 0.05,
+      "initial_mm": 0.02,
+      "mismatch_mm": 0.02,
+      "stiffness_n_mm": 1000,
+      "travel_mm": 0
+    },
+    {
+      "angle_deg": 0.05,
+      "elastic_force_n": 57.266484752127134,
+      "free_mm": 0.05,
+      "initial_mm": 0.02,
+      "mismatch_mm": 0.10726648475212713,
+      "stiffness_n_mm": 1000,
+      "travel_mm": 100
+    },
+    {
+      "angle_deg": 0.05,
+      "elastic_force_n": 144.53296950425425,
+      "free_mm": 0.05,
+      "initial_mm": 0.02,
+      "mismatch_mm": 0.19453296950425425,
+      "stiffness_n_mm": 1000,
+      "travel_mm": 200
+    }
+  ],
+  "handoff_contract_errors": [],
+  "owners": {
+    "C": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "J": [
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "M12": [
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ],
+    "M13": [
+      [
+        1,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        4
+      ]
+    ],
+    "M24": [
+      [
+        2,
+        4
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ]
+    ],
+    "M34": [
+      [
+        3,
+        4
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "R": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "S": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ]
+  },
+  "reaction_sweep": [
+    {
+      "e_mm": -150,
+      "force_n": 117.6798,
+      "reactions_n": [
+        132.389775,
+        -14.709975
+      ],
+      "spacing_mm": 240
+    },
+    {
+      "e_mm": -120,
+      "force_n": 117.6798,
+      "reactions_n": [
+        117.6798,
+        0.0
+      ],
+      "spacing_mm": 240
+    },
+    {
+      "e_mm": 0,
+      "force_n": 117.6798,
+      "reactions_n": [
+        58.8399,
+        58.8399
+      ],
+      "spacing_mm": 240
+    },
+    {
+      "e_mm": 120,
+      "force_n": 117.6798,
+      "reactions_n": [
+        0.0,
+        117.6798
+      ],
+      "spacing_mm": 240
+    },
+    {
+      "e_mm": 150,
+      "force_n": 117.6798,
+      "reactions_n": [
+        -14.709975,
+        132.389775
+      ],
+      "spacing_mm": 240
+    }
+  ],
+  "release_without_overlap_errors": [
+    "1: release before verified overlap"
+  ],
+  "shared_root_failure_uncovered": {
+    "bed1": [
+      "L",
+      "R"
+    ],
+    "bed2": [
+      "L",
+      "R"
+    ],
+    "bed3": [
+      "L",
+      "R"
+    ],
+    "bed4": [
+      "L",
+      "R"
+    ],
+    "head1": [
+      "L",
+      "R"
+    ],
+    "head2": [
+      "L",
+      "R"
+    ],
+    "head3": [
+      "L",
+      "R"
+    ],
+    "head4": [
+      "L",
+      "R"
+    ],
+    "unused_platform": [
+      "L",
+      "R"
+    ]
+  },
+  "status": "Abstract counterexamples and illustrative sensitivities; no physical validation"
+}
