@@ -108,5 +108,23 @@ Useful findings are recorded here, so no AgentMemory save is needed.
 
 ## Publication and Discord evidence
 
-Draft PR and reporting evidence will be recorded after reviewed publication. No merge
-authorized or performed.
+Research commit `110aafd838363a8752f0a3a1041eddbaf0554ceb` published in
+[Draft PR #44](https://github.com/VoidPhoenixApps/project-tesseract/pull/44), targeting
+main and linked to issue #43. [Initial CI run 38857304097](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38857304097)
+passed repository tests and whitespace. Research tests were run locally; CI does not
+run those suites. This delivery-record update is documentation-only; final-head CI is
+checked at handoff. PR remains Draft; no merge authorized or performed.
+
+Inspected all 50 retained reporting runs and the development channel before dispatch;
+no D9 duplicate. Dispatched stable milestone `d9-z-support-fault-falsification` once
+through `discord-reporting.yml --ref main` with public text and category `concept`.
+[Run 38857340390](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38857340390)
+succeeded and acknowledged message `1560528852638376027`.
+[Actual Discord message](https://discord.com/channels/1558743337735954512/1558750555097145384/1560528852638376027)
+was inspected in the native Discord UI in **Project Tesseract / development-updates**.
+Verified accomplishment, significance, 218 tests and reproduced outputs, research-only
+limits, unresolved geometry/restraint/review gates, PR #44 link and stable report ID.
+One UI scroll attempt returned `noWindowsAvailable`; reselecting the existing Discord
+window exposed the delivered message. No retry or duplicate report was sent. Dispatch,
+Actions success, acknowledgement and actual channel content were verified separately.
+No webhook secret values were read or requested.
