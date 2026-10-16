@@ -108,3 +108,26 @@ No cross-project durable decision has changed. After acceptance, separately auth
 project-knowledge work could link this D7 record and remaining gates; do not invent a
 project CURRENT_STATE or claim that update occurred. Home Infrastructure needs no
 engineering-copy update for this research publication.
+
+## Publication and Discord report
+
+Research commit `2fc9efe3910b4171c09434c2cd943cda02015dde` published in
+[Draft PR #40](https://github.com/VoidPhoenixApps/project-tesseract/pull/40), targeting
+main and linked to issue #39. The [initial CI run](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38852931958)
+passed (repository suite and whitespace, not research-suite execution). Final delivery
+record commits are documentation-only; final-head CI is checked separately at handoff.
+No merge performed.
+
+Inspected all 46 retained reporting runs; none had the D7 milestone ID. Dispatched
+`d7-integrated-architecture-research` exactly once via `discord-reporting.yml --ref main`
+with public fields and evidence category `concept`. [Run 38852952979](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38852952979)
+succeeded and logged Discord acknowledgement for message `1560516100137951365`.
+[Message location](https://discord.com/channels/1558743337735954512/1558750555097145384/1560516100137951365).
+
+**Actual message-content inspection remains blocked:** the native Discord app returned
+its existing view unchanged after server navigation, Raise and channel-switch attempts;
+the browser fallback reached Discord login rather than the channel. No credentials
+were read/requested and no retry/recovery/duplicate report was sent. Thus workflow
+execution and Discord acknowledgement are verified, but channel-visible content is
+not claimed verified. The public report says 195 software tests, inherited analytical
+reproduction and resolved AI-review corrections; no physical validation or CAD permission.
