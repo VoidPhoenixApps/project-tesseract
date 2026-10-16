@@ -111,3 +111,11 @@ transmission, positive restraint and downstream observation for head-Z and group
 across all eight arrangements. It adds bounded handoff/fault counterexamples and an
 E2 engineering-review packet. Neither candidate is selected or physically validated;
 the detailed-CAD pause and first two-bed docking/cross-seam proof remain unchanged.
+
+## S1 — software feasibility before forks
+
+The [S1 study](research/s1-study.md) compares ordinary Klipper instances, a shared
+scheduler extension/fork, RRF 3.7.0 asynchronous motion and existing slicer extension
+points. It recommends investigating a standalone coordinator first, with focused
+synthetic D6-based lifecycle/metadata tests; no firmware or slicer integration has
+been executed. All eight modes and the detailed-machine-CAD pause remain intact.

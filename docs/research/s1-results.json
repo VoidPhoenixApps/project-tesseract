@@ -1,0 +1,86 @@
+{
+  "events": [
+    {
+      "admit_first": [
+        true,
+        "synthetic admission only"
+      ]
+    },
+    {
+      "late_arrivals": [
+        true,
+        "synthetic admission only"
+      ]
+    },
+    {
+      "event": "four running independently",
+      "runs": {
+        "j1": {
+          "progress_mm": 1.5,
+          "state": "RUNNING"
+        },
+        "j2": {
+          "progress_mm": 1.0,
+          "state": "RUNNING"
+        },
+        "j3": {
+          "progress_mm": 1.5,
+          "state": "RUNNING"
+        },
+        "j4": {
+          "progress_mm": 2.0,
+          "state": "RUNNING"
+        }
+      }
+    },
+    {
+      "event": "finish one, pause one, cancel one, fourth progresses",
+      "runs": {
+        "j1": {
+          "progress_mm": 2,
+          "state": "FINISHED_OCCUPIED"
+        },
+        "j2": {
+          "progress_mm": 1.0,
+          "state": "PAUSED"
+        },
+        "j3": {
+          "progress_mm": 1.5,
+          "state": "CANCELLED_OCCUPIED"
+        },
+        "j4": {
+          "progress_mm": 4.0,
+          "state": "RUNNING"
+        }
+      }
+    },
+    {
+      "occupied_conversion": [
+        false,
+        "occupied affected bed"
+      ]
+    },
+    {
+      "event": "global fault retains objects and reservations",
+      "runs": {
+        "j1": {
+          "progress_mm": 2,
+          "state": "FINISHED_OCCUPIED"
+        },
+        "j2": {
+          "progress_mm": 1.0,
+          "state": "FAULTED"
+        },
+        "j3": {
+          "progress_mm": 1.5,
+          "state": "CANCELLED_OCCUPIED"
+        },
+        "j4": {
+          "progress_mm": 4.0,
+          "state": "FAULTED"
+        }
+      }
+    }
+  ],
+  "evidence": "synthetic contract only; no G-code or firmware executed"
+}
