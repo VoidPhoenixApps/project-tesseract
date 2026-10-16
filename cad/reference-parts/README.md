@@ -1,8 +1,10 @@
-# Off-the-shelf reference parts library — Stages A/B/C
+# Off-the-shelf reference parts library — Stages A/B/C/D
 
 This is a reusable **candidate catalog**, not a Tesseract BOM or a component selection. It supports future research without resuming detailed printer CAD. The Feather sample has a partial reference-dimension check; no mechanism, electrical system or physical fit has been validated. [Stage B issue #33](https://github.com/VoidPhoenixApps/project-tesseract/issues/33) continues merged Stage A (#31 / PR #32).
 
 Start with the [readable index](INDEX.md), [machine-readable catalog](catalog.json), [schema](catalog.schema.json), and [Stage A record](verification.md) and [Stage B verification](stage-b-verification.md). [Stage C findings](stage-c-verification.md) and [Fusion library research](fusion-library-research.md) record source/revision resolution, remaining requests and future workflows. Stage B merged in [PR #34](https://github.com/VoidPhoenixApps/project-tesseract/pull/34). There are 45 candidates in 13 categories. Only the Adafruit Feather RP2040 (#4884) sample is authorized for local download; all other models remain link-only, even where a permissive license is recorded.
+
+Stage C merged in [PR #36](https://github.com/VoidPhoenixApps/project-tesseract/pull/36). Start Stage D with the [readiness matrix](READINESS.md), [sample approval packet and supplier priorities](stage-d-qualification.md), and [proposed FreeCAD procedure](freecad-inspection-plan.md).
 
 ## Storage decision and actual access
 
@@ -103,6 +105,21 @@ Before designing around **every purchased component**, check this catalog and th
 | Actual selected identity, not a guessed substitute | Prefer STEP plus applicable native source; link official source if established | Holes, datums, shaft, connector or clearance envelope | State exact gaps and request correct file or approved source | Name dependent interface/task |
 
 Never fabricate a vendor model, substitute a purchased part silently, or invent precision geometry. A labeled preliminary non-fabrication envelope needs explicit maintainer approval and traceable dimensions. Continue unrelated safe work. No catalog entry selects the machine's hardware, final CAD toolchain, electronics or license. The research-first priority and two-bed docking/cross-seam first physical proof remain unchanged.
+
+## Offline triage and consolidated requests
+
+Use the standard-library helper before adding a candidate or requesting files. Search results identify possible existing records; confirm the full manufacturer, part, variant and physical revision before reuse. No command downloads, uploads, changes permissions or opens CAD.
+
+```sh
+python3 scripts/reference_parts_triage.py --query "Adafruit 1253" --json
+python3 scripts/reference_parts_triage.py --id adafruit-4884-feather-rp2040 --library '/Users/todd/Development Projects/tesseract-cad-library' --json
+python3 scripts/reference_parts_triage.py --id adafruit-1253-gt2-36-teeth-5mm-bore --id raspberry-pi-pico-rp2040-without-headers --requests --purpose "Compare bore/board interfaces and import portability" --blocked-work "Next local sample inspection"
+python3 scripts/reference_parts_triage.py --check-report
+```
+
+Repeat `--id` for a consolidated request. An unknown exact ID is reported as missing without inventing a source or substituting a near match; normal lookups fail with nonzero exit status. Requests include all five rights statuses/evidence, source revision, purpose and dependent work. For different purposes, generate separate groups and combine them for review. No local record means no cataloged file, not proof that no unregistered file exists anywhere. `--library` hashes only recorded approved assets and fails on absent/corrupt bytes; it does not crawl or adopt other files. `--json` preserves the full source notes and geometry evidence.
+
+After metadata changes, regenerate with `python3 scripts/reference_parts_triage.py --write-report`, then run `--check-report` and the existing validator. CI unit tests check both generated reports. Expand only for a named research/interface need: search existing identities, resolve exact variants and source/rights gaps, add a small link-only batch with evidence, and request one useful sample at a time. Do not fill category quotas or model commercial parts already cataloged.
 
 ## Next batch
 
