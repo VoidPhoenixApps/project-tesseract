@@ -4,6 +4,10 @@
 
 **Status:** Planning direction, not completed research or an approved mechanism. Nothing here selects hardware, software, CAD, printer configuration, numerical acceptance limits, or a license. Existing Phase 1/1B/1C source, evidence and unfinished work must be retained; do not silently discard earlier CAD or rewrite its conclusions. No physical work is authorized by this plan.
 
+## Integrated research available for review
+
+The [D7 integrated study](research/d7-integrated-study.md) synthesizes the existing D1–D6 packages, Phase 1/1B/1C evidence and library Stages A–D into an eight-arrangement XY/Z matrix, three research candidates plus a noncompliant control, failure chains and a future experiment queue. This supersedes the research-not-started wording above for these published desk studies only. No architecture is selected, no physical gate has passed, and the detailed-CAD pause still requires maintainer acceptance and bounded authorization.
+
 ## Why the order changes
 
 Independent toolhead movement, Z ownership, coupled/selected lifts, bed docking and registration, frame compliance and safety are coupled decisions. More fixture or printer CAD now could prematurely embody one architecture and hide contradictions with the required separated, paired, mixed and fully joined configurations.
