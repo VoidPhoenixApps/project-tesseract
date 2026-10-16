@@ -258,15 +258,15 @@
       "status": "candidate",
       "availability": "Commercial product documented; local stock and price not verified",
       "documentation_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
-      "model_url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+      "model_url": "https://pip.raspberrypi.com/documents/RP-008311-DS",
       "model_source_status": "listed",
-      "source_revision": "Undated live source; revision not established",
+      "source_revision": "RP-008311-DS redirects (HEAD only) to RP-008311-DS-1-Pico-R3-step.zip; documentation commit ddea98e98dafe9419feb4fd82710c2fbdef7dc44; internal STEP/physical revision unverified",
       "access_date": "2026-10-15",
       "formats": [
         "STEP",
         "Cadence Allegro"
       ],
-      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "provenance": "Official non-wireless Pico/Pico H documentation lists RP-008311-DS as STEP; only documentation text inspected. See stage-d-qualification.md.",
       "geometry": {
         "units": "unknown",
         "coordinate_system": "unknown; preserve native frame on first import",
@@ -307,7 +307,7 @@
         "evidence": null
       },
       "local_asset": null,
-      "notes": "Non-wireless first-generation board; do not substitute Pico W or Pico H."
+      "notes": "Non-wireless first-generation board; do not substitute Pico W or Pico H. STEP identity/header population must be checked after explicit approval; document identifier and documentation commit are not a STEP content hash."
     },
     {
       "id": "espressif-esp32-devkitc-esp32-wroom-32e-module",
@@ -1277,7 +1277,7 @@
       "variant": "GT2 36 teeth 5mm bore",
       "revision": "unknown",
       "status": "candidate",
-      "availability": "Commercial product documented; local stock and price not verified",
+      "availability": "Official Adafruit product page says No longer stocked, checked 2026-10-15; distributor availability not verified. Workflow sample only, not a sourcing recommendation.",
       "documentation_url": "https://www.adafruit.com/product/1253",
       "model_url": "https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/1253%20Aluminum%20Timing%20Pulley/1253%20Aluminum%20Timing%20Pulley.step",
       "model_source_status": "listed",
@@ -1287,7 +1287,7 @@
         "STEP",
         "Fusion 360"
       ],
-      "provenance": "Manufacturer documentation; linked model bytes not inspected",
+      "provenance": "Official pinned Git tree metadata: STEP blob b6128259281cdeb578b4422d11da41a6ec9e4868, 472468 bytes; model bytes not inspected. Root MIT license rechecked; no folder-specific override listed. See stage-d-qualification.md.",
       "geometry": {
         "units": "mm",
         "coordinate_system": "unknown; preserve native frame on first import",

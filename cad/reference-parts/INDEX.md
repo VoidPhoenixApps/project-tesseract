@@ -21,10 +21,10 @@ Candidates only; no purchasing or printer architecture selection. Unknown revisi
 
 | Manufacturer / part | Variant / revision | Model source | Local asset |
 | --- | --- | --- | --- |
-| [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html) | RP2040 without headers / unknown | [listed](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html) | None |
+| [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html) | RP2040 without headers / unknown | [listed](https://pip.raspberrypi.com/documents/RP-008311-DS) | None |
 | [Espressif ESP32-DevKitC](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html) | ESP32-WROOM-32E module / V4 | Not located | None |
 | [STMicroelectronics NUCLEO-F446RE](https://www.st.com/en/evaluation-tools/nucleo-f446re.html) | MB1136-F446RE-C04 / C04 | [listed](https://www.st.com/en/evaluation-tools/nucleo-f446re.html) | None |
-| [Adafruit 4884](https://www.adafruit.com/product/4884) | Feather RP2040 / unknown | [listed](https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/4884%20Feather%20RP2040/4884%20Feather%20RP2040.step) | File checked; import pending |
+| [Adafruit 4884](https://www.adafruit.com/product/4884) | Feather RP2040 / unknown | [listed](https://github.com/adafruit/Adafruit_CAD_Parts/blob/c128bceb1f96b6ea8b68f250bda986ba85da24ea/4884%20Feather%20RP2040/4884%20Feather%20RP2040.step) | dimension-checked; see evidence |
 
 ## controller-boards
 

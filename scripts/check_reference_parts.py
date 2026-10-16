@@ -232,7 +232,7 @@ def render_index(data):
         for p in rows:
             label = p['manufacturer'] + ' ' + p['part_number']
             model = '['+p['model_source_status']+']('+p['model_url']+')' if p['model_url'] else 'Not located'
-            lines.append(f'| [{label}]({p["documentation_url"]}) | {p["variant"]} / {p["revision"]} | {model} | '+('File checked; import pending' if p['local_asset'] else 'None')+' |')
+            lines.append(f'| [{label}]({p["documentation_url"]}) | {p["variant"]} / {p["revision"]} | {model} | '+(p['geometry']['confidence'] + '; see evidence' if p['local_asset'] else 'None')+' |')
         lines += ['']
     return '\n'.join(lines)
 
