@@ -103,3 +103,11 @@ New detailed printer/fixture CAD should resume only after a reviewed research pa
 These are **planning/review criteria**, not assertions that research has been performed or physical engineering gates passed. The maintainer can authorize a specific exception, such as preserving, diagnosing or finishing an existing narrow CAD/evidence artifact, without treating it as approval for a new mechanical architecture.
 
 **Resumption prompt:** Start at the existing concept backlog and Phase 1/1B/1C evidence. Produce the public mode × XY × Z compatibility matrix and an evidence inventory first. No new detailed CAD or hardware actions until the maintainer explicitly requests them.
+
+## D9 — Z support and fault falsification
+
+The [D9 research package](research/d9-study.md) separates registration, load support,
+transmission, positive restraint and downstream observation for head-Z and grouped-bed-Z
+across all eight arrangements. It adds bounded handoff/fault counterexamples and an
+E2 engineering-review packet. Neither candidate is selected or physically validated;
+the detailed-CAD pause and first two-bed docking/cross-seam proof remain unchanged.
