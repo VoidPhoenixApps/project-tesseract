@@ -113,3 +113,24 @@ All approved requirements and prior evidence are preserved; no architecture or l
 selected. After acceptance, a separately authorized project-knowledge link could
 record D8 and its remaining gates; no Tesseract CURRENT_STATE was invented. No new
 AgentMemory save is needed because useful task evidence is recorded here.
+
+## Publication and Discord evidence
+
+Research commit `313e16c49c6fdc1809874f301fec671f4f875e7f` published in
+[Draft PR #42](https://github.com/VoidPhoenixApps/project-tesseract/pull/42), targeting
+main and linked to issue #41. [Initial CI](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38855713903)
+passed: repository tests and whitespace only; the 111 research tests were run locally.
+This publication-record update changes documentation only; final-head CI is checked at
+handoff. No merge performed; the PR remains Draft.
+
+Inspected all 48 retained reporting runs before dispatch; no D8 milestone duplicate.
+Sent `d8-full-assembly-reach-parking` exactly once via `discord-reporting.yml --ref main`
+with public text and evidence category `concept`.
+[Run 38855751919](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38855751919)
+succeeded and acknowledged message `1560524240762052619`.
+[Actual Discord message](https://discord.com/channels/1558743337735954512/1558750555097145384/1560524240762052619)
+was then inspected through the native Discord UI in **Project Tesseract / development-updates**.
+Verified the D8 accomplishment, significance, 206 tests, 696/1,728 cases, concept category,
+remaining geometry/qualified-review/gravity/hot-seam gates, PR #42 link and stable report ID.
+Workflow success, Discord acknowledgement and channel-visible message content were each
+verified separately. No secret values were read/requested; no duplicate/recovery sent.
