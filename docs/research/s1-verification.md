@@ -65,7 +65,7 @@ git diff --cached --check
   source; no renderer execution claimed.
 - Requirements, architecture, roadmap and D6 kernel compared against main: unchanged.
   Complete intended diff reviewed, including new files; working/staged whitespace
-  checks required before commit. No credential-like content found in intended files.
+  checks passed before commit. No credential-like content found in intended files.
 
 No test here executes Klipper, RRF, Moonraker, a slicer or real G-code.
 
@@ -103,3 +103,22 @@ mechanical/electrical review and explicit maintainer decisions. After acceptance
 a separately authorized project-knowledge update could link this report and its
 software integration gates; no existing Tesseract project record should be invented.
 Home Infrastructure needs no duplicate engineering report. Neither repository changed.
+
+
+## Publication and reporting
+
+Research commit `ea03e87b5b94e5ec0aebf1278cf3626cd3169aca` published in
+[Draft PR #47](https://github.com/VoidPhoenixApps/project-tesseract/pull/47), targeting
+main and linked to issue #46. [Initial CI](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38867010363) passed. No merge performed. Final delivery-record commit changes
+only this verification document; CI status is checked separately at handoff. Existing
+CI runs the repository suite and whitespace checks, not the research suite.
+
+Inspected 52 retained Discord reporting runs; none used the S1 milestone ID.
+Dispatched `s1-software-feasibility-study` once with public fields and evidence category
+`software`, explicitly limiting evidence to synthetic tests and source research.
+[Run 38867044725](https://github.com/VoidPhoenixApps/project-tesseract/actions/runs/38867044725)
+succeeded and acknowledged message `1560554108015083591`. The actual
+[development-channel message](https://discord.com/channels/1558743337735954512/1558750555097145384/1560554108015083591)
+was inspected through native Discord accessibility: accomplishment, recommendation,
+132/84 tests, no firmware/slicer/hardware validation, remaining gaps, PR #47 and exact
+report ID all matched. No duplicate/retry or secret retrieval occurred.
