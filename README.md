@@ -20,6 +20,23 @@ Four-head cooperative printing on a single large part is an **unproven stretch g
 
 The [Phase 1 mechanical trade study](docs/phase1/README.md) is available for critique; its rankings remain proposals. The first physical proof remains **two-bed docking and cross-seam printing**. Measure registration, seam gap, thermal drift, adhesion, and repeatability through dock/undock cycles before scaling to four beds. Thermal, electrical, moving machinery, heater wiring, collision avoidance, and emergency-stop behavior require reviewed evidence; a drawing or successful simulation alone does not validate a mechanism.
 
+## Newcomer reading path
+
+Read the project in this order:
+
+1. This README for the project goal, current status, and first milestone.
+2. [CONTRIBUTING.md](CONTRIBUTING.md) for contribution scope, evidence standards, and review workflow.
+3. [Requirements](docs/requirements.md) for the approved targets and the distinction between requirements, preferences, proposals, and unknowns.
+4. [Phase 1](docs/phase1/README.md) for the current mechanical trade study and its explicitly unapproved investigations.
+
+### Five terms used in the engineering notes
+
+- **Datum:** a defined reference surface, edge, or coordinate used to locate and measure another part. The project uses frame and bed datums when comparing docking approaches; see [the configuration datum assumptions](docs/phase1/configuration-feasibility.md#datums-envelopes-and-six-target-layouts).
+- **Registration:** bringing two parts back to a known relative position and orientation. Here, bed registration is the docking problem of returning a carrier or sheet to the intended build-plane relationship; see [docking and mechanical registration](docs/phase1/docking-registration.md#six-rigid-body-degrees-of-freedom).
+- **Repeatability:** how closely repeated attempts produce the same result, such as repeated dock/undock cycles. It is a measured property, not a synonym for accuracy; see [the proposed two-bed proof measurements](docs/phase1/two-bed-proof-plan.md#variables-metrology-and-records).
+- **Seam step:** a height discontinuity between neighboring build sheets at their seam. The project treats a seam step as a risk to nozzle travel and first-layer quality that must be measured; see [the Phase 1 risk register](docs/phase1/risks-and-decisions.md#risk-register).
+- **Thermal drift:** a change in position or surface geometry as temperature changes. Bed expansion and temperature-dependent seam behavior are analytical concerns, not validated performance; see [the preliminary expansion analysis](docs/phase1/preliminary-calculations.md#expansion-and-seam-sensitivity).
+
 ## Why this is an interesting engineering problem
 
 Moving a bed is only the start: separate heated surfaces must return to a repeatable common plane, accommodate thermal expansion, and support a first layer across their seams. Locks, transport, sheet behavior, cable routing and printable-frame stiffness all interact. A convincing result needs measurements through repeated docking cycles, including failures.

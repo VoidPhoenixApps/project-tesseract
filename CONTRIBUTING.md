@@ -1,6 +1,6 @@
 # Contributing to Project Tesseract
 
-Project Tesseract is at the documentation and feasibility stage. No CAD or prototype has been validated. Contributions should help test the [requirements](docs/requirements.md), compare [architecture candidates](docs/architecture.md), or produce evidence for the [roadmap](docs/roadmap.md).
+Project Tesseract is at the documentation and feasibility stage. No CAD or prototype has been validated. Start with the [newcomer reading path in the README](README.md#newcomer-reading-path), then use this guide to choose a bounded contribution. Contributions should help test the [requirements](docs/requirements.md), compare [architecture candidates](docs/architecture.md), or produce evidence for the [roadmap](docs/roadmap.md).
 
 ## Find a useful starting point
 
