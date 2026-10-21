@@ -25,6 +25,10 @@ Project Tesseract is a new, mechanically distinctive, community-oriented RepRap 
 - The first mechanical proof should be a bounded **two-bed docking, registration and cross-seam printing rig**, following a documented architecture trade study. Do not claim any gate passed without relevant reviewed physical evidence.
 - Hardware, software and documentation licensing is **not yet selected**. The intention to allow open contributions and commercial kits is not itself an existing open-source license grant. Do not choose a license or advertise legal permissions as finalized without review.
 
+## Off-the-shelf hardware policy
+
+For parts, fixtures, CAD, architecture and BOM recommendations, enforce the approved preference for standardized, readily sourced, interchangeable off-the-shelf components wherever practical. Distinguish purpose-designed printed parts from unusual purchased parts. For exceptions, request the functional and safety justification, comparison with standard alternatives, verified sourcing and replacement plan. Do not silently substitute or compromise safety or mandatory capabilities. See [requirements](docs/requirements.md) and [AGENTS.md](AGENTS.md).
+
 ## Engineering reasoning and safety
 
 Distinguish clearly among **approved requirements**, **preferences**, **candidate designs**, **simulations**, **software tests**, and **measured physical evidence**. Compare plausible architectures before committing to one. Preserve failed experiments and their lessons, do not silently delete difficult requirements, and avoid pretending an attractive CAD render proves function.
