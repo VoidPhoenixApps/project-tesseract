@@ -24,6 +24,10 @@ Distinguish mandatory targets, preferences, proposed approaches, unknowns, and s
 
 Prefer the smallest change that satisfies the task. Preserve working artifacts and source history. Keep units, datums, tolerances, materials, variant identifiers and operating conditions explicit. Check actual purchasable stock sizes; imperial and rounded metric values are not interchangeable. Keep both variants reproducible without builder CAD edits, mesh scaling, socket reaming, or improvised shims.
 
+## Standard-parts selection rule
+
+Use common, standardized, readily available off-the-shelf purchased components wherever reasonably possible in studies, proof fixtures, CAD interfaces and BOMs. Prefer broadly sourced interchangeable specifications; verify actual compatibility, regional supply and safe substitutes rather than assuming nominal similarity. Purpose-designed printable parts remain central. Document necessity, rejected standard alternatives, sourcing and replacement risks, and review status for unusual or single-source purchased items. Never compromise a mandatory function or safety merely to use a common part. See [requirements](docs/requirements.md).
+
 ## Safety and evidence
 
 Treat thermal systems, electricity, moving machinery, heater wiring, collision avoidance, and emergency-stop behavior as safety-critical. Require risk-appropriate independent review before adopting consequential architecture or safety changes. Do not energize hardware, run moving-machine tests, purchase components, or alter physical systems merely because documentation work is authorized.
