@@ -4,6 +4,8 @@ Project Tesseract is an early engineering concept for a reconfigurable multi-bed
 
 **Development status:** Early feasibility stage, with a published mechanical trade study for review. No CAD, mechanism, firmware, or prototype has been validated. The features below are design targets, not working capabilities.
 
+**Owner scheduling decision (2026-10-21): ACTIVE — LOW PRIORITY.** Continue bounded engineering/research work when specifically chosen; do not treat the full printer roadmap, proof rigs, or open CAD ideas as immediately scheduled tasks. This prioritization does not relax safety, evidence, reproducibility or hardware authorization gates.
+
 ## Goals and planned features
 
 - Four nominal **180 × 180 mm heated bed modules** in an initial 2 × 2 array.
